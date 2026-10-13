@@ -1,0 +1,846 @@
+{
+ "jurisdiction": "ACT",
+ "gathered_by": "Claude",
+ "started_at": "2026-10-13T03:15:34Z",
+ "finished_at": "2026-10-13T03:20:11Z",
+ "master_sources": [
+  "https://www.act.gov.au/money-and-tax/cost-of-living-support",
+  "https://www.revenue.act.gov.au/community-assistance",
+  "https://www.revenue.act.gov.au/changes-for-2025-26"
+ ],
+ "gaps": [
+  "act.gov.au/concessions pages failed to fetch; used act.gov.au cost-of-living-support and revenue.act.gov.au instead",
+  "Pet registration concession not confirmed (registration page shows no concession; fees page not opened)",
+  "IPTAS per-km and accommodation rates not loaded (in guidelines PDF)",
+  "Dollar value of registration and licence fee waivers not on concession pages",
+  "Rates deferral interest rate not shown",
+  "Medical heating/cooling qualifying conditions and cards not listed",
+  "ACT Services Access Card qualifies for many items but has no schema card code",
+  "Energy Bill Relief Fund ($150, ended 31 Dec 2025) left out; check for any new one-off rebates"
+ ],
+ "benefits": [
+  {
+   "id": "ACT-001",
+   "name": "Electricity, Gas and Water Rebate (Utilities Concession)",
+   "provider": "ACT Revenue Office (via electricity retailer)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Bills",
+   "summary": "Up to $800 a year off your electricity bill to help with energy and water costs.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "electricity_account"
+   ],
+   "eligibility_text": "Primary holder of a Pensioner Concession Card, Health Care Card or Low Income Health Care Card, Veteran Gold Card (POW, War Widow or TPI embossed) or ACT Services Access Card; electricity account in your name at your principal place of residence; one rebate per household. Commonwealth Seniors Health Card not eligible.",
+   "value_text": "$800 a year, applied as a daily rate on your electricity bill",
+   "max_annual_value": 800,
+   "value_period": "2026-27",
+   "how_to_claim": "Contact your energy retailer. Residents of caravan parks or retirement villages with embedded networks apply to the ACT Revenue Office online.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/community-assistance/utilities-concession",
+   "notes": "Only DVA Gold cards embossed POW, War Widow or TPI qualify. HCC holders must reapply each time a new card is issued. Rebate raised to $800 and made permanent in 2025-26 per revenue.act.gov.au/changes-for-2025-26. Icon Water's page still shows the old $604 figure (outdated). ACT Services Access Card is not in schema card codes."
+  },
+  {
+   "id": "ACT-002",
+   "name": "Life Support Rebate",
+   "provider": "ACT Revenue Office (via electricity retailer)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Health",
+   "summary": "$150 a year off electricity if someone at home uses life support equipment such as oxygen or dialysis.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "life_support",
+    "electricity_account"
+   ],
+   "eligibility_text": "Household member uses eligible life support equipment (dialysis machine, oxygen concentrator, respirator, CPAP, nebuliser, TPN device, others on approval); letter from medical practitioner needed. One rebate per household.",
+   "value_text": "$150 a year (about 41.1 cents a day) off your electricity bill",
+   "max_annual_value": 150,
+   "value_period": "2026-27",
+   "how_to_claim": "Contact your energy retailer with a letter from your doctor. Embedded-network residents apply to the ACT Revenue Office.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/life-support-rebate",
+   "notes": "Page does not say a concession card is required for the main life support category."
+  },
+  {
+   "id": "ACT-003",
+   "name": "Medical Heating and Cooling (Life Support Rebate sub-category)",
+   "provider": "ACT Revenue Office (via electricity retailer)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Health",
+   "summary": "Concession card holders with a condition needing medical heating or cooling can get the Life Support Rebate on electricity.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "medical_condition",
+    "electricity_account"
+   ],
+   "eligibility_text": "Concession card holder with an eligible condition that requires medical heating and/or cooling; medical letter needed.",
+   "value_text": "Life Support Rebate amount ($150 a year)",
+   "max_annual_value": 150,
+   "value_period": "2026-27",
+   "how_to_claim": "Contact your energy retailer with a letter from your doctor.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/life-support-rebate",
+   "notes": "The page names this as a sub-category of the Life Support Rebate but does not list the qualifying conditions or exact cards; card list assumed from Utilities Concession, confirm."
+  },
+  {
+   "id": "ACT-004",
+   "name": "Home Haemodialysis Rebate",
+   "provider": "ACT Revenue Office (via ActewAGL for Icon Water)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Health",
+   "summary": "Up to $1,200 a year off water costs if someone at home uses a home dialysis machine.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "life_support",
+    "water_account"
+   ],
+   "eligibility_text": "Owner or joint owner of the property (or treated person lives there permanently); doctor's letter confirming home dialysis treatment. Also automatically eligible for the Life Support Rebate.",
+   "value_text": "Up to $1,200 a year ($3.29 a day) off water costs",
+   "max_annual_value": 1200,
+   "value_period": "Current",
+   "how_to_claim": "Contact ActewAGL (agent for Icon Water).",
+   "phone": "13 14 93",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/home-haemodialysis-rebate",
+   "notes": ""
+  },
+  {
+   "id": "ACT-005",
+   "name": "Pensioner General Rates Rebate",
+   "provider": "ACT Revenue Office",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "50% off your general rates, up to $750 a year, plus $133 off the emergency services levy.",
+   "cards": [
+    "PCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "Hold a Pensioner Concession Card (Services Australia or DVA) or Veteran Gold Card; property is your principal place of residence. Joint owners share the rebate by ownership share.",
+   "value_text": "50% of rates capped at $750 a year, plus $133 off the Police, Fire and Emergency Services Levy",
+   "max_annual_value": 883,
+   "value_period": "Cap applies from 2021-22 (still current)",
+   "how_to_claim": "Apply online with your ACT Digital Account, rates account number and card details. Rebate starts from the financial year you apply.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/rates-assistance/pensioners",
+   "notes": "max_annual_value combines $750 rates cap and $133 levy rebate. Phone is the ACT Revenue Office general line used on other ACT Revenue pages, not listed on this page."
+  },
+  {
+   "id": "ACT-006",
+   "name": "Pensioner Rates Deferral",
+   "provider": "ACT Revenue Office",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "Pensioners can put off paying the rest of their rates until the home is sold, with low simple interest.",
+   "cards": [
+    "PCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "Eligible pensioner (PCC or Veteran Gold Card), principal place of residence. Defer all or part of rates left after the rebate.",
+   "value_text": "Defer rates; concessional simple interest (reset each July and January)",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Apply online with your ACT Digital Account and rates account number.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/rates-assistance/pensioners",
+   "notes": "Interest rate not stated on the page."
+  },
+  {
+   "id": "ACT-007",
+   "name": "Rates Deferral for People Aged 65 or Over",
+   "provider": "ACT Revenue Office",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "If you are 65 or older and own at least 75% of your home, you can put off paying rates until the home is sold.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "homeowner",
+    "aged_65"
+   ],
+   "eligibility_text": "Aged 65 or over with at least 75% equity in your principal place of residence.",
+   "value_text": "Defer rates; concessional simple interest",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Apply online with your ACT Digital Account and rates account number.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/rates-assistance/age-65-or-over",
+   "notes": "Interest rate not stated on the page."
+  },
+  {
+   "id": "ACT-008",
+   "name": "Rates Deferral for Health Care Card Holders",
+   "provider": "ACT Revenue Office",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "Health Care Card holders who own their home can put off paying rates until it is sold.",
+   "cards": [
+    "HCC"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "Own the property, principal place of residence, current Services Australia Health Care Card or Low Income Health Care Card.",
+   "value_text": "Defer rates; concessional simple interest",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Apply online with your ACT Digital Account, rates account number and card details.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/rates-assistance/health-care-card-and-low-income-health-care-card-holders",
+   "notes": ""
+  },
+  {
+   "id": "ACT-009",
+   "name": "Rates Deferral for Financial Hardship",
+   "provider": "ACT Revenue Office",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "Homeowners in serious financial hardship can ask to delay paying rates or get a payment plan.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "homeowner",
+    "hardship"
+   ],
+   "eligibility_text": "Property owner in significant financial hardship; principal place of residence. Referral from a financial counsellor or welfare agency is considered.",
+   "value_text": "Defer rates with concessional interest, or an instalment plan",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Complete the Rates Deferral (Hardship) Application Form with supporting documents.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/rates-assistance/financial-hardship",
+   "notes": ""
+  },
+  {
+   "id": "ACT-010",
+   "name": "Pensioner Duty Concession Scheme",
+   "provider": "ACT Revenue Office",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "Pensioners selling their home and buying another pay no stamp duty from 1 July 2026.",
+   "cards": [
+    "PCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "homeowner",
+    "age_pension"
+   ],
+   "eligibility_text": "At least one buyer receives the age pension (Services Australia or DVA), disability support pension and aged 50+, a DVA Gold Card, or (from 1 July 2026) a DVA Service Pension. Must sell your current home within one year, live in the new home for at least a year, and own no other land.",
+   "value_text": "No stamp duty on the new home or land (no property value limit from 1 July 2026). In 2025-26: no duty up to $1,020,000, maximum concession $35,238.",
+   "max_annual_value": null,
+   "value_period": "From 1 July 2026",
+   "how_to_claim": "Complete the Buyer Verification Declaration before title transfer, using concession code PDC24.",
+   "phone": "(02) 6207 0028 (option 3)",
+   "source_url": "https://www.revenue.act.gov.au/home-buyer-assistance/pensioner-duty-concession-scheme",
+   "notes": "One-off, so max_annual_value null. Cannot have previously claimed the Over 60s Home Bonus. Card list approximates pension status; the test is receiving the pension, not holding a card."
+  },
+  {
+   "id": "ACT-011",
+   "name": "Pensioner Duty Deferral Scheme",
+   "provider": "ACT Revenue Office",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "Pensioners can pay stamp duty on a new home later in instalments instead of all at once.",
+   "cards": [
+    "PCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "age_pension"
+   ],
+   "eligibility_text": "At least one buyer is a pensioner (age pension, DSP aged 50+, DVA Gold Card, or DVA Service Pension from 1 July 2026) and lives in the home for at least one year. Can combine with the concession if at least $1,000 of duty remains.",
+   "value_text": "Defer stamp duty, paid by direct debit over set periods",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Complete the Buyer Verification Declaration before title transfer, using code PDD25.",
+   "phone": "(02) 6207 0028 (option 3)",
+   "source_url": "https://www.revenue.act.gov.au/home-buyer-assistance/pensioner-duty-deferral-scheme",
+   "notes": ""
+  },
+  {
+   "id": "ACT-012",
+   "name": "Spectacles Subsidy Scheme",
+   "provider": "ACT Revenue Office",
+   "level": "State",
+   "state": "ACT",
+   "category": "Health",
+   "summary": "Up to $200 towards new glasses every two years.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card (Services Australia or DVA) or Health Care Card held at least three months. Commonwealth Seniors Health Card not eligible.",
+   "value_text": "Up to $200 every two years",
+   "max_annual_value": 100,
+   "value_period": "Current",
+   "how_to_claim": "Get the form from a registered optometrist, who lodges it for you.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/spectacles-subsidy-scheme",
+   "notes": "max_annual_value is $200 averaged over two years."
+  },
+  {
+   "id": "ACT-013",
+   "name": "Low Vision Aids Scheme",
+   "provider": "ACT Revenue Office (via Vision Australia)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Health",
+   "summary": "Up to $100 every two years towards magnifiers and other low vision aids.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [
+    "medical_condition"
+   ],
+   "eligibility_text": "ACT resident with a Pension Concession Card (Services Australia or DVA) or Health Care Card held 3 months or more, with low vision. CSHC not eligible.",
+   "value_text": "Up to $100 every two years",
+   "max_annual_value": 50,
+   "value_period": "Current",
+   "how_to_claim": "Get an application form from Vision Australia, which processes it with the ACT Revenue Office.",
+   "phone": "1300 84 74 66",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/low-vision-aids-scheme",
+   "notes": "max_annual_value is $100 averaged over two years."
+  },
+  {
+   "id": "ACT-014",
+   "name": "Taxi Subsidy Scheme",
+   "provider": "ACT Revenue Office",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "Pays 50% or 75% of taxi fares for people whose disability stops them using public transport.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "mobility_need"
+   ],
+   "eligibility_text": "Permanent ACT resident with a severe or profound activity limitation preventing public transport use (mobility, vision, cognitive, psychiatric, uncontrolled epilepsy); form signed by doctor or OT.",
+   "value_text": "50% or 75% of fare, up to $31 / $47.50 per trip, up to 854 trips a year",
+   "max_annual_value": null,
+   "value_period": "1 Jul 2026 to 30 Jun 2027",
+   "how_to_claim": "Complete the Membership Application Form with Part B signed by a doctor or occupational therapist.",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/taxi-subsidy-scheme",
+   "notes": ""
+  },
+  {
+   "id": "ACT-015",
+   "name": "Funeral Assistance Program",
+   "provider": "ACT Revenue Office (via participating funeral directors)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Payments",
+   "summary": "Up to $500 towards a funeral for an immediate family member if you are in financial hardship.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "hardship"
+   ],
+   "eligibility_text": "ACT resident in financial hardship unable to meet the full cost of a funeral for an immediate family member; financial assessment of income, expenses and assets.",
+   "value_text": "Up to $500 contribution",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Apply through a participating funeral provider (Tobin Brothers, Toscan Dinn, William Cole, Tender Funerals).",
+   "phone": "(02) 6207 0028 (option 5)",
+   "source_url": "https://www.revenue.act.gov.au/cost-of-living-support/funeral-assistance",
+   "notes": "One-off, so max_annual_value null."
+  },
+  {
+   "id": "ACT-016",
+   "name": "ACT Seniors Card",
+   "provider": "ACT Government and COTA ACT",
+   "level": "State",
+   "state": "ACT",
+   "category": "Discounts",
+   "summary": "Free card for Canberrans 60+ giving discounts at about 300 businesses and transport concessions.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "aged_60"
+   ],
+   "eligibility_text": "Aged 60 or over, permanent ACT resident, not working more than 20 hours a week in paid work.",
+   "value_text": "Free card; discounts at about 300 participating businesses",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Apply online through the ACT Government form; card posted within 15 business days. COTA ACT can help.",
+   "phone": "02 6282 3777",
+   "source_url": "https://www.accesscanberra.act.gov.au/identity/proof-of-identity-and-residency/act-seniors-card",
+   "notes": "Combined Seniors Card/MyWay card can no longer be used to tap on public transport. Discount directory at actseniorscard.org.au."
+  },
+  {
+   "id": "ACT-017",
+   "name": "Free public transport for seniors aged 70+",
+   "provider": "Transport Canberra",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "ACT seniors aged 70 and over travel free on buses and light rail at any time.",
+   "cards": [
+    "SENIORS_CARD"
+   ],
+   "requires": [
+    "aged_70"
+   ],
+   "eligibility_text": "ACT seniors aged 70 and over with a registered MyWay+ seniors concession.",
+   "value_text": "Free bus and light rail travel",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Register the seniors concession in your MyWay+ account and link a card; carry proof of concession.",
+   "phone": "13 17 10",
+   "source_url": "https://www.transport.act.gov.au/tickets-and-myway/concessions",
+   "notes": "Seniors concessions last 3 years from validation."
+  },
+  {
+   "id": "ACT-018",
+   "name": "Free off-peak public transport for concession holders",
+   "provider": "Transport Canberra",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "Free bus and light rail off-peak (9am to 4:30pm and after 6pm weekdays, all weekend) for pensioners, card holders and seniors 60-69.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD",
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "Health Care Card or Pension Card, ACT Services Access Card, DVA Gold Card, ACT Seniors Card (aged 60-69) or interstate seniors card holders.",
+   "value_text": "Free off-peak travel; concession fares at other times",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Register your concession in MyWay+ and link a contactless or MyWay+ card; carry proof.",
+   "phone": "13 17 10",
+   "source_url": "https://www.transport.act.gov.au/tickets-and-myway/concessions",
+   "notes": "Most non-seniors MyWay+ concessions expired 30 June 2026 and must be revalidated. CSHC not mentioned. Peak concession fare amounts not on page."
+  },
+  {
+   "id": "ACT-019",
+   "name": "Free public transport for DVA TPI/EDA Gold Card holders",
+   "provider": "Transport Canberra",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "Veterans with a TPI or EDA Gold Card, and a companion, travel free on buses and light rail.",
+   "cards": [
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "veteran"
+   ],
+   "eligibility_text": "DVA Gold Card holders with TPI or EDA, plus their companion.",
+   "value_text": "Free bus and light rail travel",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Register the concession in MyWay+.",
+   "phone": "13 17 10",
+   "source_url": "https://www.transport.act.gov.au/tickets-and-myway/concessions",
+   "notes": ""
+  },
+  {
+   "id": "ACT-020",
+   "name": "Flexible Bus Service",
+   "provider": "Transport Canberra",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "Free door-to-door style bus for people 70+ or with mobility difficulty, weekdays 9:30am to 1:30pm.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "aged_70"
+   ],
+   "eligibility_text": "Assessed case by case: aged 70 or older, Disability Pension Card holder with mobility difficulty, disability preventing use of regular buses, or Vision Impaired/TPI/Permanent Impairment travel pass holder.",
+   "value_text": "Free",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Call or email fbs@act.gov.au by 4:30pm the business day before travel.",
+   "phone": "(02) 6205 3555",
+   "source_url": "https://www.transport.act.gov.au/travel-options/bus/accessible-travel/flexible-bus-service",
+   "notes": "Age 70 is one of several alternative criteria (not all required)."
+  },
+  {
+   "id": "ACT-021",
+   "name": "Community bus for older Canberrans",
+   "provider": "ACT Government (regional community services)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "Weekday community bus for older people who find other transport hard to use.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "mobility_need"
+   ],
+   "eligibility_text": "ACT residents who find it hard to use other transport, including older people with mobility or confidence problems and people in retirement facilities.",
+   "value_text": "Cost set by each regional service",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Call your nearest regional community service to register and book.",
+   "phone": "02 6278 8124 (Belconnen); see page for other regions",
+   "source_url": "https://www.act.gov.au/community/older-canberrans/community-bus",
+   "notes": "Fees not stated on source."
+  },
+  {
+   "id": "ACT-022",
+   "name": "Registration concession (pensioners)",
+   "provider": "Access Canberra",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "No registration fee for one car if you hold a Pensioner Concession Card, Low Income Health Care Card or DVA Gold Card.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "car_owner"
+   ],
+   "eligibility_text": "Services Australia PCC or Low Income Health Care Card, DVA PCC or Gold Card, or ACT Services Access Card. One light vehicle or light trailer in the cardholder's name. DVA White/Orange cards not eligible.",
+   "value_text": "Zero registration fee (MAI insurance and other fees still payable)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Visit an Access Canberra Service Centre with ID, concession proof and the Concession validation consent form.",
+   "phone": "13 22 81",
+   "source_url": "https://www.accesscanberra.act.gov.au/driving-transport-and-parking/registration/concessions-for-registration-fees",
+   "notes": "Dollar value of the waived registration fee not shown on this page. Standard Health Care Card holders: only the Low Income HCC is listed."
+  },
+  {
+   "id": "ACT-023",
+   "name": "Registration discount for Seniors Card holders",
+   "provider": "Access Canberra",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "10% off car registration (28% for gas-powered vehicles) for ACT Seniors Card holders.",
+   "cards": [
+    "SENIORS_CARD"
+   ],
+   "requires": [
+    "car_owner"
+   ],
+   "eligibility_text": "ACT Seniors Card holder; one light vehicle in your name.",
+   "value_text": "10% off registration fee (28% for gas vehicles); full MAI and other fees",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Call Access Canberra or visit a Service Centre to link your Seniors Card to your vehicle.",
+   "phone": "13 22 81",
+   "source_url": "https://www.accesscanberra.act.gov.au/driving-transport-and-parking/registration/concessions-for-registration-fees",
+   "notes": ""
+  },
+  {
+   "id": "ACT-024",
+   "name": "Driver licence concession",
+   "provider": "Access Canberra",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "Free driver licence renewal for Pensioner Concession Card and DVA Gold Card holders.",
+   "cards": [
+    "PCC",
+    "DVA_GOLD"
+   ],
+   "requires": [],
+   "eligibility_text": "Centrelink or DVA Pension Concession Card, or DVA Gold Card. Applies to full, provisional and heavy vehicle licences.",
+   "value_text": "100% off licence issue or renewal fees",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Visit an Access Canberra Service Centre with your licence, card and Concession validation consent form (DVA: letter or UIN).",
+   "phone": "13 22 81",
+   "source_url": "https://www.accesscanberra.act.gov.au/driving-transport-and-parking/licences/concessions-for-driver-licence-fees",
+   "notes": "No age-based (e.g. 75+) licence discount listed. Licence fee amount not on page."
+  },
+  {
+   "id": "ACT-025",
+   "name": "Safe driver licence renewal discount",
+   "provider": "Access Canberra",
+   "level": "State",
+   "state": "ACT",
+   "category": "Transport",
+   "summary": "30% off your licence renewal if you have had no driving offences for 5 years.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [],
+   "eligibility_text": "ACT resident with a full licence held continuously for 5 years and no traffic or camera infringements or driving convictions in that time.",
+   "value_text": "30% off licence renewal",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Applied automatically at renewal.",
+   "phone": "13 22 81",
+   "source_url": "https://www.accesscanberra.act.gov.au/driving-transport-and-parking/licences/concessions-for-driver-licence-fees",
+   "notes": ""
+  },
+  {
+   "id": "ACT-026",
+   "name": "Free ambulance for pensioners and concession card holders",
+   "provider": "ACT Ambulance Service (ESA)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Health",
+   "summary": "Most aged pension and health care card holders pay nothing for ACT ambulance services.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD",
+    "DVA_WHITE"
+   ],
+   "requires": [],
+   "eligibility_text": "Most aged pension and health care concession card holders are entitled to free ambulance services within the ACT. DVA card holders: DVA endorses the account.",
+   "value_text": "Ambulance fees waived (emergency transport fee is $1,180 in 2024-25)",
+   "max_annual_value": null,
+   "value_period": "2024-25 fee schedule",
+   "how_to_claim": "Send a copy of the front and back of your card to SSAF@act.gov.au or the address on the account; DVA holders contact DVA.",
+   "phone": "02 6207 9990",
+   "source_url": "https://esa.act.gov.au/about-esa-emergency-services/ambulance/fees-and-charges",
+   "notes": "Source says 'most' card holders, without exact card list. DVA_WHITE only covers accepted conditions via DVA. Ambulance cover outside the ACT not included. ACT has no ambulance levy exemption as such."
+  },
+  {
+   "id": "ACT-027",
+   "name": "Public adult dental service",
+   "provider": "Canberra Health Services",
+   "level": "State",
+   "state": "ACT",
+   "category": "Health",
+   "summary": "Low-cost public dental care for adults with a concession card, including CSHC holders.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "CSHC",
+    "DVA_GOLD",
+    "DVA_WHITE"
+   ],
+   "requires": [],
+   "eligibility_text": "ACT resident and primary holder of a Pensioner Concession Card or Health Care Card, DVA Veteran Card (white or gold), ACT Services Access Card or Commonwealth Seniors Health Card.",
+   "value_text": "Co-payments: general treatment capped at $577.80 per treatment plan; emergency appointment $55.15",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Call Central Health Intake with your Medicare and concession card details.",
+   "phone": "(02) 5124 9977",
+   "source_url": "https://www.canberrahealthservices.act.gov.au/services-and-clinics/services/dental-adult",
+   "notes": "Value is a subsidised service, not a cash amount. Waiting lists apply for restorative and denture work."
+  },
+  {
+   "id": "ACT-028",
+   "name": "Interstate Patient Travel Assistance Scheme (IPTAS)",
+   "provider": "ACT Health / Canberra Health Services",
+   "level": "State",
+   "state": "ACT",
+   "category": "Health",
+   "summary": "Help with travel and accommodation costs if you must go interstate for specialist treatment not available in the ACT.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "medical_condition"
+   ],
+   "eligibility_text": "Permanent ACT or Jervis Bay resident with Medicare, referred by an ACT or Queanbeyan medical professional to the closest interstate service; treatment not available in the ACT.",
+   "value_text": "Subsidy towards car, public transport or flight costs and accommodation",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Lodge the IPTAS claim form within six months of travel.",
+   "phone": "(02) 5124 0000",
+   "source_url": "https://www.canberrahealthservices.act.gov.au/before,-during-and-after-your-care/staying-at-canberra-hospital/before-you-arrive/getting-here-and-getting-around/travelling-from-outside-canberra",
+   "notes": "Per-km and per-night rates are in the IPTAS Assessment Guidelines PDF, not opened. Phone is the hospital switchboard."
+  },
+  {
+   "id": "ACT-029",
+   "name": "Home Energy Support Program",
+   "provider": "ACT Government (Climate Choices)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "Rebates of up to $5,000 for concession card homeowners to install solar, efficient heating, hot water, stoves or insulation.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "ACT resident homeowner living in the home, with a PCC, DVA Gold Card or Health Care Card; attended a free Everyday Climate Choices workshop; unimproved land value up to $750,000 (houses) or $300,000 (apartments). Renters not eligible.",
+   "value_text": "50% of costs up to $2,500 for rooftop solar plus 50% up to $2,500 for other products (up to $5,000 total); optional zero-interest loan up to $10,000",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Attend a workshop, get quotes from accredited suppliers via Brighte, apply before installation, then claim after.",
+   "phone": "1300 141 777",
+   "source_url": "https://www.climatechoices.act.gov.au/policy-programs/home-energy-support-rebates-for-homeowners",
+   "notes": "One-off rebate, so max_annual_value null. No end date stated."
+  },
+  {
+   "id": "ACT-030",
+   "name": "Access to Electric Program",
+   "provider": "ACT Government (with Care Financial Counselling)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "Free replacement of gas appliances with efficient electric ones for homeowners struggling to pay energy bills.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "homeowner",
+    "hardship",
+    "gas_account"
+   ],
+   "eligibility_text": "Homeowners in financial hardship who regularly struggle to pay energy bills; eligibility assessed by Care Financial Counselling.",
+   "value_text": "Fully funded electric heating/cooling, hot water, cooktop and insulation upgrades",
+   "max_annual_value": null,
+   "value_period": "Status not stated (page modified Feb 2025)",
+   "how_to_claim": "Complete the online self-assessment or contact Care Financial Counselling.",
+   "phone": "02 6257 1788",
+   "source_url": "https://www.climatechoices.act.gov.au/policy-programs/access-to-electric-program",
+   "notes": "Confirm program still open."
+  },
+  {
+   "id": "ACT-031",
+   "name": "Home Energy Efficiency Program (free energy advice and draught-proofing)",
+   "provider": "St Vincent de Paul for ACT Government",
+   "level": "State",
+   "state": "ACT",
+   "category": "Bills",
+   "summary": "Free home visit, energy-saving advice and draught-proofing for low-income households.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card (Centrelink or DVA), Low Income Health Care Card, or within NRAS income limits.",
+   "value_text": "Free assessment, information kit and draught-proofing help",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Contact the St Vincent de Paul Energy Efficiency team.",
+   "phone": "6234 7408",
+   "source_url": "https://www.climatechoices.act.gov.au/policy-programs/home-energy-efficiency-program",
+   "notes": ""
+  },
+  {
+   "id": "ACT-032",
+   "name": "Sustainable Household Scheme loans",
+   "provider": "ACT Government (via Brighte)",
+   "level": "State",
+   "state": "ACT",
+   "category": "Home and Rates",
+   "summary": "Low-interest loans of $2,000 to $20,000 for solar, batteries, efficient appliances or an electric car.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "ACT resident homeowner (or licence holder for EV loans); attend a free workshop; meet Brighte lending criteria.",
+   "value_text": "Loan $2,000 to $20,000 at 3%, up to 10 years",
+   "max_annual_value": null,
+   "value_period": "From 1 July 2026",
+   "how_to_claim": "Apply through Brighte after attending a workshop.",
+   "phone": "1300 141 777",
+   "source_url": "https://www.climatechoices.act.gov.au/policy-programs/sustainable-household-scheme",
+   "notes": "A loan, not a grant. Concession holders should use the Home Energy Support Program for zero-interest loans."
+  },
+  {
+   "id": "ACT-033",
+   "name": "Free first green garden bin for concession holders",
+   "provider": "City Services ACT",
+   "level": "State",
+   "state": "ACT",
+   "category": "Discounts",
+   "summary": "Pensioners and Seniors Card holders pay no registration fee for a green garden waste bin.",
+   "cards": [
+    "PCC",
+    "DVA_GOLD",
+    "SENIORS_CARD"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "ACTION Gold Card, DVA Gold Card, Centrelink Pensioner Concession Card or ACT Seniors Card holder.",
+   "value_text": "One-off bin registration fee waived; annual service fee applies for second bins",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Order a green bin online through City Services.",
+   "phone": "13 22 81",
+   "source_url": "https://www.cityservices.act.gov.au/recycling-and-waste/types-of-waste/garden-waste",
+   "notes": "Fee amounts not on page. Homeowner tag is an assumption; renters may also order. Phone is Access Canberra (not on page)."
+  },
+  {
+   "id": "ACT-034",
+   "name": "Free bulky waste collection",
+   "provider": "City Services ACT",
+   "level": "State",
+   "state": "ACT",
+   "category": "Discounts",
+   "summary": "One free bulky waste pick-up (up to 2 cubic metres) each financial year for Canberra households.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [],
+   "eligibility_text": "Canberra households; one collection per financial year, up to 2 cubic metres.",
+   "value_text": "One free collection a year",
+   "max_annual_value": null,
+   "value_period": "Each financial year",
+   "how_to_claim": "Book online up to 6 months ahead (closes 14 days before collection).",
+   "phone": "02 6205 9521",
+   "source_url": "https://www.cityservices.act.gov.au/recycling-and-waste/bulky-waste-collection",
+   "notes": "Not concession-specific."
+  },
+  {
+   "id": "ACT-035",
+   "name": "Recreational fishing - no licence needed",
+   "provider": "ACT Government",
+   "level": "State",
+   "state": "ACT",
+   "category": "Discounts",
+   "summary": "You do not need a licence to fish recreationally in ACT public waters.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [],
+   "eligibility_text": "Anyone fishing in ACT public waters (not Googong Reservoir, which follows NSW rules).",
+   "value_text": "No licence fee",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "No action needed; follow ACT fishing rules.",
+   "phone": "13 22 81",
+   "source_url": "https://www.act.gov.au/environment/animals-and-plants/animals/wildlife-management/fish/recreational-fishing-in-the-act",
+   "notes": "Included so the site can tell ACT users there is no fishing licence to concession."
+  }
+ ]
+}

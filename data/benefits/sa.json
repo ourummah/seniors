@@ -1,0 +1,711 @@
+{
+  "jurisdiction": "SA",
+  "gathered_by": "Claude",
+  "started_at": "2026-10-13T03:15:27Z",
+  "finished_at": "2026-10-13T03:20:32Z",
+  "master_sources": [
+    "https://www.sa.gov.au/topics/care-and-support/concessions",
+    "https://www.seniorscard.sa.gov.au/"
+  ],
+  "gaps": [
+    "SA Dental adult co-payment amounts not found",
+    "Emergency Electricity Payment Scheme amount not published",
+    "Energy, medical heating/cooling, residential park and ESL amounts: financial year not named on pages",
+    "Ambulance fee concession for pensioners not quantified",
+    "Council rate remissions vary by council (no state-wide pensioner rates concession; COLC replaced it)",
+    "Fishing: SA is understood to have no general recreational fishing licence (not checked on a source), so no record",
+    "Regional bus concession fares not found",
+    "PATS about page and homepage disagree on rates (used homepage July 2026 update)"
+  ],
+  "benefits": [
+    {
+      "id": "SA-001",
+      "name": "Cost of Living Concession",
+      "provider": "SA Government (ConcessionsSA)",
+      "level": "State",
+      "state": "SA",
+      "category": "Payments",
+      "summary": "A yearly cash payment into your bank account to help with living costs like council rates and bills.",
+      "cards": [
+        "PCC",
+        "CSHC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "Live at the property (homeowner, or tenant with a written rental agreement) and hold a Pensioner Concession Card, Commonwealth Seniors Health Card, Low Income Health Care Card, eligible Veteran Gold Card, or get an eligible Centrelink payment, or meet low income limits (single $24,926.20 a year; couple $46,295.60). Assessed on 1 July.",
+      "value_text": "$270.60 a year, paid by EFT between August and December",
+      "max_annual_value": 270.6,
+      "value_period": "2026-27",
+      "how_to_claim": "Apply online with the household concessions form at forms.sa.gov.au (or paper form) by 31 December; no need to reapply if nothing has changed.",
+      "phone": "1800 307 758",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/cost-of-living-concessions",
+      "notes": "Veteran Gold Card only if TPI, EDA, War Widow or 80+ impairment points (MRCA). Low income provision also allows people with no card. Payment shows as 'SA GOV COLC'."
+    },
+    {
+      "id": "SA-002",
+      "name": "Energy Bill Concession",
+      "provider": "SA Government (via energy retailer)",
+      "level": "State",
+      "state": "SA",
+      "category": "Bills",
+      "summary": "Money off your electricity bill each year if you hold a pension or concession card.",
+      "cards": [
+        "PCC",
+        "CSHC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "Live at the property, energy account in your name and listed first on the bill, and hold a Pensioner Concession Card, Commonwealth Seniors Health Card, Low Income Health Care Card, eligible Veteran Gold Card or an eligible Centrelink payment.",
+      "value_text": "Up to $291.27 a year, credited to your bill at a daily rate",
+      "max_annual_value": 291.27,
+      "value_period": "Current figure on page (page updated 1 July 2026, indexed yearly; likely 2026-27)",
+      "how_to_claim": "Apply online with the household concessions form or a paper form; you need your CRN or DVA number and latest electricity bill.",
+      "phone": "1800 307 758",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/energy-bill-concessions",
+      "notes": "Veteran Gold Card only if TPI, EDA, War Widow or 80+ impairment points (MRCA). Page does not name the financial year. Park residents and people without a retailer bill get quarterly EFT. Also covers LPG/bottled gas users without a retailer bill."
+    },
+    {
+      "id": "SA-003",
+      "name": "SA Concessions Energy Discount Offer (Origin)",
+      "provider": "Origin Energy (arranged with SA Government)",
+      "level": "Private",
+      "state": "SA",
+      "category": "Bills",
+      "summary": "If you get the SA energy concession you can switch to an Origin plan with 20% off electricity and 15% off gas.",
+      "cards": [
+        "PCC",
+        "CSHC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "Only for customers already receiving the SA Government energy concession.",
+      "value_text": "20% off Origin standard electricity usage and supply, 15% off natural gas, 40% off a 45kg LPG cylinder for 12 months; fee waivers",
+      "max_annual_value": null,
+      "value_period": "Offer runs until at least 2029",
+      "how_to_claim": "Phone Origin on 1300 791 465 to sign up; if switching retailer, then call ConcessionsSA so your energy concession follows you.",
+      "phone": "1300 791 465",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/energy-bill-concessions/energy-discount-offer",
+      "notes": "Dollar value depends on usage. Savings are provided by Origin, not government. DHS news (2026) confirms it runs until at least 2029."
+    },
+    {
+      "id": "SA-004",
+      "name": "Medical Heating and Cooling Concession",
+      "provider": "SA Government",
+      "level": "State",
+      "state": "SA",
+      "category": "Health",
+      "summary": "Extra yearly help with power bills if a doctor says your medical condition needs heating or cooling at home.",
+      "cards": [
+        "PCC",
+        "CSHC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "medical_condition",
+        "electricity_account"
+      ],
+      "eligibility_text": "Clinically verified condition that hot or cold weather severely worsens (certified by GP or specialist), use an air conditioner at home, pay all or part of the energy bill, and hold an eligible concession card or Centrelink payment.",
+      "value_text": "$291.27 a year, on top of the energy concession",
+      "max_annual_value": 291.27,
+      "value_period": "Current figure on page (page updated 1 July 2026, indexed yearly; likely 2026-27)",
+      "how_to_claim": "Complete the form with your doctor and email it to MHC@sa.gov.au.",
+      "phone": "1300 735 350",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/medical-heating-and-cooling-concession",
+      "notes": "Page says 'eligible concession card' without listing them; assumed same cards as the energy concession. Check."
+    },
+    {
+      "id": "SA-005",
+      "name": "Home Dialysis Electricity Concession",
+      "provider": "SA Health",
+      "level": "State",
+      "state": "SA",
+      "category": "Health",
+      "summary": "Yearly payment to help with power costs of running a dialysis machine at home.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "life_support"
+      ],
+      "eligibility_text": "Anyone undergoing dialysis treatment at home, approved by an SA Health practitioner.",
+      "value_text": "$274.85 a year",
+      "max_annual_value": 274.85,
+      "value_period": "Current (year not stated on page)",
+      "how_to_claim": "Fill in the Home Dialysis Concession Claim Form with your SA Health practitioner and return it to your renal unit.",
+      "phone": "08 8226 6000",
+      "source_url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/services/costs+and+concessions/home+dialysis+electricity+concession",
+      "notes": "No card needed per page. Phone is SA Health general line; contact your renal unit."
+    },
+    {
+      "id": "SA-006",
+      "name": "Water Rates Concession",
+      "provider": "SA Government (via SA Water or your water provider)",
+      "level": "State",
+      "state": "SA",
+      "category": "Bills",
+      "summary": "Up to 30% off your yearly water bill for pensioners and low-income homeowners and tenants.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "water_account"
+      ],
+      "eligibility_text": "Own or rent your home, pay for water supply or all usage, and hold a Pensioner Concession Card, Low Income Health Care Card, eligible Veteran Gold Card, eligible Centrelink payment, or meet low income limits.",
+      "value_text": "Up to 30% of your water bill: homeowners and tenants paying all water $304.12 to $484.80 a year; tenants paying usage only $197.20 to $377.90",
+      "max_annual_value": 484.8,
+      "value_period": "2026-27",
+      "how_to_claim": "Apply online with the household concessions form (or paper form). SA Water customers get a bill credit; others get EFT.",
+      "phone": "1800 307 758",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/water-and-sewerage-rate-concession",
+      "notes": "Commonwealth Seniors Health Card is NOT listed for this concession. Veteran Gold Card only if TPI, EDA, War Widow or 80+ impairment points (MRCA)."
+    },
+    {
+      "id": "SA-007",
+      "name": "Sewerage Rates Concession",
+      "provider": "SA Government (via SA Water or council CWMS)",
+      "level": "State",
+      "state": "SA",
+      "category": "Home and Rates",
+      "summary": "Money off sewerage rates on the home you own and live in.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Homeowner-occupier holding a Pensioner Concession Card, Low Income Health Care Card, eligible Veteran Gold Card, eligible Centrelink payment, or meeting low income limits. Tenants are not eligible.",
+      "value_text": "Up to $228.12 a year off sewerage rates",
+      "max_annual_value": 228.12,
+      "value_period": "2026-27",
+      "how_to_claim": "Apply with the household concessions form; SA Water customers get a credit, council CWMS customers get EFT.",
+      "phone": "1800 307 758",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/water-and-sewerage-rate-concession",
+      "notes": "CSHC not listed. Veteran Gold Card only if TPI, EDA, War Widow or 80+ impairment points (MRCA)."
+    },
+    {
+      "id": "SA-008",
+      "name": "Water Concession Top-up Payment",
+      "provider": "SA Government",
+      "level": "State",
+      "state": "SA",
+      "category": "Bills",
+      "summary": "An extra payment if your yearly water bills are very high.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "water_account"
+      ],
+      "eligibility_text": "Already eligible for the water concession and annual water bills above the threshold: 2026-27 thresholds $1,013.75 (homeowners and tenants paying usage and supply) or $657.35 (tenants paying usage only).",
+      "value_text": "Top-up amount depends on bills over the threshold",
+      "max_annual_value": null,
+      "value_period": "2026-27 (applications open 1 July 2027)",
+      "how_to_claim": "SA Water customers get it automatically; others send all water bills for the financial year to ConcessionsSA.",
+      "phone": "1800 307 758",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/water-and-sewerage-rate-concession",
+      "notes": "2025-26 thresholds were $910.00 and $590.40. Top-up amount not stated."
+    },
+    {
+      "id": "SA-009",
+      "name": "Emergency Services Levy Remission",
+      "provider": "SA Government (RevenueSA / ConcessionsSA)",
+      "level": "State",
+      "state": "SA",
+      "category": "Home and Rates",
+      "summary": "Money off the Emergency Services Levy on the home you own and live in.",
+      "cards": [
+        "PCC",
+        "CSHC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Registered owner or life estate holder living at the property on 1 July, holding a Pensioner Concession Card, Commonwealth Seniors Health Card, Low Income Health Care Card, eligible Veteran Gold Card or eligible Centrelink payment.",
+      "value_text": "Up to $46 a year off your ESL bill",
+      "max_annual_value": 46,
+      "value_period": "Current (year not stated on page)",
+      "how_to_claim": "Check your ESL notice or SA Water bill first (pensioners may already get it); otherwise apply with the household concessions form.",
+      "phone": "1800 307 758",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/emergency-services-levy-remission",
+      "notes": "Not available to residential park residents. Veteran Gold Card only if TPI, EDA, War Widow or 80+ impairment points (MRCA)."
+    },
+    {
+      "id": "SA-010",
+      "name": "Residential Park Resident Concession",
+      "provider": "SA Government (ConcessionsSA)",
+      "level": "State",
+      "state": "SA",
+      "category": "Bills",
+      "summary": "A combined energy, water and sewerage payment for people living in a caravan or residential park.",
+      "cards": [
+        "PCC",
+        "CSHC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "Live in a residential or caravan park as your main home and hold an eligible concession card or Centrelink payment.",
+      "value_text": "Up to $823.51 a year (own dwelling, pay water, sewerage and energy) or up to $488.47 (tenants paying water and energy), paid quarterly",
+      "max_annual_value": 823.51,
+      "value_period": "Current figure on page (page updated 1 July 2026, indexed yearly; likely 2026-27)",
+      "how_to_claim": "Email the Application for Household Concessions form with documents to concessions@sa.gov.au.",
+      "phone": "1800 307 758",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/household-concessions/residential-park-resident-concessions",
+      "notes": "Page does not list eligible cards; assumed same as energy/COLC (CSHC may not count for the water part). Can also get Cost of Living Concession, not ESL remission."
+    },
+    {
+      "id": "SA-011",
+      "name": "Emergency Electricity Payment Scheme",
+      "provider": "SA Government",
+      "level": "State",
+      "state": "SA",
+      "category": "Payments",
+      "summary": "One-off help to pay an electricity debt if you are at risk of being cut off.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "electricity_account",
+        "hardship"
+      ],
+      "eligibility_text": "You have an electricity debt and have been, or are at risk of being, disconnected.",
+      "value_text": "Amount not stated",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Contact a financial counsellor (Financial Wellbeing Program partner), who assesses you and lodges the application.",
+      "phone": "13 23 24",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/financial-aid/emergency-financial-aid",
+      "notes": "Amount not on the page. Phone is Service SA general line, not EEPS-specific."
+    },
+    {
+      "id": "SA-012",
+      "name": "Seniors Card SA",
+      "provider": "SA Government (Office for Ageing Well)",
+      "level": "State",
+      "state": "SA",
+      "category": "Discounts",
+      "summary": "Free card for South Australians aged 60+ giving free public transport and business discounts.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_60"
+      ],
+      "eligibility_text": "Aged 60 or over (or 50+ and Aboriginal or Torres Strait Islander), Australian citizen or permanent resident living in SA. No limit on work hours.",
+      "value_text": "Free card; free Adelaide Metro travel and discounts at participating businesses",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Apply online at seniorscard.sa.gov.au (need driver's licence, Medicare or pension card number) or with a paper form from a public library.",
+      "phone": "1800 819 961",
+      "source_url": "https://www.seniorscard.sa.gov.au/membership/apply-for-a-seniors-card",
+      "notes": "Replacement card $15 (free for PCC holders). Interstate Seniors Card holders get a free 14-day off-peak Adelaide Metro pass. Discounts accepted by many interstate and NZ partners."
+    },
+    {
+      "id": "SA-013",
+      "name": "Free public transport for Seniors Card holders",
+      "provider": "Adelaide Metro (SA Government)",
+      "level": "State",
+      "state": "SA",
+      "category": "Transport",
+      "summary": "Seniors Card holders travel free on Adelaide buses, trains and trams at any time.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Hold a South Australian Seniors Card (validate it when boarding).",
+      "value_text": "Free travel at all times on Adelaide Metro",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Use your Seniors Card as your ticket and validate it each time you board.",
+      "phone": "1300 311 108",
+      "source_url": "https://adelaidemetro.com.au/tickets-and-fares/seniors-card",
+      "notes": "Not free on regional private bus services, but concession fares apply there."
+    },
+    {
+      "id": "SA-014",
+      "name": "Public transport concession fares",
+      "provider": "Adelaide Metro (SA Government)",
+      "level": "State",
+      "state": "SA",
+      "category": "Transport",
+      "summary": "Half-price fares on Adelaide buses, trains and trams for concession card holders.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "Hold an eligible government concession card such as a Pensioner Concession Card, Health Care Card or DVA Veteran Gold Card.",
+      "value_text": "Concession metroCARD $2.25 peak / $1.30 off-peak; 28-day pass $59.60",
+      "max_annual_value": null,
+      "value_period": "Current fares (2026)",
+      "how_to_claim": "Buy a concession metroCARD and carry proof of eligibility.",
+      "phone": "1300 311 108",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/transport/transport-concessions",
+      "notes": "Fares from adelaidemetro.com.au fares page. CSHC not listed as eligible; check. Seniors Card holders travel free instead."
+    },
+    {
+      "id": "SA-015",
+      "name": "Pensioner registration and licence concession",
+      "provider": "Department for Infrastructure and Transport (Service SA)",
+      "level": "State",
+      "state": "SA",
+      "category": "Transport",
+      "summary": "Half off car registration and your driver's licence fee if you have a pension card.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "car_owner"
+      ],
+      "eligibility_text": "Hold an Australian Government pension card (Pensioner Concession Card). A Health Care Card or Commonwealth Seniors Health Card alone does not qualify.",
+      "value_text": "50% off the registration component for one vehicle and one trailer/caravan, 50% off licence fee, and no stamp duty on CTP insurance",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Phone Service SA on 13 10 84 (consent to Centrelink check) or apply in person at a Service SA centre.",
+      "phone": "13 10 84",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/transport/registration-and-licence-concessions",
+      "notes": "DVA pension cards assumed to count as Australian Government pension cards; check. Value depends on vehicle."
+    },
+    {
+      "id": "SA-016",
+      "name": "Incapacitated ex-service person's registration concession",
+      "provider": "Department for Infrastructure and Transport (Service SA)",
+      "level": "State",
+      "state": "SA",
+      "category": "Transport",
+      "summary": "Two-thirds off rego and half off licence fee for totally incapacitated veterans.",
+      "cards": [
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "veteran",
+        "car_owner"
+      ],
+      "eligibility_text": "Former ADF member totally incapacitated by service-related injury, e.g. Gold Card endorsed TPI or EDA, or a qualifying DVA letter.",
+      "value_text": "66.6% off registration for one vehicle, 50% off licence fee, exempt from CTP stamp duty and vehicle stamp duty",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Apply at Service SA with the form and DVA proof.",
+      "phone": "13 10 84",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/transport/registration-and-licence-concessions",
+      "notes": "Not for trailers, caravans or heavy vehicles."
+    },
+    {
+      "id": "SA-017",
+      "name": "Incapacitated person's registration concession",
+      "provider": "Department for Infrastructure and Transport (Service SA)",
+      "level": "State",
+      "state": "SA",
+      "category": "Transport",
+      "summary": "Half off rego for people who have lost the use of their legs and can't use public transport.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "mobility_need",
+        "car_owner"
+      ],
+      "eligibility_text": "Lost the use of one or both legs and cannot use public transport as a result.",
+      "value_text": "50% off registration for one vehicle, exempt from CTP stamp duty and vehicle stamp duty",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Apply in person at Service SA with the form and a medical certificate.",
+      "phone": "13 10 84",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/transport/registration-and-licence-concessions",
+      "notes": ""
+    },
+    {
+      "id": "SA-018",
+      "name": "SA Transport Subsidy Scheme (taxi fares)",
+      "provider": "Department for Infrastructure and Transport",
+      "level": "State",
+      "state": "SA",
+      "category": "Transport",
+      "summary": "Half or more off taxi fares for people with a severe permanent disability.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "mobility_need"
+      ],
+      "eligibility_text": "Permanent and severe disability that limits your ability to use public transport.",
+      "value_text": "50% of fare up to $20 a trip; 75% up to $30 a trip if permanently wheelchair dependent",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Post the application (parts completed by GP, specialist or mobility instructor) with a certified photo to SATSS, GPO Box 2830, Adelaide SA 5001.",
+      "phone": "1300 360 840",
+      "source_url": "https://www.sa.gov.au/topics/driving-and-transport/disability/taxi-fare-subsidy-scheme",
+      "notes": ""
+    },
+    {
+      "id": "SA-019",
+      "name": "Disability parking permit",
+      "provider": "Department for Infrastructure and Transport (Service SA)",
+      "level": "State",
+      "state": "SA",
+      "category": "Transport",
+      "summary": "Permit to park in disability spaces if you have trouble walking.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "mobility_need"
+      ],
+      "eligibility_text": "Use a mobility aid or have a condition that severely limits walking, or a significant cognitive/neurological condition needing support to move safely. No age limit.",
+      "value_text": "Lets you use disability parking; costs $15 temporary or $26 permanent (up to 5 years)",
+      "max_annual_value": null,
+      "value_period": "Current fees",
+      "how_to_claim": "Complete the form with your health practitioner and lodge with fee at Service SA or by post.",
+      "phone": "13 10 84",
+      "source_url": "https://sa.gov.au/topics/driving-and-transport/disability/disability-parking-permit/apply",
+      "notes": "Not a cash benefit; there is a fee."
+    },
+    {
+      "id": "SA-020",
+      "name": "Companion Card",
+      "provider": "SA Department of Human Services",
+      "level": "State",
+      "state": "SA",
+      "category": "Discounts",
+      "summary": "Your carer or companion gets in free at participating venues and on transport.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "mobility_need"
+      ],
+      "eligibility_text": "Significant and permanent disability needing a companion's support to take part in community activities.",
+      "value_text": "Free entry or ticket for your companion at participating venues",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Apply via the sa.gov.au Companion Card page.",
+      "phone": "1800 667 110",
+      "source_url": "https://dhs.sa.gov.au/how-we-help/cost-of-living/concessions/companion-card",
+      "notes": "Full eligibility criteria not on page opened; 'requires' tag is an approximation."
+    },
+    {
+      "id": "SA-021",
+      "name": "Patient Assistance Transport Scheme (PATS)",
+      "provider": "SA Government (SA Health)",
+      "level": "State",
+      "state": "SA",
+      "category": "Health",
+      "summary": "Help with fuel and accommodation if you travel over 100 km to see a specialist.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "rural"
+      ],
+      "eligibility_text": "Travel more than 100 km each way to the nearest approved specialist service (from 1 July 2026, renal or oncology patients attending 3 times a week and travelling 50-100 km may qualify).",
+      "value_text": "34.4 cents per km for your car; accommodation $110 a night (patient) or $154 (patient and escort)",
+      "max_annual_value": null,
+      "value_period": "From 1 July 2026",
+      "how_to_claim": "Claim online through the PATS portal or at a regional PATS office.",
+      "phone": "1300 341 684",
+      "source_url": "https://www.pats.sa.gov.au/",
+      "notes": "About page (pats.sa.gov.au/about-2/) still shows older rates (33.6c/km, $44/night); homepage 30 June 2026 update used. Concession card holders can ask for an advance payment."
+    },
+    {
+      "id": "SA-022",
+      "name": "SA Dental Service (adult public dental)",
+      "provider": "SA Dental (SA Health)",
+      "level": "State",
+      "state": "SA",
+      "category": "Health",
+      "summary": "Low-cost public dental care including check-ups, fillings and dentures for concession card holders.",
+      "cards": [
+        "PCC",
+        "HCC"
+      ],
+      "requires": [],
+      "eligibility_text": "Adults living in SA with a current Health Care Card or Pensioner Concession Card. DVA cards and the Commonwealth Seniors Health Card are not accepted.",
+      "value_text": "Reduced-fee general and denture care; you pay a co-payment",
+      "max_annual_value": null,
+      "value_period": "Fees rise each 1 July",
+      "how_to_claim": "Phone your closest SA Dental clinic to book or join the waiting list.",
+      "phone": "1800 022 222",
+      "source_url": "https://www.dental.sa.gov.au/adults/who-can-attend",
+      "notes": "Co-payment amounts not found on pages opened. Waiting lists apply. Phone given is healthdirect after hours; use Find a Clinic for clinic numbers."
+    },
+    {
+      "id": "SA-023",
+      "name": "GlassesSA (spectacles scheme)",
+      "provider": "SA Government",
+      "level": "State",
+      "state": "SA",
+      "category": "Health",
+      "summary": "Low-cost glasses every three years for pension and health care card holders.",
+      "cards": [
+        "PCC",
+        "HCC"
+      ],
+      "requires": [],
+      "eligibility_text": "Live in SA and hold a Pensioner Concession Card, Health Care Card or Low Income Health Care Card. Not for DVA Gold Card holders or people eligible for DVA optical services.",
+      "value_text": "One pair every 3 years; you pay at most $25 single vision, $50 bifocal, $100 multifocal. Free contact lenses for certain eye conditions",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Show your card to a GlassesSA-authorised optometrist and choose from basic frames.",
+      "phone": "1300 762 577",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/glassessa",
+      "notes": ""
+    },
+    {
+      "id": "SA-024",
+      "name": "Personal Alert AssistanceSA rebate",
+      "provider": "SA Government",
+      "level": "State",
+      "state": "SA",
+      "category": "Health",
+      "summary": "Help paying for a personal alarm and monitoring for older pensioners at risk.",
+      "cards": [
+        "PCC"
+      ],
+      "requires": [
+        "aged_70"
+      ],
+      "eligibility_text": "Aged 75+ (65+ if Aboriginal), Pensioner Concession Card, SA permanent resident, meet clinical/functional/social criteria and have had a My Aged Care assessment with an eligible outcome.",
+      "value_text": "Rebate towards an approved alarm system and monitoring (amount not stated)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Get a My Aged Care assessment, have a health professional sign the form, email it to paasa@sa.gov.au.",
+      "phone": "1300 700 169",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/health-concessions/personal-alert-systems",
+      "notes": "Age is 75+; aged_70 tag is the closest available. Not for DVA Gold Card holders or Home Care Package levels 2-4."
+    },
+    {
+      "id": "SA-025",
+      "name": "SA Ambulance Cover pensioner discount",
+      "provider": "SA Ambulance Service",
+      "level": "State",
+      "state": "SA",
+      "category": "Health",
+      "summary": "Ambulance cover is not free for pensioners in SA, but pension card holders pay a reduced price.",
+      "cards": [
+        "PCC"
+      ],
+      "requires": [],
+      "eligibility_text": "Eligible pensioner concession card holders.",
+      "value_text": "Pensioner single cover $63.50 a year (family $126) vs standard $106 single",
+      "max_annual_value": null,
+      "value_period": "2026",
+      "how_to_claim": "Join through SA Ambulance Service.",
+      "phone": "1300 136 272",
+      "source_url": "https://saambulance.sa.gov.au/membership/ambulance-cover/",
+      "notes": "Emergency call-out without cover is $1,247 plus $7.15/km (fees page). SA Pension Concession Card holders 'may be eligible for concession of the gazetted fees'. Saving vs standard is $42.50 a year single."
+    },
+    {
+      "id": "SA-026",
+      "name": "Seniors Rate Postponement Scheme",
+      "provider": "Local councils (Local Government Act 1999)",
+      "level": "Council",
+      "state": "SA",
+      "category": "Home and Rates",
+      "summary": "Seniors Card holders can delay paying part of their council rates until the home is sold.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "State Seniors Card holder, rates on your principal place of residence.",
+      "value_text": "Postpone a portion of council rates (amounts and interest set by law/council)",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Apply to your local council's rates officer.",
+      "phone": null,
+      "source_url": "https://www.dhud.sa.gov.au/our-department/local-govt/office-of-local-government/council-rates",
+      "notes": "Postponed amount is a debt on the property. Minimum payable and interest not on source. Councils may also give rate remissions to concession or Seniors Card holders, and remit/postpone for hardship (s182)."
+    },
+    {
+      "id": "SA-027",
+      "name": "Seniors Downsizing Stamp Duty Relief",
+      "provider": "RevenueSA",
+      "level": "State",
+      "state": "SA",
+      "category": "Home and Rates",
+      "summary": "No stamp duty on a new, smaller home if you are 60+ and selling your current home.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_60",
+        "homeowner"
+      ],
+      "eligibility_text": "At least one buyer aged 60+, selling your SA principal residence within 12 months, buying a new home, off-the-plan apartment or vacant land with smaller land size, and living there 6 months. Contracts from 25 March 2026.",
+      "value_text": "Full stamp duty relief up to $2 million (new home/apartment) or $1.2 million (vacant land); partial relief just above",
+      "max_annual_value": null,
+      "value_period": "Contracts on or after 25 March 2026",
+      "how_to_claim": "Your conveyancer usually lodges it, or apply directly to RevenueSA.",
+      "phone": "08 8372 7534",
+      "source_url": "https://revenuesa.sa.gov.au/seniors-downsizing-stamp-duty-relief",
+      "notes": "One-off; value depends on property price."
+    },
+    {
+      "id": "SA-028",
+      "name": "Private Rental Assistance",
+      "provider": "SA Housing Trust",
+      "level": "State",
+      "state": "SA",
+      "category": "Home and Rates",
+      "summary": "Help with bond and rent in advance for low-income renters moving into private rental.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "renter",
+        "low_income"
+      ],
+      "eligibility_text": "Meet income and asset limits, rent no more than 50% of income, no residential property, SA property.",
+      "value_text": "Bond guarantee and rent-in-advance/arrears grants (amounts not stated)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Landlord/agent completes declaration; email the reference number to housingcustomers@sa.gov.au, or apply at an SA Housing Trust office.",
+      "phone": "131 299",
+      "source_url": "https://housing.sa.gov.au/housing-supports/private-rental-assistance",
+      "notes": ""
+    },
+    {
+      "id": "SA-029",
+      "name": "Funeral AssistanceSA",
+      "provider": "SA Government",
+      "level": "State",
+      "state": "SA",
+      "category": "Payments",
+      "summary": "Basic funeral or up to $625 grant when a low-income person dies and the family can't pay.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "low_income",
+        "hardship"
+      ],
+      "eligibility_text": "Deceased was an SA resident on a pension/benefit or low income with estate under $4,000, and immediate relatives also can't pay.",
+      "value_text": "Basic contract funeral, or an after-the-event grant up to $625 paid to the funeral director",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Notify Centrelink of the death, then complete the online Funeral AssistanceSA application.",
+      "phone": "1300 762 577",
+      "source_url": "https://www.sa.gov.au/topics/care-and-support/concessions/funeral-assistance-program",
+      "notes": "One-off."
+    }
+  ]
+}

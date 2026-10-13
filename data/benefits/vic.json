@@ -1,0 +1,884 @@
+{
+ "jurisdiction": "VIC",
+ "gathered_by": "Claude",
+ "started_at": "2026-10-13T02:42:46Z",
+ "finished_at": "2026-10-13T02:46:53Z",
+ "master_sources": [
+  "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf"
+ ],
+ "gaps": [
+  "SRO stamp duty thresholds not loaded",
+  "2026-27 amounts not yet published"
+ ],
+ "benefits": [
+  {
+   "id": "VIC-001",
+   "name": "Annual Electricity Concession",
+   "provider": "Vic Government (via electricity retailer)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Bills",
+   "summary": "17.5% off usage and service charges; first $171.60 of annual bill excluded.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "electricity_account"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Electricity account holder",
+   "value_text": "17.5% off usage and service charges; first $171.60 of annual bill excluded",
+   "max_annual_value": null,
+   "value_period": "2024-25 threshold year",
+   "how_to_claim": "Phone your electricity retailer with your card details",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/annual-electricity-concession",
+   "notes": "Value depends on bill size"
+  },
+  {
+   "id": "VIC-002",
+   "name": "Excess Electricity Concession",
+   "provider": "Vic Government (via retailer)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Bills",
+   "summary": "17.5% off usage and service charges above the threshold.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "electricity_account"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Annual electricity costs above $3,895.13",
+   "value_text": "17.5% off usage and service charges above the threshold",
+   "max_annual_value": null,
+   "value_period": "Year from 1 Dec 2024",
+   "how_to_claim": "Sign and post the form your retailer sends",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/excess-electricity-concession",
+   "notes": "DFFH page also shows an older $4,217.85 threshold; check which is current"
+  },
+  {
+   "id": "VIC-003",
+   "name": "Life Support Concession (electricity)",
+   "provider": "Vic Government (via retailer)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Health",
+   "summary": "Cost of 1,880 kWh a year at retailer's domestic tariff.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "life_support"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Household member uses a dialysis machine or oxygen concentrator",
+   "value_text": "Cost of 1,880 kWh a year at retailer's domestic tariff",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Get the Medical Confirmation Form from your retailer",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-004",
+   "name": "Medical Cooling Concession",
+   "provider": "Vic Government (via retailer)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Health",
+   "summary": "Extra 17.5% off electricity 1 Nov to 30 Apr.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "medical_condition",
+    "electricity_account"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Household member has MS, lymphoedema, Parkinson's, fibromyalgia, post-polio or MND (others need approval)",
+   "value_text": "Extra 17.5% off electricity 1 Nov to 30 Apr",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Doctor signs form; send to retailer",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/medical-cooling-concession",
+   "notes": ""
+  },
+  {
+   "id": "VIC-005",
+   "name": "Winter Gas Concession",
+   "provider": "Vic Government (via gas retailer)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Bills",
+   "summary": "17.5% off gas usage and service charges 1 May to 31 Oct; first $62.40 excluded.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "gas_account"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Gas account holder",
+   "value_text": "17.5% off gas usage and service charges 1 May to 31 Oct; first $62.40 excluded",
+   "max_annual_value": null,
+   "value_period": "Winter 2025",
+   "how_to_claim": "Phone your gas retailer with your card details",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": "Value depends on bill size"
+  },
+  {
+   "id": "VIC-006",
+   "name": "Excess Gas Concession",
+   "provider": "Vic Government (via gas retailer)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Bills",
+   "summary": "17.5% off gas costs above the threshold.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "gas_account"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Winter gas costs above $2,499.14",
+   "value_text": "17.5% off gas costs above the threshold",
+   "max_annual_value": null,
+   "value_period": "1 May to 31 Oct 2025",
+   "how_to_claim": "Sign and post the form your retailer sends",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-007",
+   "name": "Non-Mains Energy Concession",
+   "provider": "Vic Government (DFFH)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Bills",
+   "summary": "$57 to $650 per energy type, by amount spent.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Uses LPG, firewood, heating oil, embedded-network electricity or generator fuel",
+   "value_text": "$57 to $650 per energy type, by amount spent",
+   "max_annual_value": 650,
+   "value_period": "2025 calendar year",
+   "how_to_claim": "Apply on the Victorian concessions and allowances portal with receipts; closes 31 Dec following year",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/non-mains-energy-concession",
+   "notes": ""
+  },
+  {
+   "id": "VIC-008",
+   "name": "Non-Mains Life Support Concession",
+   "provider": "Vic Government (DFFH)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Health",
+   "summary": "$389 electricity rebate; $560 water rebate.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "life_support"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Embedded-network electricity or non-mains water, uses a life support machine",
+   "value_text": "$389 electricity rebate; $560 water rebate",
+   "max_annual_value": 949,
+   "value_period": "2025-26",
+   "how_to_claim": "Doctor's statement, then apply on the concessions portal",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/non-mains-life-support-concession",
+   "notes": ""
+  },
+  {
+   "id": "VIC-009",
+   "name": "Non-Mains Medical Cooling Concession",
+   "provider": "Vic Government (DFFH)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Health",
+   "summary": "17.5% off electricity 1 Nov to 30 Apr.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "medical_condition"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Embedded-network electricity, qualifying medical condition",
+   "value_text": "17.5% off electricity 1 Nov to 30 Apr",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Doctor's statement, then apply on the concessions portal",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-010",
+   "name": "Municipal Rates Concession",
+   "provider": "Vic Government (via council)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Home and Rates",
+   "summary": "50% off council rates.",
+   "cards": [
+    "DVA_GOLD",
+    "PCC"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "Pensioner Concession Card, or DVA Gold Card (TPI, War Widow, EDA, POW); Owns and lives in the home",
+   "value_text": "50% off council rates",
+   "max_annual_value": 266,
+   "value_period": "2025-26",
+   "how_to_claim": "Phone or download form from your council; EDA/POW apply on portal",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/node/281",
+   "notes": "2026-27 cap not yet published on page (checked 13 Oct 2026)"
+  },
+  {
+   "id": "VIC-011",
+   "name": "Fire Services Property Levy Concession",
+   "provider": "Vic Government (via council)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Home and Rates",
+   "summary": "$50 off the levy on rates notice.",
+   "cards": [
+    "DVA_GOLD",
+    "PCC"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "Pensioner Concession Card, or DVA Gold Card (TPI, War Widow, EDA, POW); Owns and lives in the home",
+   "value_text": "$50 off the levy on rates notice",
+   "max_annual_value": 50,
+   "value_period": "2025-26",
+   "how_to_claim": "Automatic with the Municipal Rates Concession",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-012",
+   "name": "Water and Sewerage Concession",
+   "provider": "Vic Government (via water corporation)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Bills",
+   "summary": "50% off water and sewerage charges.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "water_account"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Water account holder",
+   "value_text": "50% off water and sewerage charges",
+   "max_annual_value": 372.1,
+   "value_period": "2025-26",
+   "how_to_claim": "Phone your water corporation with your card details",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/water-and-sewerage-concession",
+   "notes": "Single-service accounts capped at $186.05"
+  },
+  {
+   "id": "VIC-013",
+   "name": "Life Support Concession (water)",
+   "provider": "Vic Government (via water corporation)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Health",
+   "summary": "Water discount of 168 kL a year.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "life_support"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Household member uses a haemodialysis machine",
+   "value_text": "Water discount of 168 kL a year",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Form from your water corporation",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-014",
+   "name": "Non-Mains Water Concession",
+   "provider": "Vic Government (DFFH)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Bills",
+   "summary": "$141 to $423 by amount spent.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Carted water, billing agent, cooperative or embedded network",
+   "value_text": "$141 to $423 by amount spent",
+   "max_annual_value": 423,
+   "value_period": "2025-26",
+   "how_to_claim": "Apply on the concessions portal; closes 30 June following year",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-015",
+   "name": "Utility Relief Grant (mains)",
+   "provider": "Vic Government (via retailer)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Bills",
+   "summary": "Up to $650 per utility over 2 years ($1,300 if one energy source).",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "hardship"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card (some low-income non-cardholders); Overdue bill from temporary hardship, no other way to pay",
+   "value_text": "Up to $650 per utility over 2 years ($1,300 if one energy source)",
+   "max_annual_value": null,
+   "value_period": "Every 2 years",
+   "how_to_claim": "Phone your retailer for an application",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": "One-off hardship grant, not yearly"
+  },
+  {
+   "id": "VIC-016",
+   "name": "Utility Relief Grant (non-mains)",
+   "provider": "Vic Government (DFFH)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Bills",
+   "summary": "Up to $650 per utility over 2 years.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "hardship"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Temporary hardship; LPG, firewood, generator fuel, carted water, septic cleaning",
+   "value_text": "Up to $650 per utility over 2 years",
+   "max_annual_value": null,
+   "value_period": "Every 2 years",
+   "how_to_claim": "Apply online via DFFH",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": "One-off hardship grant"
+  },
+  {
+   "id": "VIC-017",
+   "name": "Water and Sewerage Connection Scheme",
+   "provider": "Vic Government (via water corporation)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Home and Rates",
+   "summary": "Full connection cost.",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "homeowner",
+    "hardship"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Homeowner ordered to connect to mains, no savings",
+   "value_text": "Full connection cost",
+   "max_annual_value": null,
+   "value_period": "Once only",
+   "how_to_claim": "Water corporation sends form with the notice",
+   "phone": "1800 658 521",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-018",
+   "name": "Free ambulance",
+   "provider": "Ambulance Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Health",
+   "summary": "Free road and air ambulance anywhere in Australia.",
+   "cards": [
+    "HCC",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card or Health Care Card; Clinically necessary transport",
+   "value_text": "Free road and air ambulance anywhere in Australia",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Automatic; keep card details with Ambulance Victoria",
+   "phone": "1800 648 484",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": "DVA card holders check with DVA"
+  },
+  {
+   "id": "VIC-019",
+   "name": "Public dental care",
+   "provider": "Dental Health Services Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Health",
+   "summary": "Small fee per visit up to a maximum.",
+   "cards": [
+    "HCC",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card or Health Care Card; Adult 18+",
+   "value_text": "Small fee per visit up to a maximum",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Contact a community dental clinic",
+   "phone": "03 9341 1000",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": "Fee amount not stated in guide"
+  },
+  {
+   "id": "VIC-020",
+   "name": "Victorian Eyecare Service",
+   "provider": "Australian College of Optometry",
+   "level": "Private",
+   "state": "VIC",
+   "category": "Health",
+   "summary": "Low-cost eye tests and glasses.",
+   "cards": [
+    "HCC",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card (or HCC held 6+ months)",
+   "value_text": "Low-cost eye tests and glasses",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Phone to book",
+   "phone": "03 9349 7400",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-021",
+   "name": "Multi Purpose Taxi Program",
+   "provider": "Commercial Passenger Vehicles Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Transport",
+   "summary": "50% off taxi fares up to a per-trip and yearly limit.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "mobility_need"
+   ],
+   "eligibility_text": "None required; Permanent severe disability, cannot use public transport alone",
+   "value_text": "50% off taxi fares up to a per-trip and yearly limit",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Apply to CPVV",
+   "phone": "1800 638 802",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-022",
+   "name": "Victorian Patient Transport Assistance Scheme",
+   "provider": "Vic Department of Health",
+   "level": "State",
+   "state": "VIC",
+   "category": "Health",
+   "summary": "Help with travel and accommodation costs.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "rural"
+   ],
+   "eligibility_text": "None required; Rural Victorian travelling far for specialist care",
+   "value_text": "Help with travel and accommodation costs",
+   "max_annual_value": null,
+   "value_period": "Per trip",
+   "how_to_claim": "Via your doctor or hospital social worker",
+   "phone": "1300 737 073",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-023",
+   "name": "Car registration concession",
+   "provider": "Vic Government (VicRoads)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Transport",
+   "summary": "50% off registration fee (100% for DVA Gold TPI/EDA).",
+   "cards": [
+    "DVA_GOLD",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [
+    "car_owner"
+   ],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or DVA Gold Card; Cardholder or spouse is registered operator; one vehicle",
+   "value_text": "50% off registration fee (100% for DVA Gold TPI/EDA)",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Tell VicRoads your card details",
+   "phone": "13 11 71",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-024",
+   "name": "TAC charge concession",
+   "provider": "Transport Accident Commission (via VicRoads)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Transport",
+   "summary": "50% off the TAC charge on registration.",
+   "cards": [
+    "DVA_GOLD",
+    "PCC"
+   ],
+   "requires": [
+    "car_owner"
+   ],
+   "eligibility_text": "Pensioner Concession Card or DVA Gold Card; One vehicle",
+   "value_text": "50% off the TAC charge on registration",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Tell VicRoads your card details",
+   "phone": "13 11 71",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-025",
+   "name": "Public transport concession fares",
+   "provider": "Transport Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Transport",
+   "summary": "50% of full fare.",
+   "cards": [
+    "HCC",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card or Health Care Card",
+   "value_text": "50% of full fare",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Get a concession myki",
+   "phone": "1800 800 007",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-026",
+   "name": "Pensioner free travel vouchers",
+   "provider": "Transport Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Transport",
+   "summary": "Free travel vouchers each year.",
+   "cards": [
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card; Must register",
+   "value_text": "Free travel vouchers each year",
+   "max_annual_value": null,
+   "value_period": "Yearly",
+   "how_to_claim": "Register with Transport Victoria",
+   "phone": "1800 800 007",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": "Number of vouchers not stated"
+  },
+  {
+   "id": "VIC-027",
+   "name": "Victorian Seniors Card",
+   "provider": "Vic Government (Seniors Card)",
+   "level": "State",
+   "state": "VIC",
+   "category": "Discounts",
+   "summary": "Free card; discounts at thousands of businesses (most 10%+).",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "aged_60"
+   ],
+   "eligibility_text": "None; Victorian resident aged 60+, working under 35 hours a week",
+   "value_text": "Free card; discounts at thousands of businesses (most 10%+)",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Apply online with Medicare card",
+   "phone": "1300 797 210",
+   "source_url": "https://www.seniorsonline.vic.gov.au/seniors-card/seniors-card-FAQS",
+   "notes": "Full-time workers get the Seniors Business Discount Card instead"
+  },
+  {
+   "id": "VIC-028",
+   "name": "Seniors free weekend public transport",
+   "provider": "Transport Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Transport",
+   "summary": "Free statewide public transport on weekends.",
+   "cards": [
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "Victorian Seniors Card; Seniors myki",
+   "value_text": "Free statewide public transport on weekends",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Use your Seniors myki",
+   "phone": "1300 797 210",
+   "source_url": "https://www.seniorsonline.vic.gov.au/seniors-card/public-transport-benefits",
+   "notes": ""
+  },
+  {
+   "id": "VIC-029",
+   "name": "Seniors free travel vouchers",
+   "provider": "Transport Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Transport",
+   "summary": "2 or 4 off-peak vouchers a year depending on where you live.",
+   "cards": [
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "Victorian Seniors Card; Victorian resident; must register",
+   "value_text": "2 or 4 off-peak vouchers a year depending on where you live",
+   "max_annual_value": null,
+   "value_period": "Yearly",
+   "how_to_claim": "Register with Transport Victoria",
+   "phone": "1300 797 210",
+   "source_url": "https://www.seniorsonline.vic.gov.au/seniors-card/public-transport-benefits",
+   "notes": ""
+  },
+  {
+   "id": "VIC-030",
+   "name": "Seniors Festival free travel",
+   "provider": "Transport Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Transport",
+   "summary": "Free metro and regional travel for 9 days in October.",
+   "cards": [
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "Victorian Seniors Card",
+   "value_text": "Free metro and regional travel for 9 days in October",
+   "max_annual_value": null,
+   "value_period": "Yearly (October)",
+   "how_to_claim": "Use your Seniors myki",
+   "phone": "1300 797 210",
+   "source_url": "https://www.seniorsonline.vic.gov.au/seniors-card/public-transport-benefits",
+   "notes": "Guide says 8 days, Seniors Online says 9"
+  },
+  {
+   "id": "VIC-031",
+   "name": "Seniors extra 50% off fares",
+   "provider": "Transport Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Transport",
+   "summary": "Further 50% off during the statewide 50% fare discount.",
+   "cards": [
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "Victorian Seniors Card",
+   "value_text": "Further 50% off during the statewide 50% fare discount",
+   "max_annual_value": null,
+   "value_period": "Until 1 Jan 2027",
+   "how_to_claim": "Use your Seniors myki",
+   "phone": "1300 797 210",
+   "source_url": "https://www.seniorsonline.vic.gov.au/seniors-card/public-transport-benefits",
+   "notes": "Temporary; ends 1 Jan 2027"
+  },
+  {
+   "id": "VIC-032",
+   "name": "Recreational fishing licence exemption",
+   "provider": "Victorian Fisheries Authority",
+   "level": "State",
+   "state": "VIC",
+   "category": "Discounts",
+   "summary": "No licence fee.",
+   "cards": [
+    "DVA_GOLD",
+    "PCC",
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "Victorian Seniors Card, or PCC marked AGE/DSP/CAR, or DVA Gold TPI; Or aged over 70",
+   "value_text": "No licence fee",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Carry your card when fishing",
+   "phone": "",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": "Licence fee not stated in guide"
+  },
+  {
+   "id": "VIC-033",
+   "name": "Recreation and venue discounts",
+   "provider": "Zoos Victoria, NGV, Museums Victoria and others",
+   "level": "Private",
+   "state": "VIC",
+   "category": "Discounts",
+   "summary": "Concession entry prices.",
+   "cards": [
+    "HCC",
+    "PCC",
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card, Health Care Card or Victorian Seniors Card",
+   "value_text": "Concession entry prices",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Show card at the venue",
+   "phone": "",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": ""
+  },
+  {
+   "id": "VIC-034",
+   "name": "Pet registration concession",
+   "provider": "Local council",
+   "level": "Council",
+   "state": "VIC",
+   "category": "Discounts",
+   "summary": "Reduced cat and dog registration; varies by council.",
+   "cards": [
+    "HCC",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card (some councils also HCC)",
+   "value_text": "Reduced cat and dog registration; varies by council",
+   "max_annual_value": null,
+   "value_period": "Yearly",
+   "how_to_claim": "Ask your council",
+   "phone": "",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": "Varies by council"
+  },
+  {
+   "id": "VIC-035",
+   "name": "Pensioner stamp duty exemption or concession",
+   "provider": "State Revenue Office Victoria",
+   "level": "State",
+   "state": "VIC",
+   "category": "Home and Rates",
+   "summary": "Full or partial stamp duty exemption.",
+   "cards": [
+    "CSHC",
+    "HCC",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Eligible Commonwealth concession cards; Buying a home to live in, under a value cap; once in a lifetime",
+   "value_text": "Full or partial stamp duty exemption",
+   "max_annual_value": null,
+   "value_period": "Contracts from 1 July 2023",
+   "how_to_claim": "Apply through SRO at settlement",
+   "phone": "13 21 61",
+   "source_url": "https://www.sro.vic.gov.au/buying-property/land-transfer-stamp-duty/concessions-exemptions-and-waivers/pensioner-and-concession-cardholder-duty-reduction/pensioner-and-concession-cardholder-duty-reduction-contracts-1-july-2023",
+   "notes": "SRO page did not load; thresholds still to fill"
+  },
+  {
+   "id": "VIC-036",
+   "name": "Wills and power of attorney discount",
+   "provider": "State Trustees",
+   "level": "Private",
+   "state": "VIC",
+   "category": "Discounts",
+   "summary": "20% off preparing or updating a will or power of attorney.",
+   "cards": [
+    "CSHC",
+    "HCC",
+    "PCC",
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "Victorian Seniors Card or concession card; Appointment in Melbourne CBD or Dandenong",
+   "value_text": "20% off preparing or updating a will or power of attorney",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Book an appointment",
+   "phone": "",
+   "source_url": "https://www.seniorsonline.vic.gov.au/discounts/state-trustees-limited-0",
+   "notes": "Private-sector offer via Seniors Card directory"
+  },
+  {
+   "id": "VIC-037",
+   "name": "No Interest Loan Scheme",
+   "provider": "Good Shepherd (NILS)",
+   "level": "Private",
+   "state": "VIC",
+   "category": "Payments",
+   "summary": "Interest-free loan up to $1,500 (essentials) or $5,000 (vehicle).",
+   "cards": [
+    "HCC",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card or Health Care Card, or low income; Able to repay",
+   "value_text": "Interest-free loan up to $1,500 (essentials) or $5,000 (vehicle)",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Apply online or by phone",
+   "phone": "13 64 57",
+   "source_url": "https://services.dffh.vic.gov.au/sites/default/files/2025-09/Victorian%20concessions%20-%20guide%20to%20discounts%20and%20services-september-2025.pdf",
+   "notes": "Not-for-profit, national scheme listed in Vic guide"
+  }
+ ]
+}

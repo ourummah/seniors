@@ -1,0 +1,821 @@
+{
+  "jurisdiction": "FEDERAL",
+  "gathered_by": "Claude",
+  "started_at": "2026-10-13T03:15:13Z",
+  "finished_at": "2026-10-13T03:25:18Z",
+  "master_sources": [
+    "https://guides.dss.gov.au/social-security-guide/5/1",
+    "https://clik.dva.gov.au/node/86936",
+    "https://www.dva.gov.au/financial-support/payment-rates/summary-pension-rates-limits-and-allowances",
+    "https://www.pbs.gov.au/info/healthpro/explanatory-notes/front/fee"
+  ],
+  "gaps": [
+    "Services Australia 'Guide to Australian Government Payments' 20 Sep 2026 PDF and many servicesaustralia.gov.au, health.gov.au and dva.gov.au pages are blocked (robots) for fetching; rates taken from DSS Social Security Guide (v1.343, 10 Oct 2026) instead",
+    "Services Australia HTML rate pages still show pre-20 Sep 2026 rates; DSS guide figures used",
+    "DVA Gold/White card, Veterans' Home Care, DVA transport not added (pages blocked)",
+    "Low Income Health Care Card limits, Pension advance payment, bereavement lump sum amounts, Extended Medicare Safety Net threshold not confirmed",
+    "Telephone Allowance and Utilities Allowance skipped: not paid to Age Pensioners/CSHC holders per sources",
+    "Commonwealth Energy Bill Relief Fund ended 2025, no 2026 federal energy rebate found",
+    "Hearing Services Program eligible card list not visible in fetched text"
+  ],
+  "benefits": [
+    {
+      "id": "FED-001",
+      "name": "Age Pension",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A fortnightly pension for people 67 or older who pass the income and assets tests.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_67"
+      ],
+      "eligibility_text": "Age 67 or older; within the income and assets test limits; Australian resident, normally for at least 10 years.",
+      "value_text": "Up to $1,237.70 a fortnight single, or $933.00 each for a couple ($1,866.00 combined), including Pension Supplement and Energy Supplement",
+      "max_annual_value": 32180.2,
+      "value_period": "20 Sep 2026 to 19 Mar 2027",
+      "how_to_claim": "Claim online through myGov (Centrelink online account) or at a service centre.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/8/10",
+      "notes": "Max annual = single fortnightly x 26. Basic rate alone $1,135.40 single / $855.90 each couple. Assets test free area from 1 Jul 2026: $333,000 single homeowner / $600,000 non-homeowner; $499,000 / $766,000 couple (guides.dss.gov.au 4/10/3). Income free area $5,876 pa single, $5,148 pa each couple. Services Australia rate page still showed older $1,178.70 when fetched. Eligibility from servicesaustralia.gov.au/age-pension."
+    },
+    {
+      "id": "FED-002",
+      "name": "Pension Supplement",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "An extra amount paid with your pension to help with everyday costs such as bills.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "age_pension"
+      ],
+      "eligibility_text": "Paid automatically with Age Pension, Carer Payment and other pensions.",
+      "value_text": "Up to $88.20 a fortnight single, $66.50 each for a couple (minimum $47.50 single / $35.80 each)",
+      "max_annual_value": null,
+      "value_period": "From 20 Sep 2026",
+      "how_to_claim": "Paid automatically with your pension; no separate claim.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/9/10",
+      "notes": "Already included in the Age Pension maximum; max_annual_value left null to avoid double counting."
+    },
+    {
+      "id": "FED-003",
+      "name": "Energy Supplement (Commonwealth Seniors Health Card holders)",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Bills",
+      "summary": "A quarterly payment to help with energy costs for some CSHC holders who got their card before 20 March 2017.",
+      "cards": [
+        "CSHC"
+      ],
+      "requires": [],
+      "eligibility_text": "Commonwealth Seniors Health Card holders who were already getting it; closed to new CSHC holders from 20 March 2017. Pensioners get it inside their pension.",
+      "value_text": "$366.60 a year single ($91.65 a quarter), $275.60 a year each for a couple",
+      "max_annual_value": 366.6,
+      "value_period": "Current annual rate (DSS guide reviewed 2 Jan 2026)",
+      "how_to_claim": "Paid automatically each quarter if you are eligible.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/10/20",
+      "notes": "Pension recipients receive $14.10 a fortnight single / $10.60 each couple inside the pension. DVA CLIK lists quarterly payment for quarter to 19/12/2026 at $91.65 single / $68.90 partnered."
+    },
+    {
+      "id": "FED-004",
+      "name": "Work Bonus",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "Lets pensioners earn some work income without it reducing their pension.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "age_pension"
+      ],
+      "eligibility_text": "Pensioners over Age Pension age who receive a pension (also applies to DVA pensions).",
+      "value_text": "First $300 a fortnight of work income is not counted; unused amounts build up to a balance of $11,800",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Applied automatically when you report your employment income to Centrelink.",
+      "phone": null,
+      "source_url": "https://servicesaustralia.gov.au/how-work-bonus-works",
+      "notes": "Not a cash payment; value depends on earnings."
+    },
+    {
+      "id": "FED-005",
+      "name": "Rent Assistance",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Home and Rates",
+      "summary": "Extra money paid with your pension if you pay private rent or certain other housing costs.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "renter",
+        "age_pension"
+      ],
+      "eligibility_text": "People getting an income support payment such as Age Pension who pay rent above the threshold (not public housing).",
+      "value_text": "Up to $223.80 a fortnight single ($149.20 if sharing), $211.00 a fortnight combined for a couple; 75c for every $1 of rent above $157.80 (single) / $255.80 (couple)",
+      "max_annual_value": 5818.8,
+      "value_period": "From 20 Sep 2026",
+      "how_to_claim": "Tell Centrelink your rent details when you claim your pension or through your online account.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/7/10",
+      "notes": "Max annual = single max x 26. Services Australia page still showed older $215.40 rate when fetched."
+    },
+    {
+      "id": "FED-006",
+      "name": "Remote Area Allowance",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A small extra payment if you live in a remote part of Australia and get an income support payment.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "rural",
+        "age_pension"
+      ],
+      "eligibility_text": "Income support recipients living in a designated remote area (tax zone A or special areas).",
+      "value_text": "$18.20 a fortnight single, $15.60 each for a couple",
+      "max_annual_value": 473.2,
+      "value_period": "Current (not indexed; page reviewed 20 Mar 2026)",
+      "how_to_claim": "Usually added automatically when Centrelink has your remote address.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/7/70",
+      "notes": "Remote-area definition not on the fetched page."
+    },
+    {
+      "id": "FED-007",
+      "name": "Pensioner Concession Card",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Discounts",
+      "summary": "A card for pensioners that gives cheaper medicines and health care and unlocks state, council and business discounts.",
+      "cards": [
+        "PCC"
+      ],
+      "requires": [
+        "age_pension"
+      ],
+      "eligibility_text": "Given to people who get certain Centrelink payments, including Age Pension.",
+      "value_text": "Cheaper PBS medicines, bulk-billing incentives and access to many state and private concessions",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Issued automatically when you are granted a qualifying pension.",
+      "phone": null,
+      "source_url": "https://www.servicesaustralia.gov.au/pensioner-concession-card",
+      "notes": "Laminated cards issued from December 2025; old and new both valid."
+    },
+    {
+      "id": "FED-008",
+      "name": "Commonwealth Seniors Health Card",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "A card for self-funded retirees of pension age that gives cheaper medicines and some concessions.",
+      "cards": [
+        "CSHC"
+      ],
+      "requires": [
+        "aged_67"
+      ],
+      "eligibility_text": "Age Pension age or older, meet residence rules, not getting a Centrelink/DVA income support payment, and income under the limit (no assets test).",
+      "value_text": "Income limits: under $101,105 a year single, $161,768 a year combined for a couple ($202,210 if separated by illness)",
+      "max_annual_value": null,
+      "value_period": "Current limits shown on Services Australia",
+      "how_to_claim": "Apply through your Centrelink online account via myGov.",
+      "phone": null,
+      "source_url": "https://www.servicesaustralia.gov.au/income-test-for-commonwealth-seniors-health-card",
+      "notes": "Account-based income streams are deemed. Benefits: PBS concession rate, PBS Safety Net, bulk-billing incentives, Extended Medicare Safety Net concessional threshold, discretionary state/private concessions (guides.dss.gov.au 3/9/3/20)."
+    },
+    {
+      "id": "FED-009",
+      "name": "Home Equity Access Scheme",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A government loan against your home that tops up your income with fortnightly payments or lump sums.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "homeowner",
+        "aged_67"
+      ],
+      "eligibility_text": "Age Pension age (or partner of someone who is); qualify for Age Pension, DSP or Carer Payment (need not be paid it); own Australian real estate as security with adequate insurance; not bankrupt.",
+      "value_text": "Pension plus loan up to 150% of the maximum pension rate; lump-sum advances up to 50% of the annual maximum pension rate (max 2 per 26 fortnights); interest 3.95% a year compounding fortnightly; no negative equity guarantee",
+      "max_annual_value": null,
+      "value_period": "Interest rate 3.95% (from 1 Jan 2022, still current per DSS guide)",
+      "how_to_claim": "Apply through Centrelink; for an existing loan use form D9390 for an advance.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/3/4/5/10",
+      "notes": "Formerly the Pension Loans Scheme. A loan, not a grant. Interest rate from guides.dss.gov.au 3/4/5/45; advance rules from servicesaustralia.gov.au/home-equity-access-scheme-advance-payments."
+    },
+    {
+      "id": "FED-010",
+      "name": "Carer Payment",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "An income support payment if you give constant care to someone with a disability, illness or who is frail aged.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "carer"
+      ],
+      "eligibility_text": "Provide constant care to someone with a severe disability, medical condition or who is frail aged; pass income and assets tests.",
+      "value_text": "Up to $1,237.70 a fortnight single, $933.00 each for a couple (same as pension rates)",
+      "max_annual_value": 32180.2,
+      "value_period": "20 Sep 2026 to 19 Mar 2027",
+      "how_to_claim": "Claim online through your Centrelink account with a care needs assessment.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/8/10",
+      "notes": "Carer Payment uses common pension rates (DSS guide 5/1/5/20). Cannot be received at the same time as Age Pension. Services Australia page showed older rates when fetched."
+    },
+    {
+      "id": "FED-011",
+      "name": "Carer Allowance",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A fortnightly supplement if you give daily care to someone with a disability, medical condition or who is frail aged.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "carer"
+      ],
+      "eligibility_text": "You give daily care at home; combined income of you and your partner under $250,000 a year. Can be paid on top of Age Pension.",
+      "value_text": "$162.60 a fortnight",
+      "max_annual_value": 4227.6,
+      "value_period": "Current (indexed 1 January each year)",
+      "how_to_claim": "Claim through your Centrelink online account.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/5/50",
+      "notes": "Not taxable. Income limit from servicesaustralia.gov.au/how-much-carer-allowance-you-can-get."
+    },
+    {
+      "id": "FED-012",
+      "name": "Carer Supplement",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A yearly lump sum for carers who get Carer Allowance or Carer Payment.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "carer"
+      ],
+      "eligibility_text": "Get Carer Allowance, Carer Payment, or DVA Carer Service Pension / Service Pension partner with Carer Allowance, for a period including 1 July.",
+      "value_text": "Up to $600 a year",
+      "max_annual_value": 600,
+      "value_period": "2026-27",
+      "how_to_claim": "Paid automatically.",
+      "phone": null,
+      "source_url": "https://www.servicesaustralia.gov.au/carer-supplement",
+      "notes": ""
+    },
+    {
+      "id": "FED-013",
+      "name": "Carer Gateway",
+      "provider": "Australian Government (Department of Health)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "Free counselling, practical help and support services for unpaid carers.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "carer"
+      ],
+      "eligibility_text": "Unpaid carers of someone with a disability, illness, mental health condition or who is frail aged.",
+      "value_text": "Free services",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Call 1800 422 737 or apply online.",
+      "phone": "1800 422 737",
+      "source_url": "https://www.carergateway.gov.au/",
+      "notes": ""
+    },
+    {
+      "id": "FED-014",
+      "name": "Essential Medical Equipment Payment",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Bills",
+      "summary": "A yearly payment to help with extra energy costs of running essential medical equipment or medically needed heating or cooling.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "CSHC",
+        "DVA_GOLD",
+        "DVA_WHITE"
+      ],
+      "requires": [
+        "medical_condition"
+      ],
+      "eligibility_text": "You (or the person you care for) hold a PCC, HCC, CSHC or DVA Gold/White card; use essential medical equipment or need extra heating/cooling for a specified condition at home; hold or contribute to the energy account.",
+      "value_text": "$203 a year",
+      "max_annual_value": 203,
+      "value_period": "2026-27",
+      "how_to_claim": "Claim through your Centrelink online account; a medical confirmation may be needed.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/10/40",
+      "notes": "Card list from guides.dss.gov.au 3/15/4/60."
+    },
+    {
+      "id": "FED-015",
+      "name": "Mobility Allowance",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Transport",
+      "summary": "A fortnightly payment to help with travel costs for people with a disability who cannot use public transport without a lot of help.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "mobility_need"
+      ],
+      "eligibility_text": "People with disability or illness who cannot use public transport without substantial help and travel for work, study or volunteering.",
+      "value_text": "$122.80 a fortnight standard rate, $171.70 a fortnight higher rate",
+      "max_annual_value": 4464.2,
+      "value_period": "From 1 Jan 2026",
+      "how_to_claim": "Claim through Centrelink.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/5/40",
+      "notes": "Eligibility not on the fetched rate page; check whether it can be paid alongside Age Pension (generally aimed at people below pension age)."
+    },
+    {
+      "id": "FED-016",
+      "name": "Bereavement payments",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "When a pensioner's partner dies, the survivor keeps payments for a bereavement period and may get a lump sum.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "age_pension"
+      ],
+      "eligibility_text": "Surviving partner of a pensioner couple; tell Services Australia about the death.",
+      "value_text": "Continued payments during the bereavement period and possibly a lump sum; amount depends on circumstances",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Tell Centrelink about the death as soon as possible.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/3/1/5/30",
+      "notes": "Bereavement period length and lump sum amounts not shown on fetched page (see DSS guide 3/1/5/70)."
+    },
+    {
+      "id": "FED-017",
+      "name": "Australian Government Disaster Recovery Payment",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A one-off payment if you are seriously affected by a declared major disaster.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "hardship"
+      ],
+      "eligibility_text": "Seriously affected by a disaster the Government has activated the payment for.",
+      "value_text": "$1,000 per adult, $400 per child",
+      "max_annual_value": null,
+      "value_period": "Current (as most recently determined)",
+      "how_to_claim": "Claim online through myGov within the claim period after the disaster.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/5/1/6/20",
+      "notes": "One-off; only available for activated disasters."
+    },
+    {
+      "id": "FED-018",
+      "name": "Crisis Payment",
+      "provider": "Services Australia (Centrelink)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A one-off payment if you get an income support payment and face a crisis such as family violence or a disaster.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "hardship"
+      ],
+      "eligibility_text": "Income support recipients in severe financial hardship due to an extreme circumstance.",
+      "value_text": "$618.85 single, $466.50 each partnered (per event)",
+      "max_annual_value": null,
+      "value_period": "From 20 Sep 2026",
+      "how_to_claim": "Contact Centrelink within 7 days of the event (check rules).",
+      "phone": null,
+      "source_url": "https://clik.dva.gov.au/node/86936",
+      "notes": "Rate taken from DVA CLIK 20 Sep 2026 rates table; DSS guide 5/1/6/30 not opened. Claim time limit not verified."
+    },
+    {
+      "id": "FED-019",
+      "name": "Seniors and Pensioners Tax Offset (SAPTO)",
+      "provider": "Australian Taxation Office",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A tax offset that means many older Australians pay little or no income tax.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_67"
+      ],
+      "eligibility_text": "Receive an eligible Australian Government pension (or are of pension age and eligible but not paid) and rebate income below the cut-out.",
+      "value_text": "Up to $2,230 single, $1,602 each for a couple ($2,040 each if separated by illness); cuts out at $52,759 single / $43,810 each couple",
+      "max_annual_value": 2230,
+      "value_period": "2025-26 income year",
+      "how_to_claim": "Claimed automatically in your tax return.",
+      "phone": null,
+      "source_url": "https://www.ato.gov.au/individuals-and-families/income-deductions-offsets-and-records/tax-offsets/seniors-and-pensioners-tax-offset",
+      "notes": "Reduces tax payable; worth nothing if you pay no tax."
+    },
+    {
+      "id": "FED-020",
+      "name": "Downsizer super contribution",
+      "provider": "Australian Taxation Office",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Home and Rates",
+      "summary": "Lets you put up to $300,000 from selling your home into super.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Age 55+; owned the home 10+ years; sale qualifies for main residence CGT exemption; contribute within 90 days; not used before.",
+      "value_text": "Up to $300,000 per person",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Give the Downsizer contribution form (NAT 75073) to your super fund.",
+      "phone": null,
+      "source_url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families/super/growing-and-keeping-track-of-your-super/how-to-save-more-in-your-super/downsizer-super-contributions",
+      "notes": "Not cash; super balance counts in pension assets test once over pension age."
+    },
+    {
+      "id": "FED-021",
+      "name": "PBS concessional medicines",
+      "provider": "Department of Health (Pharmaceutical Benefits Scheme)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "Concession card holders pay a much lower price for PBS prescriptions.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "CSHC",
+        "DVA_GOLD",
+        "DVA_WHITE"
+      ],
+      "requires": [],
+      "eligibility_text": "Hold a Commonwealth concession card.",
+      "value_text": "$7.70 per PBS script (general patients pay $25.00)",
+      "max_annual_value": null,
+      "value_period": "From 1 Jan 2026 (current at 1 Jul 2026)",
+      "how_to_claim": "Show your concession card at the pharmacy.",
+      "phone": null,
+      "source_url": "https://www.pbs.gov.au/info/healthpro/explanatory-notes/front/fee",
+      "notes": "Saving depends on number of scripts. DVA card coverage of PBS concession assumed from general practice — verify."
+    },
+    {
+      "id": "FED-022",
+      "name": "PBS Safety Net",
+      "provider": "Department of Health (Pharmaceutical Benefits Scheme)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "After you spend a set amount on PBS medicines in a year, the rest of your scripts are free (for concession holders).",
+      "cards": [
+        "PCC",
+        "HCC",
+        "CSHC",
+        "DVA_GOLD",
+        "DVA_WHITE"
+      ],
+      "requires": [],
+      "eligibility_text": "Concession card holders whose family PBS spending reaches the concessional threshold in a calendar year.",
+      "value_text": "Free PBS scripts for the rest of the year after $277.20 spent (general threshold $1,748.20)",
+      "max_annual_value": null,
+      "value_period": "Calendar year 2026",
+      "how_to_claim": "Ask your pharmacy to keep a record or use a Prescription Record Form; apply for a Safety Net card when you reach the threshold.",
+      "phone": null,
+      "source_url": "https://www.pbs.gov.au/info/healthpro/explanatory-notes/front/fee",
+      "notes": "health.gov.au PBS Safety Net page blocked to fetching."
+    },
+    {
+      "id": "FED-023",
+      "name": "Bulk billing incentives (GP visits)",
+      "provider": "Department of Health (Medicare)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "GPs get extra payments to bulk bill, so many visits cost you nothing.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [],
+      "eligibility_text": "From 1 Nov 2025 incentives cover all Medicare card holders; concession card holders were already covered.",
+      "value_text": "No out-of-pocket cost when your GP bulk bills",
+      "max_annual_value": null,
+      "value_period": "From 1 Nov 2025",
+      "how_to_claim": "Ask your GP clinic whether it bulk bills all patients.",
+      "phone": null,
+      "source_url": "https://www.health.gov.au/ministers/the-hon-mark-butler-mp/media/delivering-the-bulk-billing-incentive-program",
+      "notes": "Clinic chooses whether to bulk bill; source is a ministerial media release."
+    },
+    {
+      "id": "FED-024",
+      "name": "Extended Medicare Safety Net (concessional)",
+      "provider": "Department of Health (Medicare)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "Once your out-of-hospital medical costs pass a lower concession threshold, Medicare pays back more.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "CSHC"
+      ],
+      "requires": [],
+      "eligibility_text": "Commonwealth concession card holders (and families) whose out-of-pocket costs pass the concessional threshold in a calendar year.",
+      "value_text": "Higher Medicare rebates after threshold",
+      "max_annual_value": null,
+      "value_period": "Calendar year",
+      "how_to_claim": "Automatic once registered as a family/individual with Medicare.",
+      "phone": null,
+      "source_url": "https://guides.dss.gov.au/social-security-guide/3/9/3/20",
+      "notes": "Threshold amount not on fetched page; health.gov.au/servicesaustralia pages blocked."
+    },
+    {
+      "id": "FED-025",
+      "name": "Hearing Services Program",
+      "provider": "Department of Health",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "Free or subsidised hearing tests and hearing aids for eligible pensioners and veterans.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD",
+        "DVA_WHITE"
+      ],
+      "requires": [
+        "hearing_need"
+      ],
+      "eligibility_text": "Australian citizens or permanent residents aged 21+ who hold an eligible card or payment; the Commonwealth Seniors Health Card does NOT qualify.",
+      "value_text": "Subsidised hearing assessments, devices and maintenance; vouchers valid 5 years",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply online, through a hearing provider, or with a printed form.",
+      "phone": "1800 500 726",
+      "source_url": "https://www.health.gov.au/our-work/hearing-services-program/accessing/eligibility",
+      "notes": "Exact eligible card/payment list was not visible in fetched text; PCC and DVA Gold/White listed from program rules - verify. Maintenance fee not shown."
+    },
+    {
+      "id": "FED-026",
+      "name": "Continence Aids Payment Scheme (CAPS)",
+      "provider": "Department of Health (via Services Australia)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "A yearly payment to help buy continence products if you have permanent and severe incontinence.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "medical_condition"
+      ],
+      "eligibility_text": "Permanent and severe incontinence from an eligible condition; must meet all program requirements.",
+      "value_text": "$739.40 a year",
+      "max_annual_value": 739.4,
+      "value_period": "2026-27",
+      "how_to_claim": "Apply via Medicare online account or app, or paper form with your health professional's section completed.",
+      "phone": null,
+      "source_url": "https://www.health.gov.au/our-work/continence-aids-payment-scheme-caps",
+      "notes": "Detailed eligibility not shown on fetched page."
+    },
+    {
+      "id": "FED-027",
+      "name": "Support at Home (aged care at home)",
+      "provider": "Department of Health and Aged Care (via My Aged Care)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "Government-funded help at home such as nursing, personal care, cleaning and gardening; full pensioners pay the lowest contributions.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_65"
+      ],
+      "eligibility_text": "Older people assessed as needing help at home through My Aged Care; contributions depend on pension status and an income/assets assessment.",
+      "value_text": "Clinical care free; contributions for independence and everyday living services; lifetime contribution cap $135,318.69",
+      "max_annual_value": null,
+      "value_period": "Cap as at 1 Nov 2025",
+      "how_to_claim": "Contact My Aged Care to arrange an assessment.",
+      "phone": null,
+      "source_url": "https://www.health.gov.au/our-work/support-at-home/charging-for-support-at-home-services/support-at-home-participant-contributions",
+      "notes": "Exact contribution percentages not on fetched page; aged_65 is the general entry age (50 for First Nations) - not stated on this page."
+    },
+    {
+      "id": "FED-028",
+      "name": "Commonwealth Home Support Programme (CHSP)",
+      "provider": "Department of Health and Aged Care (via My Aged Care)",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Health",
+      "summary": "Low-cost entry-level help at home such as meals, transport, cleaning and home maintenance.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_65"
+      ],
+      "eligibility_text": "Older people assessed as eligible for CHSP services; pay a contribution based on ability to pay.",
+      "value_text": "You pay only a contribution, never the full cost; hardship policies apply",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Contact My Aged Care for an assessment, then agree fees with a provider.",
+      "phone": null,
+      "source_url": "https://www.myagedcare.gov.au/commonwealth-home-support-program-costs",
+      "notes": "Age criterion not stated on fetched page."
+    },
+    {
+      "id": "FED-029",
+      "name": "Concession stamps",
+      "provider": "Australia Post",
+      "level": "Private",
+      "state": "ALL",
+      "category": "Discounts",
+      "summary": "Buy up to 75 discounted stamps a year for 60c each.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "CSHC",
+        "DVA_GOLD",
+        "DVA_WHITE"
+      ],
+      "requires": [],
+      "eligibility_text": "Holders of a Pensioner Concession Card, Health Care Card, Commonwealth Seniors Health Card, DVA card or Veterans' Repatriation Health Card.",
+      "value_text": "60c per stamp instead of $1.85, up to 75 a year",
+      "max_annual_value": 93.75,
+      "value_period": "Current",
+      "how_to_claim": "Fill in the MyPost Concession account form and take it with your card to a Post Office; then show your MyPost Concession card to buy.",
+      "phone": null,
+      "source_url": "https://auspost.com.au/personal/sending/stamps/concession-stamps",
+      "notes": "Max annual value calculated as 75 x ($1.85 - $0.60)."
+    },
+    {
+      "id": "FED-030",
+      "name": "No Interest Loan Scheme (NILS)",
+      "provider": "Good Shepherd, funded by Department of Social Services",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "Interest-free, fee-free loans for essentials like appliances, car repairs or medical costs.",
+      "cards": [
+        "PCC",
+        "HCC"
+      ],
+      "requires": [
+        "low_income"
+      ],
+      "eligibility_text": "Age 18+ and hold a Health Care or Pension card, or income under $70,000 single / $100,000 with partner or dependants, or experienced family violence in last 10 years.",
+      "value_text": "Up to $2,000 for essentials, $5,000 for vehicles, $3,000 for disaster relief or rental bonds",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Use the eligibility checker or find a local provider at nils.com.au.",
+      "phone": null,
+      "source_url": "https://nils.com.au/",
+      "notes": "Loan, must be repaid."
+    },
+    {
+      "id": "FED-031",
+      "name": "Service Pension (DVA)",
+      "provider": "Department of Veterans' Affairs",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "An income support pension for eligible veterans and their partners, paid at the same rate as Age Pension.",
+      "cards": [
+        "DVA_GOLD",
+        "DVA_WHITE",
+        "NONE"
+      ],
+      "requires": [
+        "veteran"
+      ],
+      "eligibility_text": "Eligible veterans with qualifying service (and partners) who meet age and income/assets tests.",
+      "value_text": "Up to $1,237.70 a fortnight single, $933.00 each for a couple",
+      "max_annual_value": 32180.2,
+      "value_period": "From 20 Sep 2026",
+      "how_to_claim": "Claim through DVA (MyService).",
+      "phone": null,
+      "source_url": "https://clik.dva.gov.au/node/86936",
+      "notes": "Eligibility details not on fetched page (DVA service pension page blocked to fetching)."
+    },
+    {
+      "id": "FED-032",
+      "name": "Veterans' Supplement",
+      "provider": "Department of Veterans' Affairs",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A small fortnightly supplement for some veterans and war widows who do not get an income support payment.",
+      "cards": [
+        "DVA_GOLD",
+        "DVA_WHITE"
+      ],
+      "requires": [
+        "veteran"
+      ],
+      "eligibility_text": "High rate: Gold Card holders on certain disability compensation payments without income support; low rate: certain war widows, White/Orange card holders without income support.",
+      "value_text": "Low $7.00, high $14.00 a fortnight",
+      "max_annual_value": 364.0,
+      "value_period": "1 Jul to 19 Sep 2026",
+      "how_to_claim": "Paid automatically by DVA.",
+      "phone": null,
+      "source_url": "https://www.dva.gov.au/financial-support/payment-rates/summary-pension-rates-limits-and-allowances",
+      "notes": "Eligibility from clik.dva.gov.au/node/16577. Rate may have changed 20 Sep 2026."
+    },
+    {
+      "id": "FED-033",
+      "name": "War Widow(er)'s Pension",
+      "provider": "Department of Veterans' Affairs",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "A pension for widows and widowers of veterans whose death was war-caused (existing recipients).",
+      "cards": [
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "veteran"
+      ],
+      "eligibility_text": "Existing recipients; closed to new claims under the VEA from 1 July 2026.",
+      "value_text": "$1,223.40 a fortnight (incl. Energy Supplement)",
+      "max_annual_value": 31808.4,
+      "value_period": "1 Jul to 19 Sep 2026",
+      "how_to_claim": "Existing recipients paid automatically.",
+      "phone": null,
+      "source_url": "https://www.dva.gov.au/financial-support/payment-rates/summary-pension-rates-limits-and-allowances",
+      "notes": "VEA closed to new claims 1 Jul 2026; new claims under MRCA - check. Rate may have changed 20 Sep 2026."
+    },
+    {
+      "id": "FED-034",
+      "name": "DVA funeral benefit",
+      "provider": "Department of Veterans' Affairs",
+      "level": "Federal",
+      "state": "ALL",
+      "category": "Payments",
+      "summary": "Help with funeral costs for eligible veterans.",
+      "cards": [
+        "DVA_GOLD",
+        "DVA_WHITE"
+      ],
+      "requires": [
+        "veteran"
+      ],
+      "eligibility_text": "Eligible veterans' estates/family as set by DVA.",
+      "value_text": "Up to $2,000",
+      "max_annual_value": null,
+      "value_period": "1 Jul to 19 Sep 2026",
+      "how_to_claim": "Claim through DVA.",
+      "phone": null,
+      "source_url": "https://www.dva.gov.au/financial-support/payment-rates/summary-pension-rates-limits-and-allowances",
+      "notes": "One-off. Eligibility rules not on fetched page."
+    }
+  ]
+}

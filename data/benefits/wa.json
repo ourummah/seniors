@@ -1,0 +1,981 @@
+{
+  "jurisdiction": "WA",
+  "gathered_by": "Claude",
+  "started_at": "2026-10-13T03:15:24Z",
+  "finished_at": "2026-10-13T03:21:34Z",
+  "master_sources": [
+    "https://www.wa.gov.au/organisation/department-of-communities/concessions-available-western-australia",
+    "https://www.wa.gov.au/system/files/2026-09/pensioners-seniors-concessions.pdf",
+    "https://www.seniorscard.wa.gov.au/benefits",
+    "https://www.wa.gov.au/service/community-services/grants-and-subsidies/apply-energy-concession"
+  ],
+  "gaps": [
+    "Synergy page shows older EAP ($334.49) vs $377.14 on Horizon/ECES from 1 July 2026; Synergy CSHC eligibility unconfirmed",
+    "Regional Pensioner Travel Card annual dollar amount not on source",
+    "Transperth free travel hours for Pensioner/Veteran SmartRider not stated",
+    "Fishing licence concession section on DPIRD page did not load; PCC eligibility unconfirmed",
+    "Dental co-payments, CAEP costs, Aqwest percentages, dog/cat and will discounts amounts not shown",
+    "No WA pensioner stamp duty (transfer duty) concession found; not loaded. Taxi User Subsidy Scheme not loaded (disability)",
+    "No current one-off WA household electricity credit for 2026-27 found (last was 2024)"
+  ],
+  "benefits": [
+    {
+      "id": "WA-001",
+      "name": "Energy Assistance Payment",
+      "provider": "WA Government (via Synergy or Horizon Power)",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "A yearly credit on your electricity bill, paid in daily amounts, if you hold a concession card.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD",
+        "CSHC"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "Residential electricity account holder with a Pensioner Concession Card (Centrelink or DVA), Health Care Card or DVA Gold Card. Horizon Power and the ECES also list the Commonwealth Seniors Health Card.",
+      "value_text": "$377.14 a year credited to your electricity account",
+      "max_annual_value": 377.14,
+      "value_period": "From 1 July 2026",
+      "how_to_claim": "Add your concession card in your Synergy or Horizon Power online account, or phone your retailer.",
+      "phone": "Horizon Power 1800 267 926; Synergy 13 13 53",
+      "source_url": "https://www.horizonpower.com.au/for-home/managing-your-account/concessions-and-rebates/",
+      "notes": "Synergy's page still shows $334.49 (older year) and does not list CSHC; Horizon Power and RevenueWA ECES pages show $377.14 from 1 July 2026 and include CSHC. Check CSHC eligibility with Synergy. Replaced the old Cost of Living Assistance payment."
+    },
+    {
+      "id": "WA-002",
+      "name": "Air Conditioning Rebate",
+      "provider": "WA Government (via Synergy or Horizon Power)",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "Help with air-conditioner running costs for seniors living in the hot north of WA.",
+      "cards": [
+        "SENIORS_CARD",
+        "PCC",
+        "CSHC"
+      ],
+      "requires": [
+        "electricity_account",
+        "rural"
+      ],
+      "eligibility_text": "Live north of the 26th parallel and/or the 50 Day Relative Strain Index line, and hold a WA Seniors Card plus a Commonwealth Seniors Health Card, Pensioner Concession Card or DVA Pensioner Concession Card (both cards needed). Families with dependent children on a concession card also qualify. Air conditioner must be installed at the home.",
+      "value_text": "$78.98 for each eligible month (cost of 221.8 kWh); 2 to 10 eligible months depending on town",
+      "max_annual_value": null,
+      "value_period": "From 1 July 2026",
+      "how_to_claim": "Apply online through Synergy or Horizon Power with your bill and card details.",
+      "phone": "Horizon Power 1800 267 926",
+      "source_url": "https://www.wa.gov.au/service/community-services/grants-and-subsidies/apply-energy-concession",
+      "notes": "Needs BOTH a WA Seniors Card and one of PCC/CSHC/DVA PCC for seniors. Max per year = $78.98 x eligible months for your town (up to about $790). Synergy page shows older $70.05/month example."
+    },
+    {
+      "id": "WA-003",
+      "name": "Account Establishment Fee Rebate",
+      "provider": "WA Government (via Synergy or Horizon Power)",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "One-off refund of the fee to open a new electricity account.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "Residential customer opening a new electricity account with a Health Care Card, Pensioner Concession Card, DVA Gold Card or DVA Pensioner Concession Card.",
+      "value_text": "One-off $27.28 (Horizon Power) / $26.84 (Synergy) on your first bill",
+      "max_annual_value": null,
+      "value_period": "2026-27 (Horizon); Synergy figure may be older year",
+      "how_to_claim": "Tell your retailer you hold a concession card when you open the account.",
+      "phone": "Horizon Power 1800 267 926",
+      "source_url": "https://www.horizonpower.com.au/for-home/managing-your-account/concessions-and-rebates/",
+      "notes": "One-off, so max_annual_value null."
+    },
+    {
+      "id": "WA-004",
+      "name": "Reduced Meter Test Fee",
+      "provider": "WA Government (Energy Policy WA)",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "A cheaper fee if you ask for your electricity meter to be tested, refunded if the meter is faulty.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "Holders of a Centrelink Health Care Card, Pensioner Concession Card, DVA Gold Card or DVA Pensioner Concession Card.",
+      "value_text": "Reduced meter test fee (amount not stated); fee refunded if meter is faulty",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Ask your electricity retailer for a meter test and give your concession card details.",
+      "phone": "",
+      "source_url": "https://www.wa.gov.au/organisation/energy-policy-wa/household-energy-pricing-and-payment-support",
+      "notes": "Fee amount not shown on source."
+    },
+    {
+      "id": "WA-005",
+      "name": "Energy Concession Extension Scheme (ECES)",
+      "provider": "RevenueWA (Department of Finance)",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "Gets you the Energy Assistance Payment if you pay for power through a caravan park, retirement village or other landlord/on-seller instead of Synergy or Horizon Power.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "CSHC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "You pay for electricity through an eligible on-selling arrangement (e.g. retirement village, caravan park, other retailer such as Perth Energy or Alinta) and you or a household member hold a PCC, HCC, CSHC or DVA Gold Card. WA Seniors Card alone does not qualify. Tenants must have lived there or have a lease of at least 3 months.",
+      "value_text": "Energy Assistance Payment $377.14 a year paid by EFT (plus Air Conditioning Rebate if eligible)",
+      "max_annual_value": 377.14,
+      "value_period": "From 1 July 2026",
+      "how_to_claim": "Apply online via RevenueWAConnect Online Services Portal; renew yearly by your anniversary date.",
+      "phone": "08 9262 1486 (country landlines 1300 368 364)",
+      "source_url": "https://www.wa.gov.au/service/community-services/grants-and-subsidies/apply-energy-concession",
+      "notes": ""
+    },
+    {
+      "id": "WA-006",
+      "name": "Life Support Equipment Energy Subsidy",
+      "provider": "RevenueWA (Department of Finance)",
+      "level": "State",
+      "state": "WA",
+      "category": "Health",
+      "summary": "A yearly payment to help with the power costs of running life support equipment at home.",
+      "cards": [
+        "PCC",
+        "HCC"
+      ],
+      "requires": [
+        "life_support"
+      ],
+      "eligibility_text": "Patient (or their guardian/carer) depends on specified life support equipment at home on specialist advice, and holds a Pensioner Concession Card (Centrelink or DVA), Health Care Card (not CSHC) or Health Care Interim Voucher.",
+      "value_text": "From $58 (nebuliser) to $1,517 (child oxygen concentrator) a year depending on equipment; e.g. CPAP $530, adult oxygen concentrator $1,011",
+      "max_annual_value": 1517,
+      "value_period": "2026 (page updated Oct 2026)",
+      "how_to_claim": "Apply online through RevenueWAConnect; your doctor completes the medical authorisation. Renew yearly.",
+      "phone": "08 9262 1373 (country landlines 1300 368 364)",
+      "source_url": "https://www.wa.gov.au/government/publications/subsidies-life-support-fs",
+      "notes": "Max shown is the highest item rate (child oxygen concentrator); most adults get less. CSHC is excluded."
+    },
+    {
+      "id": "WA-007",
+      "name": "Thermoregulatory Dysfunction Energy Subsidy",
+      "provider": "RevenueWA (Department of Finance)",
+      "level": "State",
+      "state": "WA",
+      "category": "Health",
+      "summary": "A yearly payment for people whose medical condition means they must heat or cool their home.",
+      "cards": [
+        "PCC",
+        "HCC"
+      ],
+      "requires": [
+        "medical_condition"
+      ],
+      "eligibility_text": "Patient (or guardian/carer in the same household) holds a Pensioner Concession Card, Health Care Card (not CSHC) or Health Care Interim Voucher; patient meets at least two of three qualifying conditions, certified by a doctor who has treated them for 3+ months.",
+      "value_text": "$832 a year paid in advance (up to two payments per household)",
+      "max_annual_value": 832,
+      "value_period": "2026",
+      "how_to_claim": "Apply online through RevenueWAConnect; your doctor completes the medical form. Renew yearly.",
+      "phone": "08 9262 1373 (country landlines 1300 368 364)",
+      "source_url": "https://www.wa.gov.au/government/publications/subsidies-thermoregulatory-dysfunction-fs",
+      "notes": ""
+    },
+    {
+      "id": "WA-008",
+      "name": "Hardship Utility Grant Scheme (HUGS)",
+      "provider": "Department of Communities (via your utility provider)",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "A grant to help pay an overdue electricity, gas or water bill if you are in financial hardship.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "hardship"
+      ],
+      "eligibility_text": "Assessed by your utility provider as being in financial hardship, completed a payment arrangement of at least 90 days, and still owe more than $300. Must live at the supply address. Water customers must be owner-occupiers. Not for bottled gas.",
+      "value_text": "Up to $640 a year (south of the 26th parallel) or $1,060 (Denham and north), max 85% of the balance",
+      "max_annual_value": 1060,
+      "value_period": "Per financial year",
+      "how_to_claim": "Call your utility provider, join their hardship program, then ask them to start a HUGS application after 90 days.",
+      "phone": "Synergy 13 13 53; Water Corporation 13 13 85; Horizon Power 1800 267 926",
+      "source_url": "https://www.wa.gov.au/service/community-services/grants-and-subsidies/hardship-utility-grant-scheme",
+      "notes": "Max $1,060 applies only in the north; $640 south."
+    },
+    {
+      "id": "WA-009",
+      "name": "Local Government Rates Rebate (pensioners, and Seniors Card plus CSHC)",
+      "provider": "Water Corporation / RevenueWA (applied by your council)",
+      "level": "State",
+      "state": "WA",
+      "category": "Home and Rates",
+      "summary": "Up to half off your council rates if you own and live in your home.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD",
+        "SENIORS_CARD",
+        "CSHC"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Own and live in the property as your main home and hold a Pensioner Concession Card or State Concession Card, OR hold BOTH a WA Seniors Card and a Commonwealth Seniors Health Card. Includes long-term (5+ year) leases in retirement villages, lifestyle villages, park homes and caravan parks. DVA Gold Card holders may qualify via the State Concession Card.",
+      "value_text": "Up to 50% off council rates, capped at $750 a year",
+      "max_annual_value": 750,
+      "value_period": "Rating year 1 July to 30 June (fact sheet as at July 2026)",
+      "how_to_claim": "Register once via Water Corporation's online concession form; it tells your council. Pay the balance by 30 June to keep the rebate.",
+      "phone": "Water Corporation 1300 659 951; RevenueWA 08 9262 1373",
+      "source_url": "https://www.wa.gov.au/system/files/2026-09/pensioners-seniors-concessions.pdf",
+      "notes": "Seniors Card + CSHC need BOTH cards; DVA_GOLD only through a State Concession Card (selected TPI/EDA/war widow categories)."
+    },
+    {
+      "id": "WA-010",
+      "name": "Local Government Rates Rebate (WA Seniors Card only)",
+      "provider": "Water Corporation / RevenueWA (applied by your council)",
+      "level": "State",
+      "state": "WA",
+      "category": "Home and Rates",
+      "summary": "A smaller discount on council rates for WA Seniors Card holders who own and live in their home.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Own and live in the property as your main home and hold a WA Seniors Card (without a CSHC or PCC).",
+      "value_text": "Up to 25% off council rates, capped at $100 a year",
+      "max_annual_value": 100,
+      "value_period": "Rating year 1 July to 30 June (fact sheet as at July 2026)",
+      "how_to_claim": "Register via Water Corporation's online concession form; pay the balance by 30 June.",
+      "phone": "Water Corporation 1300 659 951",
+      "source_url": "https://www.wa.gov.au/system/files/2026-09/pensioners-seniors-concessions.pdf",
+      "notes": "No deferral option for Seniors Card only."
+    },
+    {
+      "id": "WA-011",
+      "name": "Rates and water charges deferral",
+      "provider": "RevenueWA (Department of Finance)",
+      "level": "State",
+      "state": "WA",
+      "category": "Home and Rates",
+      "summary": "Pensioners can put off paying council rates, ESL and water charges, interest-free, until the home is sold.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD",
+        "SENIORS_CARD",
+        "CSHC"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Registered for the pensioner rebate with a PCC or State Concession Card, or with BOTH a WA Seniors Card and CSHC. Seniors Card alone cannot defer.",
+      "value_text": "Defer unpaid rates, ESL and water charges with no interest; repaid when you sell, move or on death (unless a surviving partner stays)",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Charges are deferred automatically if unpaid by 30 June once you are registered.",
+      "phone": "RevenueWA 08 9262 1373",
+      "source_url": "https://www.wa.gov.au/system/files/2026-09/pensioners-seniors-concessions.pdf",
+      "notes": "Cannot claim the rebate on amounts that are deferred."
+    },
+    {
+      "id": "WA-012",
+      "name": "Emergency Services Levy Rebate",
+      "provider": "RevenueWA (applied by your council)",
+      "level": "State",
+      "state": "WA",
+      "category": "Home and Rates",
+      "summary": "The same pensioner or seniors discount you get on council rates also applies to the Emergency Services Levy.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD",
+        "SENIORS_CARD",
+        "CSHC"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Registered for the council rates rebate: PCC or State Concession Card, or WA Seniors Card plus CSHC (up to 50%); WA Seniors Card only (up to 25%).",
+      "value_text": "Up to 50% off the ESL (pensioners, Seniors + CSHC) or up to 25% (Seniors Card only)",
+      "max_annual_value": null,
+      "value_period": "Rating year 1 July to 30 June",
+      "how_to_claim": "Applied automatically once registered for the rates rebate.",
+      "phone": "RevenueWA 08 9262 1373",
+      "source_url": "https://www.wa.gov.au/system/files/2026-09/pensioners-seniors-concessions.pdf",
+      "notes": "No dollar cap stated for ESL."
+    },
+    {
+      "id": "WA-013",
+      "name": "Underground Electricity Connection Charge Rebate",
+      "provider": "RevenueWA (applied by your council)",
+      "level": "State",
+      "state": "WA",
+      "category": "Home and Rates",
+      "summary": "A discount on the council charge for connecting your home to underground power.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD",
+        "SENIORS_CARD",
+        "CSHC"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Owner-occupier registered for the pensioners and seniors rebate.",
+      "value_text": "Up to 50% off (PCC, State Concession Card, or Seniors Card + CSHC); Seniors Card only up to 25%, capped at $100, first year only",
+      "max_annual_value": null,
+      "value_period": "As at July 2026",
+      "how_to_claim": "Applied once registered for the rates rebate; ask your council.",
+      "phone": "RevenueWA 08 9262 1373",
+      "source_url": "https://www.wa.gov.au/system/files/2026-09/pensioners-seniors-concessions.pdf",
+      "notes": "One-off charge so no annual value."
+    },
+    {
+      "id": "WA-014",
+      "name": "Water Corporation service charge rebate (pensioners, and Seniors Card plus CSHC)",
+      "provider": "Water Corporation",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "Up to half off the fixed water, sewerage and drainage charges on your Water Corporation bill.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD",
+        "SENIORS_CARD",
+        "CSHC"
+      ],
+      "requires": [
+        "water_account",
+        "homeowner"
+      ],
+      "eligibility_text": "Main residence; Pensioner Concession Card or State Concession Card, OR both a WA Seniors Card and CSHC (CSHC alone not eligible).",
+      "value_text": "Up to 50% off service charges, capped at $600 a year (water $108.86, sewerage $436.15, drainage $54.99)",
+      "max_annual_value": 600,
+      "value_period": "2026-27",
+      "how_to_claim": "Apply online with Water Corporation's concession form; reapply if you move or get a new card.",
+      "phone": "1300 659 951",
+      "source_url": "https://www.watercorporation.com.au/Bill-and-account/Apply-for-a-concession",
+      "notes": "Interest is not charged on overdue bills for these cardholders."
+    },
+    {
+      "id": "WA-015",
+      "name": "Water Corporation water use rebate (pensioners)",
+      "provider": "Water Corporation",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "Half off the cost of the first block of water you use each year, for pensioners including renters.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "water_account"
+      ],
+      "eligibility_text": "Pensioner Concession Card or State Concession Card holders. Tenants qualify if they do not live with the owner. Seniors Card + CSHC holders do not get this part.",
+      "value_text": "50% off the first 150 kL in Perth (max $158.10), first 400 kL south country, first 600 kL north country (max depends on town, e.g. $891.28)",
+      "max_annual_value": 158.1,
+      "value_period": "2026-27 (metro figure)",
+      "how_to_claim": "Apply online with Water Corporation's concession form.",
+      "phone": "1300 659 951",
+      "source_url": "https://www.watercorporation.com.au/Bill-and-account/Apply-for-a-concession",
+      "notes": "Country maximums are higher and vary by town class; $158.10 is the metro cap."
+    },
+    {
+      "id": "WA-016",
+      "name": "Water Corporation service charge rebate (WA Seniors Card only)",
+      "provider": "Water Corporation",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "Up to $100 off fixed water charges for WA Seniors Card holders.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "water_account",
+        "homeowner"
+      ],
+      "eligibility_text": "WA Seniors Card holder (without a PCC or CSHC), main residence.",
+      "value_text": "Up to $100 a year off service charges",
+      "max_annual_value": 100,
+      "value_period": "2026-27",
+      "how_to_claim": "Apply online with Water Corporation's concession form.",
+      "phone": "1300 659 951",
+      "source_url": "https://www.watercorporation.com.au/Bill-and-account/Apply-for-a-concession",
+      "notes": ""
+    },
+    {
+      "id": "WA-017",
+      "name": "Busselton Water pensioner and seniors rebate",
+      "provider": "Busselton Water",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "Discount on Busselton Water bills for pensioners and seniors who own their home.",
+      "cards": [
+        "PCC",
+        "CSHC",
+        "DVA_GOLD",
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "water_account",
+        "homeowner"
+      ],
+      "eligibility_text": "Own and live in the property (incl. long-term retirement village / park home leases). PCC, CSHC or State Concession Card: up to 50%; WA Seniors Card: up to 25% off supply charge only.",
+      "value_text": "Up to 50% off supply charge and first 350 kL of water (PCC, CSHC, State Concession Card); up to 25% off supply charge (Seniors Card)",
+      "max_annual_value": null,
+      "value_period": "Current page (year not stated)",
+      "how_to_claim": "Download the form and return it to Busselton Water with a copy of your card.",
+      "phone": "",
+      "source_url": "https://www.busseltonwater.wa.gov.au/billing/make-a-payment/pensioner-rebates/",
+      "notes": "Busselton area only. No cap or phone number on page. Page lists CSHC alone, unlike Water Corporation."
+    },
+    {
+      "id": "WA-018",
+      "name": "Aqwest (Bunbury) water concession",
+      "provider": "Aqwest",
+      "level": "State",
+      "state": "WA",
+      "category": "Bills",
+      "summary": "Discount on Bunbury water bills for pensioners and seniors.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD",
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "water_account"
+      ],
+      "eligibility_text": "Valid PCC, State Concession Card or WA Seniors Card (with or without CSHC). Owner-occupiers, retirement village residents, and tenants with a Pensioner or Seniors card. HCC and DVA Gold alone not eligible.",
+      "value_text": "Discount on water charges (percentage not stated on page)",
+      "max_annual_value": null,
+      "value_period": "Current page (year not stated)",
+      "how_to_claim": "Apply online or with the PDF form; tenants with the account in landlord's name must apply by 31 July each year.",
+      "phone": "08 9780 9500",
+      "source_url": "https://aqwest.com.au/your-water/accounts-billing/concessions",
+      "notes": "Bunbury area only. DVA_GOLD only via State Concession Card."
+    },
+    {
+      "id": "WA-019",
+      "name": "State Concession Card",
+      "provider": "Department of Communities",
+      "level": "State",
+      "state": "WA",
+      "category": "Discounts",
+      "summary": "A WA card that gives certain DVA Gold Card holders the same rates and water rebates as pensioners.",
+      "cards": [
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "veteran"
+      ],
+      "eligibility_text": "DVA Gold Card holders without a PCC who are TPI, TTI, EDA, SRDP, war widows/widowers, blinded war pensioners, or other listed DVA categories.",
+      "value_text": "Access to pensioner rebates on council rates, water service and water use charges",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Download and send the State Concession Card application form.",
+      "phone": "1800 671 233 (option 6)",
+      "source_url": "https://www.wa.gov.au/service/community-services/grants-and-subsidies/state-concession-card",
+      "notes": ""
+    },
+    {
+      "id": "WA-020",
+      "name": "WA Seniors Card",
+      "provider": "Department of Communities (WA Seniors Card Centre)",
+      "level": "State",
+      "state": "WA",
+      "category": "Discounts",
+      "summary": "Free card for WA seniors 65+ that unlocks free off-peak public transport, rebates and business discounts.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_65"
+      ],
+      "eligibility_text": "Aged 65 or over, Australian citizen or permanent resident, living in WA, and retired or working no more than 25 hours a week.",
+      "value_text": "Free card; access to Cost of Living Rebate, free Transperth off-peak travel, rates/water rebates and discounts",
+      "max_annual_value": null,
+      "value_period": "Ongoing",
+      "how_to_claim": "Apply online at seniorscard.wa.gov.au.",
+      "phone": "1800 671 233",
+      "source_url": "https://www.seniorscard.wa.gov.au/eligibility/",
+      "notes": ""
+    },
+    {
+      "id": "WA-021",
+      "name": "Cost of Living Rebate (WA Seniors Card)",
+      "provider": "Department of Communities (WA Seniors Card Centre)",
+      "level": "State",
+      "state": "WA",
+      "category": "Payments",
+      "summary": "A yearly cash payment into your bank account for registered WA Seniors Card members.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "aged_65"
+      ],
+      "eligibility_text": "Registered WA Seniors Card member; new applicants must be received by 31 May for that year's payment.",
+      "value_text": "$114.20 single, $171.30 couple",
+      "max_annual_value": 171.3,
+      "value_period": "2026 (paid from 23 July 2026)",
+      "how_to_claim": "Register your bank details with the WA Seniors Card Centre by 31 May; no need to reapply each year.",
+      "phone": "1800 671 233",
+      "source_url": "https://www.wa.gov.au/government/media-statements/Cook Labor Government/Cost-of-living-payments-for-Western-Australian-seniors-20260723",
+      "notes": "$171.30 is per couple; single max $114.20."
+    },
+    {
+      "id": "WA-022",
+      "name": "Safety and Security Rebate",
+      "provider": "Department of Communities (WA Seniors Card Centre)",
+      "level": "State",
+      "state": "WA",
+      "category": "Home and Rates",
+      "summary": "Get back up to $400 for buying home security or safety items like alarms, screens, deadlocks or smoke alarms.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "aged_65"
+      ],
+      "eligibility_text": "WA Seniors Card member at the time of purchase; item installed at your principal WA home. Not for aged care, hospital or hostel residents. One claim per household.",
+      "value_text": "One-off rebate up to $400 for eligible items bought on or after 22 Aug 2021",
+      "max_annual_value": null,
+      "value_period": "Ongoing since 22 Aug 2021 (no end date set)",
+      "how_to_claim": "Buy and install the item, then apply online or by form with tax receipts and ID.",
+      "phone": "1800 671 233",
+      "source_url": "https://www.seniorscard.wa.gov.au/safety-and-security-rebate-terms/",
+      "notes": "One-off ($400 lifetime per household) so max_annual_value null."
+    },
+    {
+      "id": "WA-023",
+      "name": "Transperth free off-peak travel (Seniors SmartRider)",
+      "provider": "Transperth (Public Transport Authority)",
+      "level": "State",
+      "state": "WA",
+      "category": "Transport",
+      "summary": "Free bus, train and ferry travel in Perth at off-peak times and weekends for WA Seniors Card holders.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "aged_65"
+      ],
+      "eligibility_text": "WA Seniors Card holder using a Seniors SmartRider.",
+      "value_text": "Free 9am to 3:30pm and 7pm to 6am weekdays, all weekend, public holidays and Seniors Week; concession fares at other times",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Get a Seniors SmartRider linked to your WA Seniors Card.",
+      "phone": "13 62 13",
+      "source_url": "https://www.seniorscard.wa.gov.au/benefits",
+      "notes": "Phone 13 62 13 is Transperth's InfoLine (not on source page; verify)."
+    },
+    {
+      "id": "WA-024",
+      "name": "Transperth Pensioner and Veteran SmartRider",
+      "provider": "Transperth (Public Transport Authority)",
+      "level": "State",
+      "state": "WA",
+      "category": "Transport",
+      "summary": "Concession fares and free travel on Perth public transport for age pensioners, carers and veterans.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD",
+        "HCC"
+      ],
+      "requires": [
+        "age_pension"
+      ],
+      "eligibility_text": "Aged pensioners and carers (Pensioner SmartRider), veterans/war widows (Veteran SmartRider). HCC holders get concession fares only.",
+      "value_text": "Concession fare or free travel (times not stated on page)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Get a Pensioner or Veteran SmartRider.",
+      "phone": "",
+      "source_url": "https://www.transperth.wa.gov.au/tickets-fares/concession-guide",
+      "notes": "Free travel times not stated on the Transperth page; HCC is concession fare only."
+    },
+    {
+      "id": "WA-025",
+      "name": "Transwa regional coach and rail concession",
+      "provider": "Transwa",
+      "level": "State",
+      "state": "WA",
+      "category": "Transport",
+      "summary": "Half-price regional train and coach fares across WA.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "Pensioner Concession Card, State-issued Seniors card or Seniors SmartRider, Veteran SmartRider, DVA PCC or Gold Card. CSHC alone does not qualify.",
+      "value_text": "50% off the regular fare",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Book online (registered cardholders) or by phone/booking centre.",
+      "phone": "1300 662 205",
+      "source_url": "https://www.transwa.wa.gov.au/fares/concessions",
+      "notes": ""
+    },
+    {
+      "id": "WA-026",
+      "name": "Transwa Pensioner Free Travel",
+      "provider": "Transwa",
+      "level": "State",
+      "state": "WA",
+      "category": "Transport",
+      "summary": "Free regional train or coach trips each year for WA pensioners and DVA Gold Card holders.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "WA Pensioner Concession Card (Services Australia or DVA) holders, and WA DVA Gold Card holders.",
+      "value_text": "2 free single trips a year (PCC) or 4 (DVA Gold), plus 50% off other fares",
+      "max_annual_value": null,
+      "value_period": "Per calendar year",
+      "how_to_claim": "Register online, by phone, post or at a booking centre (up to 10 business days).",
+      "phone": "1300 662 205",
+      "source_url": "https://www.transwa.wa.gov.au/fares/pensioner-free-travel",
+      "notes": "Dollar value depends on route."
+    },
+    {
+      "id": "WA-027",
+      "name": "Regional Pensioner Travel Card",
+      "provider": "DPIRD (managed by WEX Australia)",
+      "level": "State",
+      "state": "WA",
+      "category": "Transport",
+      "summary": "A card loaded with a set amount each year for fuel or taxis, for pensioners living in regional WA.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "age_pension",
+        "rural"
+      ],
+      "eligibility_text": "Receiving a means-tested pension (Age Pension, Carer Payment, DSP, DVA Service Pension, Income Support Supplement) and living in an eligible regional location.",
+      "value_text": "Set amount each year for fuel and/or taxis (amount not stated on page)",
+      "max_annual_value": null,
+      "value_period": "Financial year",
+      "how_to_claim": "Get the form from a participating Australia Post office and submit by 15 May for the coming financial year.",
+      "phone": "1300 666 609",
+      "source_url": "https://www.wa.gov.au/service/community-services/rural-community-development/regional-pensioner-travel-card",
+      "notes": "Replaces the Country Age Pension Fuel Card. Annual dollar amount not on source. From 1 Oct 2026 fuel retailers may surcharge."
+    },
+    {
+      "id": "WA-028",
+      "name": "Vehicle licence (registration) concession",
+      "provider": "Department of Transport",
+      "level": "State",
+      "state": "WA",
+      "category": "Transport",
+      "summary": "Half off the vehicle licence fee on one car for pensioners and Seniors Card plus CSHC holders.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD",
+        "CSHC"
+      ],
+      "requires": [
+        "car_owner"
+      ],
+      "eligibility_text": "Pensioner Concession Card (Centrelink or DVA), or BOTH a WA Seniors Card and CSHC. One vehicle only (car, light goods under 3t, motorhome, motorcycle). 100% for certain veterans (TPI/EDA/SRDP) and max-rate DSP/carer/blind pensioners.",
+      "value_text": "50% off the vehicle licence fee (100% for some veterans and disability pensioners)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Fill in the C1 Application for concession form and show your card(s).",
+      "phone": "13 11 56",
+      "source_url": "https://transport.wa.gov.au/about-us/concessions/seniors-veterans-pensioners",
+      "notes": "Phone from WA Seniors Card benefits page."
+    },
+    {
+      "id": "WA-029",
+      "name": "Driver's licence fee concession",
+      "provider": "Department of Transport",
+      "level": "State",
+      "state": "WA",
+      "category": "Transport",
+      "summary": "Free or half-price driver's licence renewal for pensioners and seniors.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD",
+        "CSHC",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "100% free: PCC holders on the Age Pension, or WA Seniors Card + CSHC, or DVA Gold TPI/EDA/SRDP. 50% off: PCC (Centrelink or DVA) or WA Seniors Card.",
+      "value_text": "100% or 50% off licence renewal/replacement fees",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Show your card(s) when renewing; use the C1 form. Refunds may apply if you paid full fees while eligible.",
+      "phone": "13 11 56",
+      "source_url": "https://transport.wa.gov.au/about-us/concessions/seniors-veterans-pensioners",
+      "notes": ""
+    },
+    {
+      "id": "WA-030",
+      "name": "WA Photo Card fee concession",
+      "provider": "Department of Transport",
+      "level": "State",
+      "state": "WA",
+      "category": "Discounts",
+      "summary": "Free or half-price WA Photo Card (ID card) for pensioners and seniors.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD",
+        "CSHC"
+      ],
+      "requires": [],
+      "eligibility_text": "Same rules as driver's licence: free for Age Pension PCC holders or Seniors Card + CSHC; 50% off for PCC or Seniors Card.",
+      "value_text": "100% or 50% off Photo Card fee",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Show your card(s) when applying.",
+      "phone": "13 11 56",
+      "source_url": "https://transport.wa.gov.au/about-us/concessions/seniors-veterans-pensioners",
+      "notes": ""
+    },
+    {
+      "id": "WA-031",
+      "name": "Recreational fishing licence discount",
+      "provider": "DPIRD",
+      "level": "State",
+      "state": "WA",
+      "category": "Discounts",
+      "summary": "Half-price recreational fishing licences for WA Seniors Card holders.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "WA Seniors Card holders (other concession cards may also qualify; DPIRD page's concession section did not load).",
+      "value_text": "50% off recreational fishing licences (standard fees $40-$50)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Buy your licence online through DPIRD and select the concession.",
+      "phone": "1300 374 731",
+      "source_url": "https://www.seniorscard.wa.gov.au/benefits",
+      "notes": "Concession detail missing on DPIRD page; PCC eligibility not confirmed."
+    },
+    {
+      "id": "WA-032",
+      "name": "Ambulance fee subsidy (St John WA)",
+      "provider": "WA Department of Health / St John WA",
+      "level": "State",
+      "state": "WA",
+      "category": "Health",
+      "summary": "Free ambulance for over-65 pensioners, and half price for other over-65s or under-65 pensioners.",
+      "cards": [
+        "PCC",
+        "NONE"
+      ],
+      "requires": [],
+      "eligibility_text": "WA residents over 65 with a pension concession entitlement: free. Over 65 without one, or under 65 with one: pay 50%. Service must be medically necessary.",
+      "value_text": "Free (65+ with pension concession) or 50% off ambulance fees",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Contact St John's Finance Customer Team about your bill.",
+      "phone": "(08) 9334 1212",
+      "source_url": "https://stjohnwa.com.au/ambulance-and-health-services/ambulance-service/pay-my-bill/pensioner-over-65",
+      "notes": "Applies with no card if aged 65+ (50%); use aged_65 logic manually. Page only says 'Pension Concession Entitlement'."
+    },
+    {
+      "id": "WA-033",
+      "name": "Public dental care for adults",
+      "provider": "Dental Health Services (WA Health)",
+      "level": "State",
+      "state": "WA",
+      "category": "Health",
+      "summary": "Subsidised general and emergency dental care at public clinics for concession card holders.",
+      "cards": [
+        "PCC",
+        "HCC"
+      ],
+      "requires": [],
+      "eligibility_text": "Aged 17+ with a current Health Care Card or Pensioner Concession Card. Includes the Country and Metropolitan Patients Dental Subsidy Schemes (private dentists).",
+      "value_text": "Subsidised dental care (co-payment not stated)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Phone Dental Health Services to get on the waiting list.",
+      "phone": "(08) 9313 0555",
+      "source_url": "https://www.health.wa.gov.au/Articles/A_E/Dental-Health-Services",
+      "notes": "Patient co-payment amounts not on page."
+    },
+    {
+      "id": "WA-034",
+      "name": "Spectacle Subsidy Scheme",
+      "provider": "WA Department of Health",
+      "level": "State",
+      "state": "WA",
+      "category": "Health",
+      "summary": "Up to $54.34 every two years towards glasses or contact lenses.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Receive an Age, Disability or Service pension, or hold a WA Seniors Card. DVA Gold Card holders not eligible.",
+      "value_text": "Up to $54.34 every 2 years",
+      "max_annual_value": null,
+      "value_period": "Rate since 1 July 2019",
+      "how_to_claim": "Ask your optometrist for the claim form when you buy your glasses.",
+      "phone": "13 44 77 (option 3, then 4)",
+      "source_url": "https://www.healthywa.wa.gov.au/Articles/S_T/Spectacle-Subsidy-Scheme",
+      "notes": "Paid every 2 years so max_annual_value null (about $27/yr)."
+    },
+    {
+      "id": "WA-035",
+      "name": "Patient Assisted Travel Scheme (PATS)",
+      "provider": "WA Country Health Service",
+      "level": "State",
+      "state": "WA",
+      "category": "Health",
+      "summary": "Helps country people with travel and accommodation costs to reach specialist treatment far from home.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "rural"
+      ],
+      "eligibility_text": "Country WA residents travelling over 100 km (70-100 km for cancer/renal) to the nearest eligible specialist service, assessed under the PATS Handbook. From 1 July 2026 also covers approved specialist allied health and dental.",
+      "value_text": "40c per km fuel; accommodation $20/night private or up to $110/night commercial (+$15 support person); $20 per return trip for 70-100 km cancer/renal",
+      "max_annual_value": null,
+      "value_period": "From July 2025 (fuel rate); current page",
+      "how_to_claim": "Get your specialist/GP to sign the PATS form and lodge it with your local PATS office.",
+      "phone": "",
+      "source_url": "https://wacountry.health.wa.gov.au/Our-patients/Patient-Assisted-Travel-Scheme-PATS/PATS-subsidies",
+      "notes": "No card needed; phone via local PATS office."
+    },
+    {
+      "id": "WA-036",
+      "name": "Community Aids and Equipment Program (CAEP)",
+      "provider": "WA Department of Health",
+      "level": "State",
+      "state": "WA",
+      "category": "Health",
+      "summary": "Equipment like wheelchairs and home changes like ramps for people with long-term or age-related impairment living at home.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "mobility_need"
+      ],
+      "eligibility_text": "People living at home with long-term health conditions, disability or age-related functional impairment, assessed by a health professional.",
+      "value_text": "Equipment and home modifications (cost to client not stated)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Ask your GP or allied health professional to complete the CAEP Referral Form.",
+      "phone": "",
+      "source_url": "https://www.wa.gov.au/service/health-care/community-health-services/community-aids-and-equipment-program-caep",
+      "notes": "Card/income criteria not on page."
+    },
+    {
+      "id": "WA-037",
+      "name": "Dog and cat registration discount",
+      "provider": "Local councils (under DLGSC rules)",
+      "level": "State",
+      "state": "WA",
+      "category": "Discounts",
+      "summary": "Cheaper dog and cat registration for concession card holders.",
+      "cards": [
+        "PCC"
+      ],
+      "requires": [],
+      "eligibility_text": "Dog: Pensioner Concession Card holders. Cat: accepted concession card holders.",
+      "value_text": "Discounted registration (amount not stated)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Show your card when registering your pet with your council.",
+      "phone": "",
+      "source_url": "https://www.wa.gov.au/organisation/department-of-communities/concessions-available-western-australia",
+      "notes": "Level is State law applied by councils."
+    },
+    {
+      "id": "WA-038",
+      "name": "Public Trustee will drafting discount",
+      "provider": "Public Trustee WA (Department of Justice)",
+      "level": "State",
+      "state": "WA",
+      "category": "Discounts",
+      "summary": "A cheaper fee to have the Public Trustee write your will if you hold a concession card.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Valid concession card holders (exact cards not stated on master list).",
+      "value_text": "Discounted will drafting fee (amount not stated)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Contact the Public Trustee to book a will appointment.",
+      "phone": "",
+      "source_url": "https://www.wa.gov.au/organisation/department-of-communities/concessions-available-western-australia",
+      "notes": "Eligible cards to confirm on Public Trustee page."
+    },
+    {
+      "id": "WA-039",
+      "name": "Attractions and parks concessions",
+      "provider": "WA Government agencies",
+      "level": "State",
+      "state": "WA",
+      "category": "Discounts",
+      "summary": "Discounted entry to Perth Zoo, WA Museum, national parks, Rottnest Island and other state attractions.",
+      "cards": [
+        "SENIORS_CARD",
+        "PCC"
+      ],
+      "requires": [],
+      "eligibility_text": "Concession card holders; WA Seniors Card holders get discounts at the Art Gallery of WA, WA Museum, Perth Zoo, national parks and Rottnest accommodation.",
+      "value_text": "Discounted entry (varies by venue)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Show your card at the venue or when booking.",
+      "phone": "",
+      "source_url": "https://www.seniorscard.wa.gov.au/benefits",
+      "notes": "Bundled record; individual prices not loaded."
+    },
+    {
+      "id": "WA-040",
+      "name": "Land tax concession for veterans' surviving partners",
+      "provider": "RevenueWA (Department of Finance)",
+      "level": "State",
+      "state": "WA",
+      "category": "Home and Rates",
+      "summary": "Lower land tax for eligible war widows, war widowers and widowed mothers of veterans.",
+      "cards": [
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "veteran",
+        "homeowner"
+      ],
+      "eligibility_text": "Eligible war widows, war widowers or veterans' widowed mothers.",
+      "value_text": "Reduced assessable land value (amount not stated)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply for a land tax exemption with RevenueWA.",
+      "phone": "08 9262 1373",
+      "source_url": "https://www.wa.gov.au/organisation/department-of-communities/concessions-available-western-australia",
+      "notes": "Only matters if land tax applies (most owner-occupied homes are already exempt)."
+    }
+  ]
+}
