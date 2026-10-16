@@ -1,0 +1,685 @@
+{
+  "jurisdiction": "QLD",
+  "gathered_by": "Claude",
+  "started_at": "2026-10-13T03:15:21Z",
+  "finished_at": "2026-10-13T03:20:48Z",
+  "master_sources": [
+    "https://www.qld.gov.au/community/cost-of-living-support/concessions",
+    "https://www.qld.gov.au/community/cost-of-living-support/concessions/energy-concessions/electricity-gas-rebates",
+    "https://www.qld.gov.au/community/cost-of-living-support/concessions/property-concessions",
+    "https://www.qld.gov.au/community/cost-of-living-support/concessions/medical-concessions",
+    "https://www.qld.gov.au/community/cost-of-living-support/concessions/transport-concessions",
+    "https://www.qld.gov.au/seniors/legal-finance-concessions/seniors-card"
+  ],
+  "gaps": [
+    "The 'find concessions and rebates' master page and the Concessions Finder app could not be fetched; list built from category index pages.",
+    "Qld PCC holders' long-distance rail discount / free trip entitlements not stated on Queensland Rail Travel page.",
+    "Driver licence concession for seniors not found on any official page checked (likely none).",
+    "Boat registration concession dollar amount not confirmed; vehicle rego saving varies by vehicle.",
+    "Several qld.gov.au pages are dated 2017-2018 (water subsidy, spectacles, MASS cards); amounts should be rechecked.",
+    "No current one-off Qld seniors/cost-of-living rebate found for 2026 (the $1,000 2024-25 electricity rebate has ended).",
+    "Deaf smoke alarm subsidy page now redirects to QFES; not included. Council-specific pensioner rate rebates (beyond Brisbane transport) not covered.",
+    "No Qld stamp duty concession specific to seniors identified; not included."
+  ],
+  "benefits": [
+    {
+      "id": "QLD-001",
+      "name": "Electricity Rebate",
+      "provider": "Qld Government (via electricity retailer)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Bills",
+      "summary": "A yearly rebate of about $399 off your home electricity bill.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "SENIORS_CARD",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "Queensland Seniors Card, Pensioner Concession Card (Services Australia or DVA), Health Care Card or Veteran Gold Card. Must be the electricity account holder at your principal place of residence; one rebate per household. CSHC holders are not eligible.",
+      "value_text": "$399.47 a year (GST inclusive)",
+      "max_annual_value": 399.47,
+      "value_period": "Current rate (page updated 10 Jul 2026)",
+      "how_to_claim": "Phone your electricity retailer with your concession card; it is then deducted from your bills.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/energy-concessions/electricity-gas-rebates",
+      "notes": "Page does not name the rebate year. Commonwealth Seniors Health Card on its own does not qualify (Qld Seniors Card does)."
+    },
+    {
+      "id": "QLD-002",
+      "name": "Reticulated Natural Gas Rebate",
+      "provider": "Qld Government (via gas retailer)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Bills",
+      "summary": "A yearly rebate of about $96 off your piped natural gas bill.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "gas_account"
+      ],
+      "eligibility_text": "Queensland Seniors Card, Pensioner Concession Card or Veteran Gold Card (Health Care Card is electricity-only). Must be the gas account holder at your principal place of residence.",
+      "value_text": "$96.45 a year (GST inclusive)",
+      "max_annual_value": 96.45,
+      "value_period": "Current rate (page updated 10 Jul 2026)",
+      "how_to_claim": "Contact your gas retailer; the rebate is deducted from your bills.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/energy-concessions/electricity-gas-rebates",
+      "notes": "Not for bottled LPG."
+    },
+    {
+      "id": "QLD-003",
+      "name": "Electricity and Gas Rebates for Home Park and Multi-Unit Residents",
+      "provider": "Qld Government (via park owner/proprietor)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Bills",
+      "summary": "If your power comes through a park, village or unit-complex owner, you still get the rebate as a daily amount.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "SENIORS_CARD",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "Residents of residential parks, multi-unit complexes, granny flats etc. who are billed by a proprietor and hold a Qld Seniors Card, PCC, Health Care Card (electricity only) or Veteran Gold Card. Principal place of residence only; not nursing homes, motels or dormitories.",
+      "value_text": "Electricity $1.0945 a day (incl GST); gas $0.2643 a day (incl GST)",
+      "max_annual_value": null,
+      "value_period": "Current gazetted daily rate",
+      "how_to_claim": "Ask your park owner or proprietor to add you to their Form 502 application to the energy retailer.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/energy-concessions/residential-homes-rebates",
+      "notes": "Daily electricity rate works out to about $399 a year; you do not hold the account yourself, so 'electricity_account' is approximate."
+    },
+    {
+      "id": "QLD-004",
+      "name": "Home Energy Emergency Assistance Scheme (HEEAS)",
+      "provider": "Qld Government (paid to energy retailer)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Bills",
+      "summary": "One-off help of up to $720 to pay an electricity or gas bill after an emergency or money crisis.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "SENIORS_CARD",
+        "DVA_GOLD",
+        "CSHC",
+        "NONE"
+      ],
+      "requires": [
+        "hardship"
+      ],
+      "eligibility_text": "Responsible for the overdue bill and hold a concession card, or have income at or below the part-age-pension limit, or be on your energy retailer's hardship program; plus a big drop in income or high unexpected essential costs in the last 12 months.",
+      "value_text": "Up to $720, once every 2 years",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Ask your energy retailer for an assessment and application number, then apply online at heeas-application-form.treasury.qld.gov.au.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/energy-concessions/home-energy-emergency-assistance-scheme",
+      "notes": "One-off payment so max_annual_value is null. Card list is broad because the page says 'a current concession card' or income test."
+    },
+    {
+      "id": "QLD-005",
+      "name": "Medical Cooling and Heating Electricity Concession Scheme",
+      "provider": "Qld Government",
+      "level": "State",
+      "state": "QLD",
+      "category": "Bills",
+      "summary": "About $522 a year towards power bills if a medical condition means you must heat or cool your home.",
+      "cards": [
+        "PCC",
+        "HCC"
+      ],
+      "requires": [
+        "electricity_account",
+        "medical_condition"
+      ],
+      "eligibility_text": "PCC (Services Australia or DVA) or Health Care Card; financially responsible for the electricity bill; a specialist certifies a condition such as MS, autonomic dysfunction, loss of sweating capacity or temperature hypersensitivity.",
+      "value_text": "$522.09 a year (incl GST), paid quarterly to your bank",
+      "max_annual_value": 522.09,
+      "value_period": "From 1 July 2026",
+      "how_to_claim": "Fill in the MCHECS form with your specialist and post it.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/medical-concessions/medical-cooling-heating-electricity-concession-scheme",
+      "notes": ""
+    },
+    {
+      "id": "QLD-006",
+      "name": "Electricity Life Support Concession (Oxygen Concentrator)",
+      "provider": "Qld Government",
+      "level": "State",
+      "state": "QLD",
+      "category": "Bills",
+      "summary": "About $1,063 a year towards the power used by a home oxygen concentrator.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "life_support",
+        "electricity_account"
+      ],
+      "eligibility_text": "Oxygen concentrator supplied free through the Medical Aids Subsidy Scheme, and hold a Pensioner Concession Card, Health Care Card or Queensland Seniors Card.",
+      "value_text": "$1,063.30 a year per machine, paid quarterly",
+      "max_annual_value": 1063.3,
+      "value_period": "From 1 July 2025",
+      "how_to_claim": "Complete the form MASS sends within 14 working days of getting the machine.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/medical-concessions/electricity-life-support",
+      "notes": "Page shows 1 July 2025 rates; 2026-27 rate not shown."
+    },
+    {
+      "id": "QLD-007",
+      "name": "Electricity Life Support Concession (Kidney Dialysis)",
+      "provider": "Qld Government",
+      "level": "State",
+      "state": "QLD",
+      "category": "Bills",
+      "summary": "About $712 a year towards the power used by a home kidney dialysis machine.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "life_support",
+        "electricity_account"
+      ],
+      "eligibility_text": "Home dialysis machine supplied free by a Queensland Health hospital. No concession card requirement is listed.",
+      "value_text": "$712.07 a year per machine, paid quarterly",
+      "max_annual_value": 712.07,
+      "value_period": "From 1 July 2025",
+      "how_to_claim": "Complete the form from your hospital Renal Unit.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/medical-concessions/electricity-life-support",
+      "notes": ""
+    },
+    {
+      "id": "QLD-008",
+      "name": "Pensioner Rate Subsidy",
+      "provider": "Qld Government (via local council)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Home and Rates",
+      "summary": "20% off your council rates, up to $200 a year.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Pensioner Concession Card (Services Australia or DVA) or DVA Gold Card; owner or life tenant of your principal place of residence in Qld and legally responsible for the rates.",
+      "value_text": "20% of gross rates and charges, up to $200 a year",
+      "max_annual_value": 200,
+      "value_period": "Current",
+      "how_to_claim": "Apply through your local council.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/property-concessions/rates-subsidy",
+      "notes": "Many councils add their own extra pensioner rebate; not covered here."
+    },
+    {
+      "id": "QLD-009",
+      "name": "South East Queensland Pensioner Water Subsidy",
+      "provider": "Qld Government (via water retailer)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Bills",
+      "summary": "Up to $120 a year off water charges for pensioner homeowners in South East Queensland.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "homeowner",
+        "water_account"
+      ],
+      "eligibility_text": "PCC (Centrelink or DVA) or DVA Gold Card; own or have a life tenancy in your principal place of residence in the SEQ Water Grid and be responsible for rates and charges.",
+      "value_text": "Up to $120 a year",
+      "max_annual_value": 120,
+      "value_period": "Current (page last updated 2017)",
+      "how_to_claim": "Apply to your water retailer (e.g. Urban Utilities, Unitywater or your council).",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/property-concessions/water-subsidy",
+      "notes": "Page is old (2017); confirm amount with retailer. SEQ only."
+    },
+    {
+      "id": "QLD-010",
+      "name": "Emergency Management Levy Concession",
+      "provider": "Qld Government (via council rates)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Home and Rates",
+      "summary": "20% off the Emergency Management Levy on your council rates notice.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Commonwealth Pensioner Concession Card or Repatriation Health (Gold) Card; principal place of residence.",
+      "value_text": "20% off the Emergency Management Levy",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Ask your local council (often applied with the rates subsidy).",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/property-concessions/emergency-management-levy",
+      "notes": "Dollar value depends on property levy class."
+    },
+    {
+      "id": "QLD-011",
+      "name": "Home Assist Secure",
+      "provider": "Qld Government (via local HAS provider)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Home and Rates",
+      "summary": "Help with the labour cost of essential small home repairs and safety jobs, up to $500 a year.",
+      "cards": [
+        "PCC"
+      ],
+      "requires": [
+        "aged_60"
+      ],
+      "eligibility_text": "Aged 60+ (or any age with a disability), hold a Pensioner Concession Card, and unable to do the work yourself. Homeowners and renters. Usually not if you get Commonwealth Home Support or Support at Home.",
+      "value_text": "Labour subsidy up to $200 a job and $500 a year (jobs up to $1,500 total)",
+      "max_annual_value": 500,
+      "value_period": "Current",
+      "how_to_claim": "Contact your local Home Assist Secure provider (search by suburb or call 13 QGOV); they visit and arrange the work.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/housing/buying-owning-home/homeowners-financial-help/home-assist-secure",
+      "notes": "Smoke alarm $250 component has ended in some areas."
+    },
+    {
+      "id": "QLD-012",
+      "name": "Queensland Seniors Card",
+      "provider": "Qld Government",
+      "level": "State",
+      "state": "QLD",
+      "category": "Discounts",
+      "summary": "A free card giving access to state concessions and business discounts for older Queenslanders.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_60"
+      ],
+      "eligibility_text": "Permanent Qld resident living in Qld 6+ months a year; aged 65+ working under 35 hours a week, or 60-64 working under 35 hours a week and holding a PCC, Health Care Card or DVA Gold/White/Orange card.",
+      "value_text": "Free card; unlocks concessions and discounts",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply online, by phone on 13 QGOV, in person at a Qld Government Service Centre, or by post.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/seniors/legal-finance-concessions/seniors-card/applying-seniors-card",
+      "notes": "Age 60-64 without a card: Seniors Business Discount Card only."
+    },
+    {
+      "id": "QLD-013",
+      "name": "Seniors Card +go",
+      "provider": "Qld Government / Translink",
+      "level": "State",
+      "state": "QLD",
+      "category": "Transport",
+      "summary": "Your Seniors Card with a built-in go card for South East Queensland public transport.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Eligible for a Queensland Seniors Card; existing holders can upgrade free.",
+      "value_text": "Free upgrade; no $5 deposit (must load $5 credit)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply online or call 13 74 68.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/seniors/legal-finance-concessions/seniors-card/seniors-card-types-benefits",
+      "notes": ""
+    },
+    {
+      "id": "QLD-014",
+      "name": "Seniors Business Discount Card",
+      "provider": "Qld Government",
+      "level": "State",
+      "state": "QLD",
+      "category": "Discounts",
+      "summary": "A free discount card for Queenslanders aged 60+ who don't qualify for the full Seniors Card.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_60"
+      ],
+      "eligibility_text": "Aged 60 or older and a Queensland resident (6+ months a year); not eligible for the Seniors Card.",
+      "value_text": "Business discounts and Senior Shopper; no government concessions",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply through the same Seniors Card application.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/seniors/legal-finance-concessions/seniors-card/applying-seniors-card",
+      "notes": ""
+    },
+    {
+      "id": "QLD-015",
+      "name": "Senior Shopper",
+      "provider": "Qld Government (Seniors Card program)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Discounts",
+      "summary": "Free service that finds you a better price on appliances, cars, travel and discounted gift cards.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Holders of a Seniors Card, Seniors Card +go or Seniors Business Discount Card.",
+      "value_text": "Free service; gift cards about 2% to 11% off; average 26% saving on electrical goods (program claim)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Register at seniorshopper.com.au and upload your card, then request a quote.",
+      "phone": "1300 366 265",
+      "source_url": "https://www.qld.gov.au/seniors/legal-finance-concessions/seniors-card/senior-shopper",
+      "notes": ""
+    },
+    {
+      "id": "QLD-016",
+      "name": "Seniors Card Interstate and New Zealand Discounts",
+      "provider": "Qld Government / partner businesses",
+      "level": "State",
+      "state": "QLD",
+      "category": "Discounts",
+      "summary": "Use your Qld Seniors Card for business discounts interstate and with New Zealand SuperGold businesses.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Queensland Seniors Card holders.",
+      "value_text": "Discounts on request; varies by business",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Show your card and ask before purchasing; see the visited state's Seniors Card site or supergold.govt.nz.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/seniors/legal-finance-concessions/seniors-card/using-seniors-card",
+      "notes": "Government concessions are not included in the NZ arrangement."
+    },
+    {
+      "id": "QLD-017",
+      "name": "Translink 50 Cent Fares (Seniors)",
+      "provider": "Translink (Qld Government)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Transport",
+      "summary": "All Translink bus, train, ferry and tram trips cost 50 cents for seniors.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Seniors using a Senior go card or Seniors Card +go; all Translink fares are currently 50 cents for everyone.",
+      "value_text": "50 cents per journey",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Get a Senior go card (show Seniors Card) from a retailer, station or online, or upgrade to Seniors Card +go.",
+      "phone": "13 12 30",
+      "source_url": "https://translink.com.au/tickets-and-fares/concessions/seniors",
+      "notes": "50c fares apply to all passengers now, so the seniors concession adds little on Translink. Regional non-Translink ferries accept any Australian Seniors Card. Gold Coast free bus travel ended 1 July 2025."
+    },
+    {
+      "id": "QLD-018",
+      "name": "Brisbane Free Off-Peak Travel for Seniors",
+      "provider": "Brisbane City Council",
+      "level": "Council",
+      "state": "QLD",
+      "category": "Transport",
+      "summary": "Free off-peak trips on Brisbane City Council buses, CityCats and ferries.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Seniors with a Senior go card or Seniors Card +go.",
+      "value_text": "Free on Council buses weekdays 8:30am-3:30pm, 7pm-6am and weekends; CityCats/ferries weekdays off-peak only",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Touch on and off with your Senior go card.",
+      "phone": "13 12 30",
+      "source_url": "https://www.brisbane.qld.gov.au/traffic-and-transport/public-transport/free-off-peak-travel-for-seniors",
+      "notes": "Not valid on Queensland Rail trains."
+    },
+    {
+      "id": "QLD-019",
+      "name": "Long-Distance Rail Concession (Queensland Rail Travel)",
+      "provider": "Queensland Rail",
+      "level": "State",
+      "state": "QLD",
+      "category": "Transport",
+      "summary": "Up to half off long-distance Queensland Rail trains with a Seniors Card.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "Australian state Seniors Card (up to 50% off); interstate PCC (25% off); Queensland PCC holders get Queensland pensioner entitlements; Qld resident war widow/er Gold Card holders treated as Qld pensioners.",
+      "value_text": "Up to 50% off adult fare (Seniors Card); 25% off (interstate PCC)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Register your card on your Queensland Rail Travel profile then book online, or call.",
+      "phone": "1800 872 467",
+      "source_url": "https://www.queenslandrailtravel.com.au/Planyourtrip/concession-fares",
+      "notes": "Page does not state the Queensland pensioner discount or any free-trip allowance. Meals and sleeper upgrades not discounted."
+    },
+    {
+      "id": "QLD-020",
+      "name": "Vehicle Registration Concession",
+      "provider": "Qld Department of Transport and Main Roads",
+      "level": "State",
+      "state": "QLD",
+      "category": "Transport",
+      "summary": "About half off the registration fee for one car or motorbike.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "car_owner"
+      ],
+      "eligibility_text": "Queensland resident with a Qld Seniors Card (not Business Discount Card) or Qld-issued PCC, or ADF member with 70% incapacity / 50 impairment points. One vehicle per person, one per spousal couple, private use, registered in your name.",
+      "value_text": "About 50% off the registration fee, e.g. $385.45 to $192.75 for a 4-cylinder car (saves $192.70); CTP and traffic improvement fee not discounted",
+      "max_annual_value": null,
+      "value_period": "Fees as at 1 October 2026",
+      "how_to_claim": "Complete form F3937 and email, post or lodge it at a transport customer service centre with a copy of your card.",
+      "phone": "13 23 80",
+      "source_url": "https://www.qld.gov.au/transport/registration/fees/concession/senior",
+      "notes": "Saving depends on vehicle; fee table at https://www.qld.gov.au/transport/registration/fees/cost. CSHC not listed. DVA Gold Card holders qualify only via TPI/EDA embossing or DVA letter."
+    },
+    {
+      "id": "QLD-021",
+      "name": "Boat Registration Concession",
+      "provider": "Qld Department of Transport and Main Roads",
+      "level": "State",
+      "state": "QLD",
+      "category": "Transport",
+      "summary": "Reduced registration fee for one private recreational boat.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Queensland resident with Qld Seniors Card or Qld PCC (or prescribed ADF service person); recreational boat in your name; one boat per person, one concession per couple.",
+      "value_text": "Reduced registration fee (see fee table)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Complete form F3937 with a copy of your card; applies from the next registration period.",
+      "phone": "13 23 80",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/transport-concessions/boat-registration-fees",
+      "notes": "Dollar amount not stated on page."
+    },
+    {
+      "id": "QLD-022",
+      "name": "Taxi Subsidy Scheme",
+      "provider": "Qld Department of Transport and Main Roads",
+      "level": "State",
+      "state": "QLD",
+      "category": "Transport",
+      "summary": "Half of your taxi fare paid, up to $30 a trip, if a severe disability stops you using public transport.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "mobility_need"
+      ],
+      "eligibility_text": "Permanent Qld resident who uses a wheelchair, has a severe walking problem, severe vision loss, uncontrolled epilepsy, or dementia/intellectual impairment needing a companion.",
+      "value_text": "50% of the fare, up to $30 per trip, no trip limit",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Complete form QF2330 with a health professional and photo, then email or post to the Taxi Subsidy Unit.",
+      "phone": "1300 134 755",
+      "source_url": "https://www.qld.gov.au/community/cost-of-living-support/concessions/transport-concessions/taxi-concessions",
+      "notes": ""
+    },
+    {
+      "id": "QLD-023",
+      "name": "Free Ambulance for Queensland Residents",
+      "provider": "Queensland Ambulance Service",
+      "level": "State",
+      "state": "QLD",
+      "category": "Health",
+      "summary": "Ambulance treatment and transport is free for Queenslanders, including interstate.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [],
+      "eligibility_text": "Queensland residents (principal place of residence in Qld) and their dependants.",
+      "value_text": "Free; no ambulance cover needed",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Nothing to claim. If you get an interstate ambulance bill, follow the Qld interstate ambulance process.",
+      "phone": "000 (emergency)",
+      "source_url": "https://www.ambulance.qld.gov.au/our-services/emergency-ambulance-response",
+      "notes": "Not limited to pensioners."
+    },
+    {
+      "id": "QLD-024",
+      "name": "Public Dental Services",
+      "provider": "Queensland Health",
+      "level": "State",
+      "state": "QLD",
+      "category": "Health",
+      "summary": "Free public dental care for adults with a concession card or Qld Seniors Card.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "CSHC",
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Queensland residents with a PCC (Centrelink or DVA), Health Care Card, Commonwealth Seniors Health Card or Queensland Seniors Card.",
+      "value_text": "Free (you pay your own transport)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Contact your local public dental clinic to check eligibility and join the waiting list.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/health/services/oral-eye-ear/dental-services",
+      "notes": "Waiting lists apply."
+    },
+    {
+      "id": "QLD-025",
+      "name": "Spectacle Supply Scheme",
+      "provider": "Queensland Health (MASS)",
+      "level": "State",
+      "state": "QLD",
+      "category": "Health",
+      "summary": "Free basic prescription glasses every two years.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Permanent Qld resident who has held a PCC, Health Care Card or Qld Seniors Card in their own name for 6 months; optometrist confirms your eyesight has changed.",
+      "value_text": "Free basic glasses every 2 years",
+      "max_annual_value": null,
+      "value_period": "Current (eligibility page last updated 2018)",
+      "how_to_claim": "Ask a participating optometrist; complete the MASS consent form.",
+      "phone": "(07) 3136 3636",
+      "source_url": "https://www.qld.gov.au/health/condition/eye-health/vision-problems-and-impairments/spectacles-supply-scheme-eligibility",
+      "notes": "Confirm current details; page dated 2018."
+    },
+    {
+      "id": "QLD-026",
+      "name": "Medical Aids Subsidy Scheme (MASS)",
+      "provider": "Queensland Health",
+      "level": "State",
+      "state": "QLD",
+      "category": "Health",
+      "summary": "Subsidised mobility, continence, daily-living and other aids for people with a permanent condition.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "medical_condition"
+      ],
+      "eligibility_text": "Permanent Qld resident with a permanent, stable condition or disability, holding a PCC (Centrelink or DVA), Health Care Card or Qld Seniors Card; clinical assessment by an approved prescriber.",
+      "value_text": "Aids on loan or supplied; value varies",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "A clinician assesses you and applies (MASS-eApply).",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://qld.gov.au/seniors/health/illness-support/health-subsidies",
+      "notes": "Card list from seniors health-subsidies page (2017); MASS page itself does not list cards. Copayment rules not confirmed."
+    },
+    {
+      "id": "QLD-027",
+      "name": "Patient Travel Subsidy Scheme",
+      "provider": "Queensland Health",
+      "level": "State",
+      "state": "QLD",
+      "category": "Health",
+      "summary": "Help with travel and accommodation costs if you must travel far for specialist treatment.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "rural"
+      ],
+      "eligibility_text": "Queensland resident referred to a public specialist service not available locally, more than 50 km from your nearest public hospital.",
+      "value_text": "Private car $0.45/km; commercial accommodation up to $70/night; private accommodation $10/night; approved escort may be covered",
+      "max_annual_value": null,
+      "value_period": "Page updated 1 July 2026",
+      "how_to_claim": "Register and claim through your local hospital's PTSS office.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/health/services/travel/subsidies/ptss-subsidies",
+      "notes": "No different rate for concession card holders stated."
+    },
+    {
+      "id": "QLD-028",
+      "name": "Stocked Impoundment Permit Concession (Fishing)",
+      "provider": "Qld Department of Primary Industries",
+      "level": "State",
+      "state": "QLD",
+      "category": "Discounts",
+      "summary": "Cheaper annual permit to fish in stocked dams and weirs.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "SENIORS_CARD",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "Holders of a Qld Seniors Card, PCC, Health Care Card or Gold Card.",
+      "value_text": "Concession annual permit $46.45 (standard $64.58)",
+      "max_annual_value": null,
+      "value_period": "From 1 July 2026",
+      "how_to_claim": "Buy online or from a permit agent and enter your card details.",
+      "phone": "13 QGOV (13 74 68)",
+      "source_url": "https://www.qld.gov.au/recreation/activities/boating-fishing/rec-fishing/dams/stocked-impoundment-permits/buy",
+      "notes": "Queensland has no general recreational fishing licence; this permit is only needed in stocked impoundments. Saving $18.13 a year."
+    }
+  ]
+}

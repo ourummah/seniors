@@ -1,0 +1,545 @@
+{
+ "jurisdiction": "NT",
+ "gathered_by": "Claude",
+ "started_at": "2026-10-13T03:15:37Z",
+ "finished_at": "2026-10-13T03:19:51Z",
+ "master_sources": [
+  "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions",
+  "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/become-a-member",
+  "https://nt.gov.au/community/concessions-and-payments/nt-seniors-recognition-scheme",
+  "https://nt.gov.au/community/seniors/apply-for-seniors-card"
+ ],
+ "gaps": [
+  "No 'Territory Seniors Rebate' or other current one-off seniors rebate found on nt.gov.au",
+  "Interstate airfare/travel concession from the old Pensioner and Carer Concession Scheme is no longer listed; not included",
+  "NT concession pages do not state the financial year for amounts (pages updated 31 Jul 2026)",
+  "Ambulance cover wording is 'may have'; needs confirmation with St John NT",
+  "Public dental fees and dentures not detailed; stamp duty concession page last updated 2018",
+  "Recreational fishing licence not checked (NT does not appear to have one); principal place of residence rebate (not seniors-specific) omitted"
+ ],
+ "benefits": [
+  {
+   "id": "NT-001",
+   "name": "NT Concession Scheme membership",
+   "provider": "NT Government (NT Concession and Recognition Unit)",
+   "level": "State",
+   "state": "NT",
+   "category": "Discounts",
+   "summary": "Join this free scheme to unlock NT discounts on power, water, council rates, garbage, rego, licence and glasses.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card.",
+   "value_text": "Gives access to the NT concessions listed separately",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Apply online at ntconcessions.nt.gov.au, or post/email the application form with 100 points of ID; processing takes about 20 working days.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/become-a-member",
+   "notes": "Health Care Card and DVA White Card are not listed as qualifying cards. Age Pension recipients qualify (PCC). All concessions are capped and only one member per household can claim."
+  },
+  {
+   "id": "NT-002",
+   "name": "Electricity concession",
+   "provider": "NT Government (via Jacana Energy / Power and Water)",
+   "level": "State",
+   "state": "NT",
+   "category": "Bills",
+   "summary": "Up to $1,200 a year off your home electricity bill.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "electricity_account"
+   ],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card. Must be the primary account holder for your main home (owner or primary tenant for prepaid meters).",
+   "value_text": "Up to $1,200 a year (8,000 kWh): $1.274/day plus $0.091/kWh incl GST on Jacana bills",
+   "max_annual_value": 1200,
+   "value_period": "2026-27 (page updated 31 Jul 2026; year not stated on page)",
+   "how_to_claim": "Give your NT Concession Scheme membership number to Jacana Energy or Power and Water; caravan park / alternative energy users claim with the form and receipts.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions/electricity",
+   "notes": "Prepaid meter users get $600 credited in late January and late July. Caravan park / alternative energy: $1.274 per day unless actual use is shown. No concession if solar covers all use. Cap resets each financial year."
+  },
+  {
+   "id": "NT-003",
+   "name": "Electricity medical support allowance",
+   "provider": "NT Government",
+   "level": "State",
+   "state": "NT",
+   "category": "Health",
+   "summary": "Extra $154 if a medical condition pushes your power use over the concession cap.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "electricity_account",
+    "medical_condition"
+   ],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card. You have exceeded the electricity cap and you or a dependant has a medical condition that directly affects electricity use; you must pay the account.",
+   "value_text": "$154 allowance",
+   "max_annual_value": 154,
+   "value_period": "2026-27 (page updated 31 Jul 2026; year not stated on page)",
+   "how_to_claim": "Apply using the medical support allowance form to the NT Concession and Recognition Unit.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions/electricity",
+   "notes": "Page does not mention life support equipment specifically."
+  },
+  {
+   "id": "NT-004",
+   "name": "Water concession",
+   "provider": "NT Government (via Power and Water)",
+   "level": "State",
+   "state": "NT",
+   "category": "Bills",
+   "summary": "Up to $800 a year off your home water bill.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "water_account"
+   ],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card. Primary account holder or financially responsible for water at your main home (units/townhouses: titleholder or financially responsible; retirement villages: lifetime occupancy).",
+   "value_text": "Up to $800 a year: $0.96/day plus $0.955/kL (471 kL)",
+   "max_annual_value": 800,
+   "value_period": "2026-27 (page updated 31 Jul 2026; year not stated on page)",
+   "how_to_claim": "Houses: give your membership number to Power and Water. Units, retirement villages and water carting: email ntconcessionandrecognition@nt.gov.au or visit a customer service centre with proof of payment and vendor form.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions/water-and-sewerage",
+   "notes": "Unit/townhouse/retirement village claims reimbursed around January and July. Remote water carting: $0.955/kL. One concession per household."
+  },
+  {
+   "id": "NT-005",
+   "name": "Sewerage concession",
+   "provider": "NT Government (via Power and Water)",
+   "level": "State",
+   "state": "NT",
+   "category": "Bills",
+   "summary": "Up to $486.12 a year off sewerage charges.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "water_account"
+   ],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card. Financially responsible for sewerage charges at your main home.",
+   "value_text": "Up to $486.12 a year ($1.332 a day)",
+   "max_annual_value": 486.12,
+   "value_period": "2026-27 (page updated 31 Jul 2026; year not stated on page)",
+   "how_to_claim": "Houses: give your membership number to Power and Water; others email ntconcessionandrecognition@nt.gov.au or visit a customer service centre.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions/water-and-sewerage",
+   "notes": ""
+  },
+  {
+   "id": "NT-006",
+   "name": "Council rates concession",
+   "provider": "NT Government (via local council)",
+   "level": "State",
+   "state": "NT",
+   "category": "Home and Rates",
+   "summary": "62.5% off your council rates, up to $200 a year.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card. Registered titleholder responsible for rates on your principal place of residence; one property per rating year.",
+   "value_text": "62.5% of annual rates, up to $200 a year per household",
+   "max_annual_value": 200,
+   "value_period": "2026-27 (page updated 31 Jul 2026; year not stated on page)",
+   "how_to_claim": "First claim: email ntconcessionandrecognition@nt.gov.au or visit a customer service centre with your rates invoice, proof of payment and vendor creation form; after that the council applies it automatically.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions/council-rates-and-garbage",
+   "notes": "Claim within 6 months of the cost or within the financial year, whichever is greater."
+  },
+  {
+   "id": "NT-007",
+   "name": "Garbage concession",
+   "provider": "NT Government (via local council)",
+   "level": "State",
+   "state": "NT",
+   "category": "Home and Rates",
+   "summary": "Discount on council garbage charges, up to $150 a year depending on where you live.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card. Titleholder of the home you live in and responsible for council or body corporate garbage charges; properties outside town/shire areas and private collections excluded.",
+   "value_text": "Darwin $46.25, Palmerston $47.50, Alice Springs $52, Katherine $45, Tennant Creek $45, up to $150 (Wagait) a year",
+   "max_annual_value": 150,
+   "value_period": "2026-27 (page updated 31 Jul 2026; year not stated on page)",
+   "how_to_claim": "Claim with the council rates concession: email ntconcessionandrecognition@nt.gov.au or visit a customer service centre.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions/council-rates-and-garbage",
+   "notes": "Amount varies by council (17 listed, $10.37 Mataranka to $150 Wagait)."
+  },
+  {
+   "id": "NT-008",
+   "name": "Free driver licence renewal",
+   "provider": "NT Government (Motor Vehicle Registry)",
+   "level": "State",
+   "state": "NT",
+   "category": "Transport",
+   "summary": "Renew your NT driver licence for free.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card.",
+   "value_text": "Free licence renewal",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Give your NT Concession Scheme membership number at an MVR office when renewing.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions/driver-licence-and-vehicles",
+   "notes": "Fee saved not stated on the source."
+  },
+  {
+   "id": "NT-009",
+   "name": "Vehicle registration concession",
+   "provider": "NT Government (Motor Vehicle Registry)",
+   "level": "State",
+   "state": "NT",
+   "category": "Transport",
+   "summary": "Up to $154 a year off registering your car, motorbike or mobility scooter.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "car_owner"
+   ],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card. Non-commercial vehicle, motorcycle, motorised wheelchair or trike; not company vehicles, caravans or trailers.",
+   "value_text": "Up to $154 for 12 months ($77 for 6 months)",
+   "max_annual_value": 154,
+   "value_period": "2026-27 (page updated 31 Jul 2026; year not stated on page)",
+   "how_to_claim": "Give your membership number at MVR when renewing registration.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions/driver-licence-and-vehicles",
+   "notes": "Annual cycle runs from your concession anniversary."
+  },
+  {
+   "id": "NT-010",
+   "name": "Spectacles concession",
+   "provider": "NT Government (via approved optometrists)",
+   "level": "State",
+   "state": "NT",
+   "category": "Health",
+   "summary": "Up to $502.20 towards prescription glasses or contact lenses every two years.",
+   "cards": [
+    "PCC",
+    "CSHC",
+    "DVA_GOLD"
+   ],
+   "requires": [],
+   "eligibility_text": "NT Concession Scheme member: NT resident at least 183 days of the financial year, Australian citizen or permanent resident, receiving Age Pension, Disability Support Pension, Carer Payment or Parenting Payment (single), or holding a DVA Gold Card, DVA orange card, Pensioner Concession Card or Commonwealth Seniors Health Card.",
+   "value_text": "Up to $502.20 every 2 years (about $251 a year)",
+   "max_annual_value": 251.1,
+   "value_period": "Page updated 4 Nov 2024",
+   "how_to_claim": "Claim at the time of purchase from an approved optometrist (listed for Darwin, Palmerston, Katherine and Alice Springs).",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-concession-scheme/concessions/spectacles",
+   "notes": "max_annual_value is $502.20 halved. Covers bifocals/multifocals or reading+distance pair or contacts, plus tinting and repairs."
+  },
+  {
+   "id": "NT-011",
+   "name": "NT Seniors Recognition Scheme prepaid card",
+   "provider": "NT Government (NT Concession and Recognition Unit)",
+   "level": "State",
+   "state": "NT",
+   "category": "Payments",
+   "summary": "A $550 prepaid card every financial year for Territorians aged 65+, to spend as you choose.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "aged_65"
+   ],
+   "eligibility_text": "Aged 65 or over; NT resident at least 183 days of the financial year; Australian citizen, permanent resident or temporary visa holder with Medicare card at an NT address.",
+   "value_text": "$550 per financial year on a prepaid card",
+   "max_annual_value": 550,
+   "value_period": "Per financial year (page current 2026)",
+   "how_to_claim": "Apply online at ntconcessions.nt.gov.au or by form with 100 points of ID; apply by 1 May to get that financial year's card.",
+   "phone": "1800 777 704",
+   "source_url": "https://nt.gov.au/community/concessions-and-payments/nt-seniors-recognition-scheme",
+   "notes": "DVA factsheet says $500 (older figure); nt.gov.au says $550. Restricted merchant categories apply."
+  },
+  {
+   "id": "NT-012",
+   "name": "NT Seniors Card",
+   "provider": "COTA NT for NT Government",
+   "level": "State",
+   "state": "NT",
+   "category": "Discounts",
+   "summary": "Free card for Territorians 60+ giving discounts at participating businesses.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "aged_60"
+   ],
+   "eligibility_text": "Permanent NT resident aged 60 or over.",
+   "value_text": "Free; discounts vary by business",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Post the Seniors Card application form to Seniors Card, GPO Box 852, Darwin NT 0801.",
+   "phone": "1800 441 489",
+   "source_url": "https://nt.gov.au/community/seniors/apply-for-seniors-card",
+   "notes": "No work-hours test mentioned. Card does not need renewing. [Claude: cards set to NONE so people without the card are told about it.]"
+  },
+  {
+   "id": "NT-013",
+   "name": "Seniors Card vehicle registration concession",
+   "provider": "NT Government (Motor Vehicle Registry)",
+   "level": "State",
+   "state": "NT",
+   "category": "Transport",
+   "summary": "$55 a year off private car registration for Seniors Card holders.",
+   "cards": [
+    "SENIORS_CARD"
+   ],
+   "requires": [
+    "car_owner",
+    "aged_60"
+   ],
+   "eligibility_text": "NT Seniors Card holder (60+) with a private vehicle; card registered with MVR.",
+   "value_text": "$55 a year off private vehicle registration",
+   "max_annual_value": 55,
+   "value_period": "Ongoing",
+   "how_to_claim": "Register your Seniors Card with MVR.",
+   "phone": "1800 441 489",
+   "source_url": "https://nt.gov.au/community/seniors/apply-for-seniors-card",
+   "notes": "Concession scheme page calls it an 'additional' Senior's discount, so may stack with NT-009."
+  },
+  {
+   "id": "NT-014",
+   "name": "Seniors Card interstate public transport discounts",
+   "provider": "Interstate transport operators",
+   "level": "State",
+   "state": "NT",
+   "category": "Transport",
+   "summary": "Your NT Seniors Card gets discounted fares on most interstate public transport.",
+   "cards": [
+    "SENIORS_CARD"
+   ],
+   "requires": [
+    "aged_60"
+   ],
+   "eligibility_text": "NT Seniors Card holder.",
+   "value_text": "Discounted fares; varies by state",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Show your NT Seniors Card; check with the operator before travelling.",
+   "phone": "1800 441 489",
+   "source_url": "https://nt.gov.au/community/seniors/apply-for-seniors-card",
+   "notes": "No interstate airfare concession found in the current NT scheme."
+  },
+  {
+   "id": "NT-015",
+   "name": "Free public bus travel",
+   "provider": "NT Government",
+   "level": "State",
+   "state": "NT",
+   "category": "Transport",
+   "summary": "All public buses in Darwin, Palmerston and Alice Springs are free.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [],
+   "eligibility_text": "Anyone; no card mentioned.",
+   "value_text": "Free fares",
+   "max_annual_value": null,
+   "value_period": "From 1 July 2025",
+   "how_to_claim": "Just board the bus.",
+   "phone": "",
+   "source_url": "https://nt.gov.au/driving/public-transport-cycling/public-buses/fares",
+   "notes": "Page dated 9 Jul 2025 says 'continue to be free from 1 July 2025'; confirm still current. DVA factsheet also says Gold Card holders get fully subsidised urban bus travel."
+  },
+  {
+   "id": "NT-016",
+   "name": "Senior, pensioner and carer stamp duty concession",
+   "provider": "Territory Revenue Office",
+   "level": "State",
+   "state": "NT",
+   "category": "Home and Rates",
+   "summary": "Up to $10,000 off stamp duty when buying a home if you are 60+ or a concession card holder.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "aged_60"
+   ],
+   "eligibility_text": "Aged 60 or over, or hold an NT Pensioner and Carer Concession card; not means tested; home dutiable value up to $750,000 (land up to $385,000); must live in it.",
+   "value_text": "Up to $10,000 off stamp duty (one-off)",
+   "max_annual_value": null,
+   "value_period": "Page updated 27 Apr 2018",
+   "how_to_claim": "Lodge the application form via your conveyancer before settlement, or with the Territory Revenue Office after paying duty.",
+   "phone": "1300 305 353",
+   "source_url": "https://nt.gov.au/property/homeowner-incentives/seniors,-pensioners-and-carers/senior,-pensioner-and-carer-concession",
+   "notes": "One-off, so max_annual_value null. Concession card holders under 60 also qualify; the 'cards' field lists NONE because age 60 alone qualifies. Page last updated 2018: thresholds should be checked."
+  },
+  {
+   "id": "NT-017",
+   "name": "Free public dental care",
+   "provider": "NT Health",
+   "level": "State",
+   "state": "NT",
+   "category": "Health",
+   "summary": "Free public dental care for adults with a pension, health care or seniors health card.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "CSHC",
+    "DVA_GOLD",
+    "DVA_WHITE"
+   ],
+   "requires": [],
+   "eligibility_text": "Holder or dependant of a Pensioner Concession Card, Health Care Card, Commonwealth Seniors Health Card, or DVA Gold or White card.",
+   "value_text": "Free",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Phone Oral Health Services to book: Darwin 08 8922 6466, Alice Springs 08 8951 6713.",
+   "phone": "08 8922 6466",
+   "source_url": "https://nt.gov.au/wellbeing/allied-health/public-dental-services/eligibility-for-public-dental-services",
+   "notes": "'Free' wording from https://nt.gov.au/wellbeing/hospitals-health-services/dental-services; eligibility page does not list fees."
+  },
+  {
+   "id": "NT-018",
+   "name": "Patient Assistance Travel Scheme (PATS)",
+   "provider": "NT Health",
+   "level": "State",
+   "state": "NT",
+   "category": "Health",
+   "summary": "Help with travel and accommodation costs if you live over 75 km from the specialist you are referred to.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "rural"
+   ],
+   "eligibility_text": "Australian citizen or permanent resident living in the NT 6+ months, Medicare enrolled, referred to the nearest approved specialist more than 75 km away (renal/oncology: over 250 km a week).",
+   "value_text": "Accommodation $90/night commercial ($60 hostel/not-for-profit, $20 with friends/family); private car 40c/km; air and bus at best fare of the day",
+   "max_annual_value": null,
+   "value_period": "Page modified 26 Feb 2026",
+   "how_to_claim": "Your doctor or health provider applies; the hospital patient travel office books travel.",
+   "phone": "08 8922 8135",
+   "source_url": "https://nt.gov.au/wellbeing/health-subsidies-support-and-home-visits/patient-assistance-travel-scheme/what-you-can-claim-for",
+   "notes": "Other offices: Alice Springs 08 8951 7846, Katherine 08 8973 9215, Tennant Creek 08 8962 4647, Gove 08 8987 0201. Value depends on travel."
+  },
+  {
+   "id": "NT-019",
+   "name": "Emergency ambulance cover for concession card holders",
+   "provider": "St John Ambulance NT",
+   "level": "State",
+   "state": "NT",
+   "category": "Health",
+   "summary": "Pensioner Concession Card or Health Care Card holders may have emergency ambulance cover in the NT.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [],
+   "eligibility_text": "NT holders of a Centrelink Pensioner Concession Card or Health Care Card may have cover; may not apply in Queensland or South Australia.",
+   "value_text": "Emergency ambulance transport (may be free)",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Ask St John NT accounts team to confirm your cover.",
+   "phone": "08 8922 6200",
+   "source_url": "https://www.stjohnnt.org.au/ambulance-services/emergency-ambulance-transport-cover",
+   "notes": "Source wording is 'may have'; DVA factsheet says free emergency ambulance transport for NT PCC holders. Needs checking."
+  },
+  {
+   "id": "NT-020",
+   "name": "Taxi Transport Subsidy Scheme",
+   "provider": "NT Government",
+   "level": "State",
+   "state": "NT",
+   "category": "Transport",
+   "summary": "Half-price taxi and minibus fares if a long-term disability stops you using public transport.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "mobility_need"
+   ],
+   "eligibility_text": "NT resident with a permanent or long-term (6+ months) disability confirmed by a health professional that stops you safely using public transport.",
+   "value_text": "50% of taxi or minibus fare",
+   "max_annual_value": null,
+   "value_period": "Page modified 30 Jul 2026",
+   "how_to_claim": "Complete the TSS form (Part B by your health professional) with photos and proof of residency; mail to GPO Box 2520, Darwin NT 0801 or email cpv.admin@nt.gov.au.",
+   "phone": "08 8924 7229",
+   "source_url": "https://nt.gov.au/driving/public-transport-cycling/taxi-subsidy-scheme",
+   "notes": "Wheelchair users also covered by the Lift Incentive Scheme ($30 paid to driver per accessible trip)."
+  },
+  {
+   "id": "NT-021",
+   "name": "Jacana Energy Stay Connected hardship program",
+   "provider": "Jacana Energy (NT Government owned)",
+   "level": "State",
+   "state": "NT",
+   "category": "Bills",
+   "summary": "Help to keep your power on with payment plans if you are struggling to pay.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "electricity_account",
+    "hardship"
+   ],
+   "eligibility_text": "Jacana customer in financial difficulty, willing to set up a payment arrangement and work with support agencies.",
+   "value_text": "Payment plans, extensions and hardship support",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Call Jacana Energy or apply online for a payment extension or arrangement.",
+   "phone": "1800 522 262",
+   "source_url": "https://jacanaenergy.com.au/support/financial-support",
+   "notes": "Not a cash rebate."
+  },
+  {
+   "id": "NT-022",
+   "name": "Power and Water Bill Relief Program",
+   "provider": "Power and Water Corporation",
+   "level": "State",
+   "state": "NT",
+   "category": "Bills",
+   "summary": "Interest-free payment plans and no late fees if you are struggling with your water bill.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "water_account",
+    "hardship"
+   ],
+   "eligibility_text": "Residential customer finding it hard to pay, identified by a financial counsellor, overdue on 2+ bills, or an unusually high bill from a leak.",
+   "value_text": "Interest-free plans; no late fees, restrictions or debt collection while on plan",
+   "max_annual_value": null,
+   "value_period": "Ongoing",
+   "how_to_claim": "Contact Power and Water customer service.",
+   "phone": "1800 245 092",
+   "source_url": "https://powerwater.com.au/customer-hardship",
+   "notes": "Not a cash rebate."
+  }
+ ]
+}

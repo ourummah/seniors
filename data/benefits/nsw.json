@@ -1,0 +1,772 @@
+{
+  "jurisdiction": "NSW",
+  "gathered_by": "Claude",
+  "started_at": "2026-10-13T03:15:16Z",
+  "finished_at": "2026-10-13T03:22:27Z",
+  "master_sources": [
+    "https://www.energy.nsw.gov.au/sites/default/files/2025-07/20250730-Energy-rebates-partner-toolkit-2025-26.pdf",
+    "https://www.energy.nsw.gov.au/households/rebates-grants-and-schemes",
+    "https://www.service.nsw.gov.au/services/seniors-carers-pensioners",
+    "https://www.service.nsw.gov.au/transaction/claim-the-pensioner-water-rebate"
+  ],
+  "gaps": [
+    "Energy rebate amounts are from the 2025-26 partner toolkit; 2026-27 amounts not confirmed (energy.nsw.gov.au rebate pages would not render their body text; Service NSW pages omit amounts).",
+    "Regional Seniors Travel Card ($250) is not current: it was axed and is only an opposition pledge for the 2027 election, so it is excluded.",
+    "No NSW pensioner stamp duty / transfer duty concession found (only DVA transfer-fee exemption within rego concession).",
+    "Gold Opal: Service NSW names only Seniors Cards; exact pensioner card wording for Gold Opal not confirmed.",
+    "Sydney Water annual maximum, Shoalhaven Water and Essential Water rebate amounts not loaded.",
+    "IPTAAS patient contribution amounts and EAPA annual cap wording not confirmed.",
+    "service.nsw.gov.au savings finder / cost-of-living campaign pages and olg.nsw.gov.au failed to fetch.",
+    "National Energy Bill Relief ($150, Commonwealth-funded) left for the federal file."
+  ],
+  "benefits": [
+    {
+      "id": "NSW-001",
+      "name": "Low Income Household Rebate",
+      "provider": "NSW Government (via electricity retailer)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Bills",
+      "summary": "A yearly discount on your electricity bill if you have a pension or health care card.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "Electricity account in your name for your main NSW home, and a Pensioner Concession Card (Services Australia or DVA), Health Care Card, Low Income Health Care Card or DVA Gold Card. Commonwealth Seniors Health Card holders are not eligible. One per household per year; cannot also get the Seniors Energy Rebate.",
+      "value_text": "$285 a year off your electricity bill",
+      "max_annual_value": 285,
+      "value_period": "2025-26",
+      "how_to_claim": "Retail customers phone their electricity retailer with their CRN or DVA file number. Embedded network (on-supply) customers apply online or by post via Service NSW.",
+      "phone": "13 77 88",
+      "source_url": "https://www.energy.nsw.gov.au/sites/default/files/2025-07/20250730-Energy-rebates-partner-toolkit-2025-26.pdf",
+      "notes": "Amount from the 2025-26 partner toolkit; Service NSW apply pages (Oct 2026) do not state the 2026-27 amount. Service NSW on-supply page: https://www.service.nsw.gov.au/transaction/apply-low-income-household-rebate"
+    },
+    {
+      "id": "NSW-002",
+      "name": "Seniors Energy Rebate",
+      "provider": "NSW Government",
+      "level": "State",
+      "state": "NSW",
+      "category": "Bills",
+      "summary": "A yearly payment towards your electricity bill if you hold a Commonwealth Seniors Health Card.",
+      "cards": [
+        "CSHC"
+      ],
+      "requires": [
+        "electricity_account"
+      ],
+      "eligibility_text": "Electricity account in your name for your NSW home and a current Commonwealth Seniors Health Card (Services Australia or DVA). Not available if you hold a Pensioner Concession Card or Veteran Gold Card. One per household per year, and not as well as the Low Income Household Rebate.",
+      "value_text": "$200 a year towards your electricity bill",
+      "max_annual_value": 200,
+      "value_period": "2025-26",
+      "how_to_claim": "Apply online through the Social Programs for Energy portal via Service NSW, or post the paper form with your latest bill to NSW Energy Rebates, PO Box 435, Parramatta NSW 2124. Must be re-claimed each financial year.",
+      "phone": "13 77 88",
+      "source_url": "https://www.service.nsw.gov.au/transaction/apply-for-the-seniors-energy-rebate",
+      "notes": "$200 figure is from the 2025-26 toolkit (https://www.energy.nsw.gov.au/sites/default/files/2025-07/20250730-Energy-rebates-partner-toolkit-2025-26.pdf); the Service NSW page is taking 2026-27 applications but does not show the amount."
+    },
+    {
+      "id": "NSW-003",
+      "name": "Medical Energy Rebate",
+      "provider": "NSW Government (via electricity retailer)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Bills",
+      "summary": "A yearly electricity discount if you or someone at home cannot control body temperature because of a medical condition.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "electricity_account",
+        "medical_condition"
+      ],
+      "eligibility_text": "Electricity account in your name; Pensioner Concession Card, Health Care Card, Low Income Health Care Card or DVA Gold Card; you or a household member cannot self-regulate body temperature, assessed by a GP or specialist who has treated them for at least 3 months, and meets a primary and secondary qualifying condition.",
+      "value_text": "$285 a year off your electricity bill",
+      "max_annual_value": 285,
+      "value_period": "2025-26",
+      "how_to_claim": "Download the form from Service NSW, have your doctor complete it, and give it to your electricity retailer. Embedded network customers apply online or at a Service NSW Centre.",
+      "phone": "13 77 88",
+      "source_url": "https://www.energy.nsw.gov.au/sites/default/files/2025-07/20250730-Energy-rebates-partner-toolkit-2025-26.pdf",
+      "notes": "Qualifying conditions are not listed in the toolkit."
+    },
+    {
+      "id": "NSW-004",
+      "name": "Life Support Rebate",
+      "provider": "NSW Government (via electricity retailer)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Bills",
+      "summary": "Help with electricity costs if you or someone at home uses approved life support equipment such as home dialysis, a ventilator or oxygen concentrator.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "electricity_account",
+        "life_support"
+      ],
+      "eligibility_text": "Electricity account in your name for your main NSW home; you or someone living with you has been assessed by a registered medical practitioner as needing approved life support equipment at home. No concession card required.",
+      "value_text": "Up to $1,343 a year depending on the equipment",
+      "max_annual_value": 1343,
+      "value_period": "2025-26",
+      "how_to_claim": "Download the form from Service NSW, have your doctor complete it, and submit through your electricity retailer. Embedded network customers apply online or by post via Service NSW.",
+      "phone": "13 77 88",
+      "source_url": "https://www.energy.nsw.gov.au/sites/default/files/2025-07/20250730-Energy-rebates-partner-toolkit-2025-26.pdf",
+      "notes": "Amount varies by equipment type."
+    },
+    {
+      "id": "NSW-005",
+      "name": "NSW Gas Rebate",
+      "provider": "NSW Government (via gas retailer)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Bills",
+      "summary": "A yearly discount on your natural gas or bottled LPG bill if you have a pension or health care card.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "gas_account"
+      ],
+      "eligibility_text": "Natural gas or bottled LPG (over 45 kg / 88 litres) account in your name for your main NSW home and a Pensioner Concession Card, Health Care Card, Low Income Health Care Card or DVA Gold Card. CSHC holders are not eligible.",
+      "value_text": "$110 a year off your gas bill",
+      "max_annual_value": 110,
+      "value_period": "2025-26",
+      "how_to_claim": "Retail customers phone their gas retailer with their CRN or DVA file number. Embedded network and bottled LPG customers apply online or by post via Service NSW.",
+      "phone": "13 77 88",
+      "source_url": "https://www.energy.nsw.gov.au/sites/default/files/2025-07/20250730-Energy-rebates-partner-toolkit-2025-26.pdf",
+      "notes": "Retail apply page: https://www.service.nsw.gov.au/transaction/apply-for-the-gas-rebate-retail-customers"
+    },
+    {
+      "id": "NSW-006",
+      "name": "Energy Accounts Payment Assistance (EAPA)",
+      "provider": "NSW Government (via community welfare providers)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Bills",
+      "summary": "Emergency vouchers to help pay an overdue electricity or gas bill when you are in short-term financial crisis.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "hardship"
+      ],
+      "eligibility_text": "Electricity or natural gas account in your name for your main NSW home; most recent bill unpaid and account open; experiencing short-term financial hardship, crisis or emergency.",
+      "value_text": "Up to $1,600 (max 2 applications); electricity and gas each capped at $400 per application",
+      "max_annual_value": null,
+      "value_period": "2025-26",
+      "how_to_claim": "Apply online through Service NSW, or in person or by phone with one of 200+ approved EAPA community providers.",
+      "phone": "13 77 88",
+      "source_url": "https://www.energy.nsw.gov.au/sites/default/files/2025-07/20250730-Energy-rebates-partner-toolkit-2025-26.pdf",
+      "notes": "Toolkit says 'up to $1,600, with a maximum of 2 applications'; annual cap period not stated clearly, so max_annual_value left null."
+    },
+    {
+      "id": "NSW-007",
+      "name": "Pensioner council rates rebate",
+      "provider": "NSW Government and local council",
+      "level": "Council",
+      "state": "NSW",
+      "category": "Home and Rates",
+      "summary": "A yearly discount on your council rates and waste charges if you are a pensioner who owns your home.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "homeowner"
+      ],
+      "eligibility_text": "Pensioner Concession Card; DVA Gold Card embossed TPI or EDA; or war widow/widower or wholly dependent partner receiving DVA income support supplement that attracts a PCC. Rebates may also be granted in some hardship cases.",
+      "value_text": "Up to $250 a year off ordinary council rates and domestic waste charges",
+      "max_annual_value": 250,
+      "value_period": "2025-26 (statutory amount)",
+      "how_to_claim": "Check your rates notice first; if not applied, get the pensioner rebate form from your council's website and submit it with your card details.",
+      "phone": "13 77 88",
+      "source_url": "https://www.service.nsw.gov.au/transaction/apply-council-rates-rebate",
+      "notes": "Funded 55% NSW Government / 45% council (per NSW media release 24 Aug 2023: https://www.nsw.gov.au/media-releases/concessions-now-available-to-pensioners-for-council-rates). Some councils add extra voluntary rebates. DVA Gold eligibility limited to TPI/EDA."
+    },
+    {
+      "id": "NSW-008",
+      "name": "Pensioner council water and sewer rebate",
+      "provider": "Local council (where council supplies water)",
+      "level": "Council",
+      "state": "NSW",
+      "category": "Home and Rates",
+      "summary": "A yearly discount on council water and sewerage charges for pensioner homeowners.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "homeowner",
+        "water_account"
+      ],
+      "eligibility_text": "Same cards as the pensioner council rates rebate; only where your council is your water and/or sewerage provider.",
+      "value_text": "Up to $87.50 a year off water charges and up to $87.50 a year off sewerage charges",
+      "max_annual_value": 175,
+      "value_period": "2025-26 (statutory amount)",
+      "how_to_claim": "Apply to your council with its pensioner rebate form, or check your rates notice to see if it is already applied.",
+      "phone": "13 77 88",
+      "source_url": "https://www.service.nsw.gov.au/transaction/apply-council-rates-rebate",
+      "notes": "If your water is from Sydney Water, Hunter Water, Shoalhaven Water, Essential Water or a private scheme, see those separate rebates instead (https://www.service.nsw.gov.au/transaction/claim-the-pensioner-water-rebate)."
+    },
+    {
+      "id": "NSW-009",
+      "name": "Sydney Water pensioner rebate",
+      "provider": "Sydney Water",
+      "level": "State",
+      "state": "NSW",
+      "category": "Home and Rates",
+      "summary": "A discount on Sydney Water fixed water, wastewater and stormwater charges for pensioner homeowners.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "homeowner",
+        "water_account"
+      ],
+      "eligibility_text": "Pensioner Concession Card (Services Australia or DVA) or Veteran Gold Card marked War Widow/Widower, EDA, TTI or TPI; or DVA Disability Compensation Payment at TTI or Intermediate rate. Must own (or be life tenant etc.) and live in the property. CSHC, Health Care Card, Veteran White and Orange cards not eligible.",
+      "value_text": "Up to $26.65 water + $144.56 wastewater + $13.68 stormwater (house) per quarter; Sydney Water's example is about $679.20 a year",
+      "max_annual_value": null,
+      "value_period": "Year not stated on page",
+      "how_to_claim": "Apply online with Sydney Water's pension rebate form (one form per pensioner owner), or phone if you are a DVA payment recipient without a Gold Card.",
+      "phone": "13 20 92",
+      "source_url": "https://www.sydneywater.com.au/accounts-billing/managing-your-account/pension-rebates/claim-your-pensioner-rebate.html",
+      "notes": "Quarterly maxima are for a 92-day quarter; amount reduced for some co-owner arrangements. Annual maximum not stated, so null."
+    },
+    {
+      "id": "NSW-010",
+      "name": "Hunter Water pension rebate",
+      "provider": "Hunter Water",
+      "level": "State",
+      "state": "NSW",
+      "category": "Home and Rates",
+      "summary": "A yearly discount on Hunter Water bills for pensioners who own and live in their home.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "homeowner",
+        "water_account"
+      ],
+      "eligibility_text": "Own and live in a residential property (main home) and hold a Pensioner Concession Card or DVA Gold Card. Tenants generally not eligible except life tenancy or sole beneficiary.",
+      "value_text": "Up to $445 a year for water and sewer ($222.50 for water only)",
+      "max_annual_value": 445,
+      "value_period": "Current (year not stated)",
+      "how_to_claim": "Complete the pension rebate form on the Hunter Water website, or use online chat.",
+      "phone": "1300 657 657",
+      "source_url": "https://hunterwater.com.au/accounts-and-billing/get-help-paying/pension-rebate",
+      "notes": ""
+    },
+    {
+      "id": "NSW-011",
+      "name": "NSW Private Water Scheme Pensioner Rebate",
+      "provider": "NSW Department of Climate Change, Energy, the Environment and Water",
+      "level": "State",
+      "state": "NSW",
+      "category": "Home and Rates",
+      "summary": "A yearly rebate on water and wastewater fixed charges for pensioners served by a licensed private water scheme.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "water_account"
+      ],
+      "eligibility_text": "Pensioner Concession Card (Services Australia or DVA), DVA Gold Card marked War Widow/Widower, EDA, TTI or TPI, or DVA intermediate rate pension; water bill from an eligible private scheme (e.g. Central Park Water, Huntlee Water) in your name. CSHC holders not eligible.",
+      "value_text": "Up to $592.43 a year ($97.20 drinking water + $495.23 wastewater fixed charges)",
+      "max_annual_value": 592.43,
+      "value_period": "2025-26",
+      "how_to_claim": "Complete the application form, attach a 2025-26 bill and email to private.water.rebates@pwr.planning.nsw.gov.au or post to PO Box 435, Parramatta NSW 2124 by 30 June 2026.",
+      "phone": "(02) 3816 2771",
+      "source_url": "https://www.water.dcceew.nsw.gov.au/sites/default/files/2025-09/private-water-rebate-scheme-pensioner-rebate-application-form-2025-26.pdf",
+      "notes": "2026-27 form not checked; 2025-26 deadline was 30 June 2026."
+    },
+    {
+      "id": "NSW-012",
+      "name": "NSW Seniors Card",
+      "provider": "NSW Government",
+      "level": "State",
+      "state": "NSW",
+      "category": "Discounts",
+      "summary": "A free card for NSW residents aged 60+ who work 20 hours a week or less, giving business discounts and access to Gold Opal $2.50 travel.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_60"
+      ],
+      "eligibility_text": "Aged 60 or over (or turning 60 within 3 weeks), NSW resident, Australian citizen or permanent resident, not working or averaging 20 hours or less paid work a week over 12 months.",
+      "value_text": "Free; discounts at participating businesses and access to Gold Opal fares",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply online with a MyServiceNSW Account, in person at Service NSW, or by phone. Card arrives by post in about 21 days; digital card available in the Service NSW app.",
+      "phone": "13 77 88",
+      "source_url": "https://www.service.nsw.gov.au/transaction/apply-for-a-nsw-seniors-card-or-nsw-senior-savers-card",
+      "notes": ""
+    },
+    {
+      "id": "NSW-013",
+      "name": "NSW Senior Savers Card",
+      "provider": "NSW Government",
+      "level": "State",
+      "state": "NSW",
+      "category": "Discounts",
+      "summary": "A free discount card for NSW residents aged 60+ who still work more than 20 hours a week.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "aged_60"
+      ],
+      "eligibility_text": "Aged 60 or over, NSW resident, Australian citizen or permanent resident, averaging more than 20 hours paid work a week over 12 months.",
+      "value_text": "Free; discounts at participating businesses (no Gold Opal or transport concessions)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply online, in person or by phone through Service NSW; can be converted to a Seniors Card if work hours drop.",
+      "phone": "13 77 88",
+      "source_url": "https://www.service.nsw.gov.au/transaction/apply-for-a-nsw-seniors-card-or-nsw-senior-savers-card",
+      "notes": ""
+    },
+    {
+      "id": "NSW-014",
+      "name": "Gold Senior/Pensioner Opal fares",
+      "provider": "Transport for NSW",
+      "level": "State",
+      "state": "NSW",
+      "category": "Transport",
+      "summary": "Unlimited public transport across Sydney and Opal networks for no more than $2.50 a day.",
+      "cards": [
+        "SENIORS_CARD",
+        "PCC"
+      ],
+      "requires": [],
+      "eligibility_text": "NSW or ACT Seniors Card holders (or interstate seniors card if you live outside NSW/ACT); Transport for NSW also offers Gold Opal to eligible Australian pensioners, war widows/widowers and asylum seekers.",
+      "value_text": "Maximum $2.50 a day on Opal public transport",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply for a Gold Opal card through Transport for NSW, or link your concession entitlement to a credit/debit card to tap on and off.",
+      "phone": "13 77 88",
+      "source_url": "https://www.service.nsw.gov.au/transaction/apply-for-a-gold-senior-pensioner-opal-card",
+      "notes": "Service NSW lists only Seniors Cards as qualifying; transportnsw.info/pensioners says pensioners qualify but does not name the exact card. Senior Savers Card holders not eligible."
+    },
+    {
+      "id": "NSW-015",
+      "name": "Pensioner Travel Vouchers",
+      "provider": "Transport for NSW (NSW TrainLink)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Transport",
+      "summary": "Four free regional train or coach trips a year for pensioners.",
+      "cards": [
+        "PCC"
+      ],
+      "requires": [],
+      "eligibility_text": "NSW/ACT Pensioner Concession Card holders and NSW War Widow/er transport concession card holders.",
+      "value_text": "4 vouchers per calendar year (2 return or 4 single economy trips) on NSW TrainLink Regional services",
+      "max_annual_value": null,
+      "value_period": "Calendar year",
+      "how_to_claim": "Book through NSW TrainLink and carry your concession card when travelling. First class upgrade costs 15% of full adult peak fare.",
+      "phone": "13 22 32",
+      "source_url": "https://www.service.nsw.gov.au/referral/use-your-concession-card-to-access-pensioner-travel-vouchers",
+      "notes": "Phone is NSW TrainLink general line, not shown on the source page; verify."
+    },
+    {
+      "id": "NSW-016",
+      "name": "Country Pensioner Excursion (CPE) ticket",
+      "provider": "Transport for NSW (NSW TrainLink)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Transport",
+      "summary": "Cheap day trips on regional train and coach services for eligible pensioners and seniors.",
+      "cards": [
+        "PCC",
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "Eligible pensioners and seniors (source does not spell out cards).",
+      "value_text": "$2.50 ticket",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Ask a NSW TrainLink sales agent.",
+      "phone": "",
+      "source_url": "https://transportnsw.Info/travel-in-regional-nsw-for-seniors-pensioners-concessions",
+      "notes": "Card eligibility not confirmed on source; Service NSW Gold Opal page also mentions CPE for PCC and Seniors Card holders."
+    },
+    {
+      "id": "NSW-017",
+      "name": "Pensioner vehicle registration concession",
+      "provider": "Transport for NSW",
+      "level": "State",
+      "state": "NSW",
+      "category": "Transport",
+      "summary": "Free car registration and motor vehicle tax for one vehicle if you have a Pensioner Concession Card.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [
+        "car_owner"
+      ],
+      "eligibility_text": "NSW resident with a Pensioner Concession Card (Services Australia or DVA) showing a NSW address; DVA Gold Card endorsed TPI, EDA or War Widow; or certain DVA disability statements. Interstate cards not accepted. One vehicle per person.",
+      "value_text": "Free registration fees and motor vehicle tax (you still pay CTP and safety check)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Checked electronically at renewal; automatic renewal available. Contact Service NSW if eligibility cannot be confirmed. Refunds possible for up to 3 years.",
+      "phone": "13 22 13",
+      "source_url": "https://www.nsw.gov.au/driving-boating-and-transport/vehicle-registration/renewing-vehicle-registration/pensioner-concessions-and-renewals",
+      "notes": "Dollar value depends on vehicle weight; not stated."
+    },
+    {
+      "id": "NSW-018",
+      "name": "Free driver licence, Photo Card and Mobility Parking Permit for pensioners",
+      "provider": "Transport for NSW",
+      "level": "State",
+      "state": "NSW",
+      "category": "Transport",
+      "summary": "Pensioners get free driver licences, driving tests, NSW Photo Cards and Mobility Parking Permits.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "Current Pensioner Concession Card (Services Australia or DVA) with a NSW address, or certain DVA Gold Cards/statements. Interstate cards not accepted.",
+      "value_text": "Free licence, tests, Photo Card and Mobility Parking Permit",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Eligibility is checked electronically at Service NSW; pro-rata refund available if you become a pensioner mid-licence.",
+      "phone": "13 22 13",
+      "source_url": "https://www.nsw.gov.au/driving-boating-and-transport/driver-and-rider-licences/fees/concessions-and-discounts",
+      "notes": ""
+    },
+    {
+      "id": "NSW-019",
+      "name": "Free NSW Photo Card for Seniors Card holders",
+      "provider": "Transport for NSW",
+      "level": "State",
+      "state": "NSW",
+      "category": "Discounts",
+      "summary": "NSW Seniors Card and Senior Savers Card holders can get a NSW Photo Card for free.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [],
+      "eligibility_text": "NSW Seniors Card or Senior Savers Card holder (not the other pensioner licence concessions).",
+      "value_text": "Free NSW Photo Card",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply for a Photo Card at Service NSW and show your Seniors Card.",
+      "phone": "13 22 13",
+      "source_url": "https://www.nsw.gov.au/driving-boating-and-transport/driver-and-rider-licences/fees/concessions-and-discounts",
+      "notes": ""
+    },
+    {
+      "id": "NSW-020",
+      "name": "Boat and PWC licence concession",
+      "provider": "Transport for NSW (Maritime)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Transport",
+      "summary": "Half price boat and jet ski licences for pensioners.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "NSW Pensioner Concession Card (Centrelink or DVA), or DVA Gold Card endorsed TPI, EDA or war widow/er (with DVA evidence of disability pension 70%+, intermediate pension or 50+ impairment points).",
+      "value_text": "50% off licence fees, e.g. 1-year boat licence $41 instead of $82",
+      "max_annual_value": null,
+      "value_period": "Current fee table",
+      "how_to_claim": "Contact Transport for NSW Roads and Waterways or a Service NSW centre.",
+      "phone": "13 12 36",
+      "source_url": "https://www.nsw.gov.au/driving-boating-and-transport/maritime-licences/boat-and-pwc-licences/licence-and-test-fees",
+      "notes": ""
+    },
+    {
+      "id": "NSW-021",
+      "name": "Boat registration concession",
+      "provider": "Transport for NSW (Maritime)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Transport",
+      "summary": "Half price boat registration for pensioners.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "NSW Pensioner Concession Card (Centrelink or DVA), or DVA Gold Card endorsed TPI, EDA or war widow/er with qualifying DVA evidence.",
+      "value_text": "50% off registration and renewal fees, e.g. vessel up to 3m $46 instead of $94",
+      "max_annual_value": null,
+      "value_period": "From 1 July 2026",
+      "how_to_claim": "Contact the Maritime Info Line or a Service NSW centre.",
+      "phone": "13 12 36",
+      "source_url": "https://www.nsw.gov.au/boat-and-vessel-registration/fees-and-concessions",
+      "notes": ""
+    },
+    {
+      "id": "NSW-022",
+      "name": "Recreational fishing fee exemption",
+      "provider": "NSW Department of Primary Industries",
+      "level": "State",
+      "state": "NSW",
+      "category": "Discounts",
+      "summary": "Pensioners do not have to pay for a NSW recreational fishing licence.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD"
+      ],
+      "requires": [],
+      "eligibility_text": "Pensioner Concession Card (Centrelink or DVA), DVA Gold Card marked TPI or EDA, or DVA letter confirming 70%+ disability payment. Seniors Card, Health Care Card and DVA White Card are not exempt.",
+      "value_text": "Free (fishing fee waived)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "No form needed; carry your signed card when fishing.",
+      "phone": "1300 550 474",
+      "source_url": "https://www.dpi.nsw.gov.au/fishing/recreational/recreational-fishing-fee/exemptions",
+      "notes": "CSHC not listed as exempt."
+    },
+    {
+      "id": "NSW-023",
+      "name": "Free NSW Ambulance",
+      "provider": "NSW Ambulance",
+      "level": "State",
+      "state": "NSW",
+      "category": "Health",
+      "summary": "Free ambulance treatment and transport in NSW for concession card holders.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "CSHC",
+        "DVA_GOLD",
+        "DVA_WHITE"
+      ],
+      "requires": [],
+      "eligibility_text": "Valid Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card; DVA Gold Card (excludes non-emergency); DVA White Card only for DVA-funded conditions. Dependants only if Centrelink has verified them.",
+      "value_text": "Free ambulance service",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "No application needed; give your card details if you receive an account, or claim an exemption via Service NSW.",
+      "phone": "",
+      "source_url": "https://www.ambulance.nsw.gov.au/our-services/accounts-and-fees/exemptions-from-nsw-ambulance-fees",
+      "notes": ""
+    },
+    {
+      "id": "NSW-024",
+      "name": "NSW public dental services",
+      "provider": "NSW Health",
+      "level": "State",
+      "state": "NSW",
+      "category": "Health",
+      "summary": "Free dental care at NSW public dental clinics for adults with a concession card.",
+      "cards": [
+        "PCC",
+        "HCC",
+        "CSHC"
+      ],
+      "requires": [],
+      "eligibility_text": "NSW resident, eligible for Medicare, and holder of (or dependant on) a Health Care Card, Pensioner Concession Card or Commonwealth Seniors Health Card.",
+      "value_text": "Free public dental care (waiting lists apply)",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Phone the public dental service with your postcode, Medicare details and concession card.",
+      "phone": "1800 679 336",
+      "source_url": "https://www.health.nsw.gov.au/oralhealth/Pages/info-patients.aspx",
+      "notes": "Dentures not mentioned on the page."
+    },
+    {
+      "id": "NSW-025",
+      "name": "NSW Spectacles Program",
+      "provider": "NSW Government (via Vision Australia)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Health",
+      "summary": "Free glasses every two years for people on very low incomes with few assets.",
+      "cards": [
+        "PCC",
+        "HCC"
+      ],
+      "requires": [
+        "low_income"
+      ],
+      "eligibility_text": "NSW permanent resident on a full Centrelink pension or income support with no other income (or income below the full Age Pension if 65+); financial assets under $500 single / $1,000 couple; not eligible for DVA or other spectacle subsidies.",
+      "value_text": "One free pair of single vision or bifocal glasses every 2 years",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply through the Service NSW / NSW Spectacles Program page.",
+      "phone": "",
+      "source_url": "https://www.service.nsw.gov.au/transaction/nsw-spectacles-program",
+      "notes": ""
+    },
+    {
+      "id": "NSW-026",
+      "name": "Isolated Patients Travel and Accommodation Assistance Scheme (IPTAAS)",
+      "provider": "NSW Health",
+      "level": "State",
+      "state": "NSW",
+      "category": "Health",
+      "summary": "Help with travel and accommodation costs if you have to travel a long way for specialist medical treatment.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "rural"
+      ],
+      "eligibility_text": "Travelling at least 100 km one way (or 200 km a week over multiple trips) to the nearest treatment that is not available locally, with a recognised specialist, approved clinic or clinical trial.",
+      "value_text": "40c per km by private car; accommodation $75 a night (1-7 nights), $120 a night (8+ nights), $40 a night staying with family/friends",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply online via the IPTAAS website after treatment, with forms signed by your specialist; air travel needs prior approval.",
+      "phone": "1800 478 227",
+      "source_url": "https://iptaas.health.nsw.gov.au/for-patients/subsidy-rates",
+      "notes": "Patient contribution amounts for concession vs non-concession not found on opened pages. Eligibility from https://iptaas.health.nsw.gov.au/for-patients/eligibility"
+    },
+    {
+      "id": "NSW-027",
+      "name": "National Parks Concession Pass",
+      "provider": "NSW National Parks and Wildlife Service",
+      "level": "State",
+      "state": "NSW",
+      "category": "Discounts",
+      "summary": "Free car entry to NSW national parks for pensioners and veterans.",
+      "cards": [
+        "PCC",
+        "DVA_GOLD",
+        "DVA_WHITE"
+      ],
+      "requires": [
+        "car_owner"
+      ],
+      "eligibility_text": "Australian Pensioner Concession Card holders and Australian veteran card holders. Not for international pensioner or seniors cards.",
+      "value_text": "Free vehicle entry to the 45 parks that charge entry fees",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply online at NSW National Parks, call, or visit a Service NSW centre or NPWS office.",
+      "phone": "1300 072 757",
+      "source_url": "https://www.nationalparks.nsw.gov.au/passes-and-fees/discount-and-concession-passes",
+      "notes": ""
+    },
+    {
+      "id": "NSW-028",
+      "name": "National Parks annual pass seniors discount",
+      "provider": "NSW National Parks and Wildlife Service",
+      "level": "State",
+      "state": "NSW",
+      "category": "Discounts",
+      "summary": "About 20% off NSW national parks annual passes for Seniors Card holders.",
+      "cards": [
+        "SENIORS_CARD"
+      ],
+      "requires": [
+        "car_owner"
+      ],
+      "eligibility_text": "Current Australian Seniors Card holder (not Senior Savers Card); vehicle in your name or registered to your address.",
+      "value_text": "About 20% off all four annual pass types",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply online with a photo of your Seniors Card and rego certificate, or call / visit Service NSW.",
+      "phone": "1300 072 757",
+      "source_url": "https://www.nationalparks.nsw.gov.au/passes-and-fees/discount-and-concession-passes",
+      "notes": ""
+    },
+    {
+      "id": "NSW-029",
+      "name": "Toll Relief weekly cap",
+      "provider": "NSW Government (Service NSW)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Transport",
+      "summary": "Money back on toll costs above $50 a week on NSW toll roads.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "car_owner"
+      ],
+      "eligibility_text": "Personal toll account and privately registered vehicle; spend more than $50 a week on NSW tolls. Business, employer-reimbursed and rideshare trips excluded.",
+      "value_text": "Rebate of toll spend between $50 and $400 a week, up to $350 a week per token and $5,000 a year",
+      "max_annual_value": 5000,
+      "value_period": "From 6 July 2026 (12 months)",
+      "how_to_claim": "Link your toll account to MyServiceNSW and claim online once each quarterly claim window opens.",
+      "phone": "13 77 88",
+      "source_url": "https://service.nsw.gov.au/transaction/claim-the-toll-relief-cap",
+      "notes": "Not seniors-specific. Cap dropped from $60 to $50 on 6 July 2026."
+    },
+    {
+      "id": "NSW-030",
+      "name": "Taxi Transport Subsidy Scheme",
+      "provider": "Transport for NSW",
+      "level": "State",
+      "state": "NSW",
+      "category": "Transport",
+      "summary": "Half price taxi fares for people with a severe permanent disability who cannot use public transport.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "mobility_need"
+      ],
+      "eligibility_text": "NSW resident with a severe, permanent disability (mobility, vision, epilepsy, intellectual, speech or hearing) that prevents using public transport. Not means tested.",
+      "value_text": "50% of the taxi fare, up to $60 subsidy",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Download the form, have your doctor complete parts B and C, and apply online or by post.",
+      "phone": "131 500",
+      "source_url": "https://www.service.nsw.gov.au/transaction/apply-taxi-transport-subsidy-scheme",
+      "notes": "Source unclear whether $60 is per trip."
+    },
+    {
+      "id": "NSW-031",
+      "name": "EnableNSW Aids and Equipment Program",
+      "provider": "NSW Health (EnableNSW)",
+      "level": "State",
+      "state": "NSW",
+      "category": "Health",
+      "summary": "Equipment such as mobility aids, home oxygen and continence products to help you live safely at home.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "mobility_need"
+      ],
+      "eligibility_text": "NSW residents with specific short-term or ongoing health needs; eligibility criteria and co-payments apply (see EnableNSW eligibility indicator).",
+      "value_text": "Aids and equipment provided or funded; co-payment may apply",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "A health professional (prescriber) applies on your behalf; contact EnableNSW for details.",
+      "phone": "1800 362 253",
+      "source_url": "https://www.enable.health.nsw.gov.au/",
+      "notes": "Age 65+ interplay with My Aged Care/Support at Home not confirmed on opened page."
+    },
+    {
+      "id": "NSW-032",
+      "name": "NSW Companion Card",
+      "provider": "NSW Government",
+      "level": "State",
+      "state": "NSW",
+      "category": "Discounts",
+      "summary": "Free entry for your carer or support person at participating venues and events.",
+      "cards": [
+        "NONE"
+      ],
+      "requires": [
+        "carer"
+      ],
+      "eligibility_text": "Significant and permanent disability, unable to take part in most community activities without lifelong attendant care; Australian citizen or permanent resident living in NSW.",
+      "value_text": "Free entry for your support person",
+      "max_annual_value": null,
+      "value_period": "Current",
+      "how_to_claim": "Apply online via the nsw.gov.au 'Get a Companion Card' page with supporting documents.",
+      "phone": "",
+      "source_url": "https://www.service.nsw.gov.au/referral/apply-for-a-companion-card",
+      "notes": "'carer' tag used to indicate a support person is needed; review."
+    }
+  ]
+}

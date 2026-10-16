@@ -1,0 +1,1102 @@
+{
+ "jurisdiction": "TAS",
+ "gathered_by": "Claude",
+ "started_at": "2026-10-13T03:15:30Z",
+ "finished_at": "2026-10-13T03:20:10Z",
+ "master_sources": [
+  "https://www.concessions.tas.gov.au/concessions",
+  "https://www.sro.tas.gov.au/electricity-concessions/annual-electricity-concession",
+  "https://www.sro.tas.gov.au/pensioner-rates-remission"
+ ],
+ "gaps": [
+  "TasWater water and sewerage concession 2026-27 amount not confirmed (TasWater site failed to load); 2025-26 figure used",
+  "Pensioners downsizing duty concession ended 30 June 2025 (no extension found), so it is not included",
+  "PTAS fuel and accommodation subsidy rates not loaded (in PTAS Patient Guidelines)",
+  "Concessions.tas.gov.au master list still shows 2025-26 electricity rates; 2026-27 SRO rates used",
+  "Seniors Card business discount directory not loaded; no current one-off seniors rebate found"
+ ],
+ "benefits": [
+  {
+   "id": "TAS-001",
+   "name": "Annual Electricity Concession",
+   "provider": "Tas Government (via electricity retailer)",
+   "level": "State",
+   "state": "TAS",
+   "category": "Bills",
+   "summary": "A daily discount on your electricity bill, worth about $673 a year.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [
+    "electricity_account"
+   ],
+   "eligibility_text": "Pensioner Concession Card (Centrelink or DVA), Health Care Card, ImmiCard (Bridging Visa E) or Tasmanian Concession Card; name on card must match the account holder; principal place of residence on a general domestic tariff.",
+   "value_text": "$1.84347 a day (about $673 a year)",
+   "max_annual_value": 673,
+   "value_period": "2026-27 (from 1 July 2026)",
+   "how_to_claim": "Contact your electricity retailer or send them the Annual Electricity Concession application form.",
+   "phone": null,
+   "source_url": "https://www.sro.tas.gov.au/electricity-concessions/annual-electricity-concession",
+   "notes": "Commonwealth Seniors Health Card not listed. Concessions.tas.gov.au master list still shows the older 176.866 cents/day rate."
+  },
+  {
+   "id": "TAS-002",
+   "name": "Annual Electricity Concession (embedded networks)",
+   "provider": "Tas Government",
+   "level": "State",
+   "state": "TAS",
+   "category": "Bills",
+   "summary": "If your power comes through a caravan park, retirement village or similar embedded network, you can get the electricity concession as a yearly payment.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [
+    "electricity_account"
+   ],
+   "eligibility_text": "Same eligibility as the Annual Electricity Concession but you are supplied through an embedded network.",
+   "value_text": "$673 one-off payment for 2026-27",
+   "max_annual_value": 673,
+   "value_period": "2026-27",
+   "how_to_claim": "Apply through a Service Tasmania outlet or the Service Tasmania website.",
+   "phone": "1300 135 513",
+   "source_url": "https://www.sro.tas.gov.au/electricity-concessions/annual-electricity-concession",
+   "notes": "Embedded network rates for medical cooling/heating and life support are also paid annually."
+  },
+  {
+   "id": "TAS-003",
+   "name": "Medical Cooling or Heating Concession",
+   "provider": "Tas Government (via electricity retailer)",
+   "level": "State",
+   "state": "TAS",
+   "category": "Bills",
+   "summary": "A daily discount on your power bill if you or someone you live with has a medical condition made worse by heat or cold.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [
+    "electricity_account",
+    "medical_condition"
+   ],
+   "eligibility_text": "Eligible for the Annual Electricity Concession; hold a PCC or HCC; you or a household member has a qualifying condition (e.g. MS, Parkinson's, lupus) certified by a GP or specialist; recertify every four years.",
+   "value_text": "55.216 cents a day ($201.54 a year)",
+   "max_annual_value": 201.54,
+   "value_period": "2026-27 (from 1 July 2026)",
+   "how_to_claim": "Get the form from your retailer, Service Tasmania or SRO, have your doctor certify it, and send it to your retailer.",
+   "phone": null,
+   "source_url": "https://www.sro.tas.gov.au/electricity-concessions/medical-cooling-or-heating-concession",
+   "notes": null
+  },
+  {
+   "id": "TAS-004",
+   "name": "Life Support Concession",
+   "provider": "Tas Government (via electricity retailer)",
+   "level": "State",
+   "state": "TAS",
+   "category": "Bills",
+   "summary": "A daily discount on your power bill if you or someone you live with uses an approved life support machine at home.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "electricity_account",
+    "life_support"
+   ],
+   "eligibility_text": "Account holder requires, or lives with someone who requires, an approved life support system at the principal place of residence. No concession card needed.",
+   "value_text": "From $50.01 a year (mains nebuliser) to $939.82 a year (phototherapy machine); oxygen concentrator $498.72 a year",
+   "max_annual_value": null,
+   "value_period": "2026-27 (from 1 July 2026)",
+   "how_to_claim": "Have your doctor certify the life support application form and send it to your electricity retailer.",
+   "phone": null,
+   "source_url": "https://www.sro.tas.gov.au/electricity-concessions/life-support-concession",
+   "notes": "Value depends on the device; highest single-device rate is $939.82 a year."
+  },
+  {
+   "id": "TAS-005",
+   "name": "Heating Allowance",
+   "provider": "Department of Premier and Cabinet",
+   "level": "State",
+   "state": "TAS",
+   "category": "Bills",
+   "summary": "A small yearly payment to help pensioners with low savings pay for heating.",
+   "cards": [
+    "PCC"
+   ],
+   "requires": [
+    "age_pension",
+    "low_income"
+   ],
+   "eligibility_text": "Means-tested pensioners holding an eligible concession card; cash assets under $1,750 (single) or $2,750 (couple); other conditions apply.",
+   "value_text": "$56 a year, paid as two $28 payments",
+   "max_annual_value": 56,
+   "value_period": "Current (year not stated)",
+   "how_to_claim": "Apply online or request a form by phone or email (heatingallowance@dpac.tas.gov.au).",
+   "phone": "1800 300 068",
+   "source_url": "https://www.concessions.tas.gov.au/concessions/electricity_and_heating/heating",
+   "notes": "Page does not name exactly which cards qualify; master list shows HCC and PCC."
+  },
+  {
+   "id": "TAS-006",
+   "name": "Energy Hardship Fund",
+   "provider": "Tas Government (run by The Salvation Army)",
+   "level": "State",
+   "state": "TAS",
+   "category": "Bills",
+   "summary": "Help for Tasmanians struggling to pay their energy bills.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "hardship"
+   ],
+   "eligibility_text": "Tasmanians in energy bill hardship; detailed criteria not stated in the budget release.",
+   "value_text": "Amount not stated",
+   "max_annual_value": null,
+   "value_period": "2026-27 Budget",
+   "how_to_claim": "Contact The Salvation Army.",
+   "phone": null,
+   "source_url": "https://www.premier.tas.gov.au/budget-2026/budget-releases/delivering-the-energy-support-and-security-tasmania-deserves",
+   "notes": "Budget release only ($450,000 funding); no individual amount or application page found."
+  },
+  {
+   "id": "TAS-007",
+   "name": "Council Rates Remission for Pensioners",
+   "provider": "Tas Government (via local council)",
+   "level": "State",
+   "state": "TAS",
+   "category": "Home and Rates",
+   "summary": "Money off council rates on the home you live in.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "homeowner"
+   ],
+   "eligibility_text": "PCC, HCC, or DVA Gold Card (TPI or War Widow/Widower) issued on or before 1 July 2026; principal place of residence. CSHC alone does not qualify.",
+   "value_text": "Lesser of 30% of your rates or $591 ($401 if you are a TasWater customer)",
+   "max_annual_value": 591,
+   "value_period": "2026-27",
+   "how_to_claim": "Apply in person at your council by 31 March 2027, showing your card. Back-claims for one prior year allowed.",
+   "phone": null,
+   "source_url": "https://www.sro.tas.gov.au/pensioner-rates-remission",
+   "notes": "$401 cap applies to TasWater clients because they also get the TasWater concession."
+  },
+  {
+   "id": "TAS-008",
+   "name": "Water and Sewerage Concession",
+   "provider": "Tas Government (via TasWater)",
+   "level": "State",
+   "state": "TAS",
+   "category": "Bills",
+   "summary": "Money off the TasWater access charges for water and sewerage.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "water_account",
+    "homeowner"
+   ],
+   "eligibility_text": "Eligible HCC, PCC or DVA Gold Card holders who are TasWater customers.",
+   "value_text": "Up to $242.56 a year ($121.28 water, $121.28 sewerage)",
+   "max_annual_value": 242.56,
+   "value_period": "2025-26",
+   "how_to_claim": "Contact TasWater.",
+   "phone": "136 992",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "Covers access charges only, not usage. 2026-27 amount not confirmed; TasWater site failed to load."
+  },
+  {
+   "id": "TAS-009",
+   "name": "Tasmanian Seniors Card",
+   "provider": "Tas Government",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "A free card giving discounts at businesses and on some government fees for Tasmanians aged 60+.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "aged_60"
+   ],
+   "eligibility_text": "Aged 60 or over, live in Tasmania and work less than 20 hours a week.",
+   "value_text": "Discounts vary by business",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Apply online or at any Service Tasmania centre.",
+   "phone": "1300 135 513",
+   "source_url": "https://www.concessions.tas.gov.au/more_information/concessions_cards/tasmanian_seniors_card",
+   "notes": "Page does not state a fee."
+  },
+  {
+   "id": "TAS-010",
+   "name": "Adult Bus and Ferry Concession Fares",
+   "provider": "Department of State Growth",
+   "level": "State",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "Half-price fares on Metro and other buses and the River Derwent ferry.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "SENIORS_CARD",
+    "DVA_GOLD"
+   ],
+   "requires": [],
+   "eligibility_text": "An eligible concession card, or aged 70 and over, or DVA Gold Card printed War Widow, among others.",
+   "value_text": "50% off the full fare, plus a further 20% off with a smartcard (e.g. Greencard) or 10-trip ticket",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Show your eligible card when buying a ticket or registering a smartcard.",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions/transport/metromerseylink_buses2",
+   "notes": "Aged 70+ qualifies without a card. Master list shows Seniors Card as eligible; transport page wording is 'eligible concession card'."
+  },
+  {
+   "id": "TAS-011",
+   "name": "Free Bus Travel for DVA TPI and EDA Pensioners",
+   "provider": "Department of State Growth",
+   "level": "State",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "Free bus and ferry travel for veterans on the TPI or EDA pension.",
+   "cards": [
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "veteran"
+   ],
+   "eligibility_text": "DVA Veteran Gold Card printed TPI or EDA.",
+   "value_text": "Free travel",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Get a Greencard to use on Metro buses.",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions/transport/metromerseylink_buses2",
+   "notes": null
+  },
+  {
+   "id": "TAS-012",
+   "name": "Vision Impaired Travel Pass",
+   "provider": "Department of State Growth",
+   "level": "State",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "Free bus and ferry travel for people who are legally blind, plus an attendant and guide dog.",
+   "cards": [
+    "PCC"
+   ],
+   "requires": [
+    "medical_condition"
+   ],
+   "eligibility_text": "PCC with blind pension endorsement or ophthalmologist assessment.",
+   "value_text": "Free travel for cardholder, attendant and guide dog",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Apply via Department of State Growth (transport.tas.gov.au).",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-013",
+   "name": "Taxi Subsidy Program",
+   "provider": "Department of State Growth",
+   "level": "State",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "Half-price (or 60% off) taxi trips for people with a severe disability who cannot use buses.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "CSHC"
+   ],
+   "requires": [
+    "mobility_need"
+   ],
+   "eligibility_text": "Transport Access Scheme member; 60% rate is for wheelchair-reliant members.",
+   "value_text": "50% off, up to $25 a trip; or 60% off, up to $30 a trip (wheelchair reliant)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Apply to join the Transport Access Scheme via transport.tas.gov.au.",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "Master list shows concession cards and a generic option; membership of the Transport Access Scheme is the key requirement."
+  },
+  {
+   "id": "TAS-014",
+   "name": "Bass Strait Islands Age Pension Air Travel Subsidy",
+   "provider": "Department of State Growth",
+   "level": "State",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "Age pensioners on King or Flinders Island get half of one return mainland flight back each year.",
+   "cards": [
+    "PCC"
+   ],
+   "requires": [
+    "age_pension",
+    "rural"
+   ],
+   "eligibility_text": "Age pensioner (PCC) living on a Bass Strait island.",
+   "value_text": "50% rebate on one return trip to mainland Tasmania per financial year",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Apply via transport.tas.gov.au.",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-015",
+   "name": "SeaLink Bruny Island Ferry Concession",
+   "provider": "SeaLink Bruny Island",
+   "level": "Private",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "Cheaper vehicle fares on the Bruny Island ferry.",
+   "cards": [
+    "PCC",
+    "CSHC"
+   ],
+   "requires": [
+    "car_owner"
+   ],
+   "eligibility_text": "CSHC or PCC holder driving; show card at check-in.",
+   "value_text": "Discounted driver fare (amount not stated)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Show your card at check-in.",
+   "phone": "1300 127 869",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-016",
+   "name": "Spirit of Tasmania Pensioner Fares",
+   "provider": "TT-Line",
+   "level": "Private",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "Discounted passenger fares on the Spirit of Tasmania.",
+   "cards": [
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Pensioner Concession Card holders; subject to availability.",
+   "value_text": "Discounted selected passenger fares (amount not stated)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Book with Spirit of Tasmania and quote your card.",
+   "phone": "132 010",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-017",
+   "name": "Motor Tax 40% Rebate",
+   "provider": "Department of State Growth",
+   "level": "State",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "40% off the motor tax part of registration for one car.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_WHITE",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "car_owner"
+   ],
+   "eligibility_text": "Eligible concession card holder; one non-business vehicle up to 4.5 tonnes.",
+   "value_text": "40% rebate on motor tax",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Contact the Vehicle Registration Unit or Service Tasmania.",
+   "phone": "1300 135 513",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-018",
+   "name": "Vehicle Registration Concession",
+   "provider": "Department of State Growth",
+   "level": "State",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "Discount on 12-month registration fees for one vehicle.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_WHITE",
+    "DVA_GOLD"
+   ],
+   "requires": [
+    "car_owner"
+   ],
+   "eligibility_text": "HCC, PCC, DVA White or Gold Card, or Transport Access Scheme member; one vehicle.",
+   "value_text": "Car $60.20 off; motorcycle $55.07 off a 12-month registration",
+   "max_annual_value": 60.2,
+   "value_period": "Current (year not stated)",
+   "how_to_claim": "Contact the Vehicle Registration Unit or Service Tasmania.",
+   "phone": "1300 135 513",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "May overlap with the motor tax rebate; check whether the two are additive."
+  },
+  {
+   "id": "TAS-019",
+   "name": "MAIB Third-Party Insurance Concession",
+   "provider": "Motor Accidents Insurance Board",
+   "level": "State",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "$58 off compulsory third-party insurance for one vehicle.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_WHITE"
+   ],
+   "requires": [
+    "car_owner"
+   ],
+   "eligibility_text": "HCC, PCC, DVA White Card or Transport Access Scheme member; one vehicle.",
+   "value_text": "$58 off the MAIB premium",
+   "max_annual_value": 58,
+   "value_period": "Current (year not stated)",
+   "how_to_claim": "Contact the Vehicle Registration Unit or Service Tasmania.",
+   "phone": "1300 135 513",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-020",
+   "name": "Free Driver Licence (65+) and Licence Concessions",
+   "provider": "Department of State Growth",
+   "level": "State",
+   "state": "TAS",
+   "category": "Transport",
+   "summary": "No licence fee once you are 65 (photo fee only); card holders under 65 also save.",
+   "cards": [
+    "NONE",
+    "PCC",
+    "HCC",
+    "DVA_WHITE",
+    "DVA_GOLD"
+   ],
+   "requires": [],
+   "eligibility_text": "Aged 65+ pay no licence fee; under 65 holders of HCC, PCC, DVA White/Gold save on fees.",
+   "value_text": "65+: no licence fee, $12.64 photo fee; under 65 card holders save $13.09 to $63.58",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Renew at Service Tasmania.",
+   "phone": "1300 135 513",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-021",
+   "name": "Free Ambulance for Tasmanian Residents",
+   "provider": "Ambulance Tasmania",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Tasmanians don't pay for ambulance services in most cases, including some interstate emergencies.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [],
+   "eligibility_text": "Tasmanian residents; apply for a fee waiver with proof of Tasmanian address. MAIB, WorkCover etc. pay first where they apply.",
+   "value_text": "Ambulance fees waived",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "If you get a bill, apply for a waiver with a certified copy of proof of Tasmanian address.",
+   "phone": null,
+   "source_url": "https://health.tas.gov.au/node/1231",
+   "notes": "Interstate cover depends on reciprocal agreements and varies by state."
+  },
+  {
+   "id": "TAS-022",
+   "name": "Adult Public Dental Service",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Subsidised emergency, general and denture care at public dental clinics.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD",
+    "DVA_WHITE"
+   ],
+   "requires": [],
+   "eligibility_text": "HCC or PCC holders; DVA Veteran Card holders meeting criteria.",
+   "value_text": "Subsidised (fee not stated); waiting lists may apply",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Phone Oral Health Services Tasmania.",
+   "phone": "1300 011 013",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "DVA enquiries 1800 838 272."
+  },
+  {
+   "id": "TAS-023",
+   "name": "Patient Travel Assistance Scheme (PTAS)",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Help with travel and accommodation costs when you must travel far for specialist treatment.",
+   "cards": [
+    "NONE",
+    "PCC",
+    "HCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Travel more than 75 km one way for specialist care not available locally (more than 50 km for cancer or dialysis). Concession card holders don't pay the patient contribution.",
+   "value_text": "Travel and accommodation subsidy; patient contribution of $82.50 a trip (capped at $330 a year) waived for concession card holders",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Contact your regional PTAS office (South 6166 8225, North 6777 6249, North-West 6477 7734).",
+   "phone": "6166 8225",
+   "source_url": "https://www.concessions.tas.gov.au/concessions/health/patient_travel_assistance",
+   "notes": "Subsidy amounts are in the PTAS Patient Guidelines, not loaded."
+  },
+  {
+   "id": "TAS-024",
+   "name": "Spectacle and Visual Aids Assistance",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Subsidised glasses and low vision aids.",
+   "cards": [
+    "PCC",
+    "DVA_GOLD",
+    "DVA_WHITE"
+   ],
+   "requires": [
+    "low_income"
+   ],
+   "eligibility_text": "PCC or DVA Orange/White/Gold holders and others meeting criteria.",
+   "value_text": "Glasses for adults; low vision aids up to $436.05 per item",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Phone the Spectacles Assistance Scheme.",
+   "phone": "1800 232 148",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "Exact glasses subsidy not stated."
+  },
+  {
+   "id": "TAS-025",
+   "name": "TasEquip",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Free or cheap equipment like shower chairs, walkers and wheelchairs to help you live at home.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [
+    "mobility_need"
+   ],
+   "eligibility_text": "HCC or PCC holders living at home who need equipment.",
+   "value_text": "Free or subsidised equipment",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Phone TasEquip.",
+   "phone": "1300 827 387",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-026",
+   "name": "Public Hospital Pharmaceuticals",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Medicines from Tasmanian public hospital pharmacies cost at most $7.70 per item.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "CSHC",
+    "DVA_GOLD",
+    "DVA_WHITE"
+   ],
+   "requires": [],
+   "eligibility_text": "Eligible concession card holders.",
+   "value_text": "Maximum $7.70 per item",
+   "max_annual_value": null,
+   "value_period": "Current (year not stated)",
+   "how_to_claim": "Show your card at the hospital pharmacy.",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "Concession-rate pharmaceuticals usually follow the PBS co-payment; confirm current figure."
+  },
+  {
+   "id": "TAS-027",
+   "name": "Lymphoedema Compression Garments",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Help paying for compression garments for lymphoedema.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "DVA_GOLD",
+    "DVA_WHITE"
+   ],
+   "requires": [
+    "medical_condition"
+   ],
+   "eligibility_text": "HCC, PCC or DVA card holders with lymphoedema.",
+   "value_text": "Assistance (amount not stated)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Contact your hospital physiotherapy department (RHH 6166 8634, LGH 6777 6216, NW 6493 6250).",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-028",
+   "name": "Orthotic and Prosthetic Services",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Lower charges for orthotics and prosthetics.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [
+    "mobility_need"
+   ],
+   "eligibility_text": "HCC or PCC holders with a GP or specialist referral.",
+   "value_text": "Reduced contribution charge",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Ask your GP or specialist for a referral (South 6166 7377, North 6777 8562, NW 6493 6272).",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-029",
+   "name": "CPAP Program",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "CPAP equipment for sleep breathing disorders.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [
+    "medical_condition"
+   ],
+   "eligibility_text": "HCC or PCC holders prescribed CPAP by a sleep specialist.",
+   "value_text": "Equipment provided (cost not stated)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Contact the program with a sleep specialist prescription.",
+   "phone": "1300 135 513",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-030",
+   "name": "Home Oxygen Program",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Oxygen supply at home for people who need it.",
+   "cards": [
+    "NONE"
+   ],
+   "requires": [
+    "medical_condition"
+   ],
+   "eligibility_text": "Patients assessed by a specialist as needing home oxygen.",
+   "value_text": "Oxygen supply (cost not stated)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Through your specialist.",
+   "phone": "1300 135 513",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-031",
+   "name": "Wig Assistance",
+   "provider": "Department of Health",
+   "level": "State",
+   "state": "TAS",
+   "category": "Health",
+   "summary": "Help with the cost of a wig for cancer or alopecia patients.",
+   "cards": [
+    "PCC",
+    "DVA_GOLD",
+    "DVA_WHITE"
+   ],
+   "requires": [
+    "medical_condition"
+   ],
+   "eligibility_text": "PCC or DVA card holders referred by a doctor.",
+   "value_text": "Assistance (amount not stated)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Doctor referral to the hospital (RHH 6166 8308, LGH 6777 6477, Devonport 6478 6119).",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-032",
+   "name": "National Parks Pass Discount",
+   "provider": "Parks and Wildlife Service",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "20% off annual and two-year Tasmanian national parks passes.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "CSHC",
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "HCC, CSHC, Seniors Card, Companion Card or PCC holders.",
+   "value_text": "20% off annual and two-year passes",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Buy online or phone Parks and Wildlife.",
+   "phone": "1300 827 727",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "Overland Track, Three Capes Track, Hastings, Mole Creek Caves and Highfield also give discounts to the same card holders."
+  },
+  {
+   "id": "TAS-033",
+   "name": "Heritage Site Concessions (Port Arthur, Female Factory, Botanical Gardens)",
+   "provider": "Tas Government agencies",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "Cheaper entry at Port Arthur and the Cascades Female Factory, and cheaper Botanical Gardens tours.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "CSHC",
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "Same card holders as national parks passes.",
+   "value_text": "Discounted entry; 10% off at the Botanical Gardens shop",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Show your card when booking.",
+   "phone": "1800 659 101",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "Phone is Port Arthur; Female Factory 1800 139 478; Botanical Gardens 6166 0451."
+  },
+  {
+   "id": "TAS-034",
+   "name": "Inland Recreational Angling Licence Discount",
+   "provider": "Inland Fisheries Service",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "20% off an inland fishing licence for Seniors Card holders.",
+   "cards": [
+    "SENIORS_CARD",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Seniors Card holders (20%); PCC holders also listed.",
+   "value_text": "20% off adult licences",
+   "max_annual_value": null,
+   "value_period": "2024-25",
+   "how_to_claim": "Buy online with your card number.",
+   "phone": "1300 463 474",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "PCC discount level not stated."
+  },
+  {
+   "id": "TAS-035",
+   "name": "Recreational Sea Fishing Licence Concession",
+   "provider": "Department of Natural Resources and Environment",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "Half-price application fee on recreational sea fishing licences.",
+   "cards": [
+    "SENIORS_CARD",
+    "PCC",
+    "CSHC",
+    "DVA_WHITE",
+    "DVA_GOLD"
+   ],
+   "requires": [],
+   "eligibility_text": "Seniors Card, PCC, DVA cards (as listed).",
+   "value_text": "50% off the application fee",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Apply online or phone.",
+   "phone": "1300 720 647",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-036",
+   "name": "Hunting Licence Discount",
+   "provider": "Department of Natural Resources and Environment",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "20% off deer, wallaby, duck and other hunting licences.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "CSHC",
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "HCC, CSHC, Seniors Card or PCC holders.",
+   "value_text": "20% off",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Contact Wildlife Services.",
+   "phone": "6165 4305",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-037",
+   "name": "Firearms Fees Concession",
+   "provider": "Tasmania Police",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "20% off firearms licence fees.",
+   "cards": [
+    "PCC",
+    "HCC"
+   ],
+   "requires": [],
+   "eligibility_text": "HCC or PCC holders.",
+   "value_text": "20% off from 1 July 2024",
+   "max_annual_value": null,
+   "value_period": "From 1 July 2024",
+   "how_to_claim": "Contact Firearms Services.",
+   "phone": "6173 2720",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-038",
+   "name": "Land Tax Exemption for Pensioners Partly Using Home for Other Purposes",
+   "provider": "State Revenue Office",
+   "level": "State",
+   "state": "TAS",
+   "category": "Home and Rates",
+   "summary": "Pensioners can stay exempt from land tax even if part of the home is used for something else.",
+   "cards": [
+    "PCC"
+   ],
+   "requires": [
+    "homeowner",
+    "age_pension"
+   ],
+   "eligibility_text": "Pensioners whose principal residence is partly used for other purposes.",
+   "value_text": "Land tax exemption",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Email the SRO (taxhelp@treasury.tas.gov.au).",
+   "phone": null,
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "Card requirement not specified; listed as generic for pensioners."
+  },
+  {
+   "id": "TAS-039",
+   "name": "Free Will and Enduring Power of Attorney (Public Trustee)",
+   "provider": "Public Trustee",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "Free will or enduring power of attorney when you appoint the Public Trustee.",
+   "cards": [
+    "SENIORS_CARD",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Seniors Card or PCC holders, where the Public Trustee is appointed executor or attorney; one each per 12 months.",
+   "value_text": "No charge for a standard appointment",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Phone the Public Trustee.",
+   "phone": "1800 068 784",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-040",
+   "name": "Free Library Computers and Internet",
+   "provider": "Libraries Tasmania",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "Free computer and internet use at libraries and no overdue fines.",
+   "cards": [
+    "NONE",
+    "PCC"
+   ],
+   "requires": [],
+   "eligibility_text": "Available to library members; PCC listed.",
+   "value_text": "Free",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Visit your local library.",
+   "phone": "1800 808 303",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-041",
+   "name": "Adult Education Course Concession",
+   "provider": "Libraries Tasmania",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "Cheaper adult education courses.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "SENIORS_CARD"
+   ],
+   "requires": [],
+   "eligibility_text": "HCC, Seniors Card or PCC holders.",
+   "value_text": "Reduced course fees (amount not stated)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Enrol and show your card.",
+   "phone": "6165 5564",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-042",
+   "name": "No Interest Essential Loan (NILS)",
+   "provider": "NILS Tasmania",
+   "level": "Private",
+   "state": "TAS",
+   "category": "Payments",
+   "summary": "Interest-free loans up to $2,000 for essentials like fridges or car repairs.",
+   "cards": [
+    "PCC",
+    "HCC",
+    "CSHC"
+   ],
+   "requires": [
+    "low_income"
+   ],
+   "eligibility_text": "Card holders or gross income up to $60,000.",
+   "value_text": "Interest-free loan up to $2,000",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Apply to NILS Tasmania.",
+   "phone": "1300 301 650",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "A loan, not a grant."
+  },
+  {
+   "id": "TAS-043",
+   "name": "Veterans Wellbeing Voucher Program",
+   "provider": "Tas Government (Veterans Affairs)",
+   "level": "State",
+   "state": "TAS",
+   "category": "Discounts",
+   "summary": "Two $100 vouchers for club or gym membership for veterans.",
+   "cards": [
+    "DVA_GOLD",
+    "DVA_WHITE",
+    "PCC",
+    "HCC",
+    "CSHC",
+    "SENIORS_CARD"
+   ],
+   "requires": [
+    "veteran"
+   ],
+   "eligibility_text": "Eligible veterans holding listed cards.",
+   "value_text": "Two $100 vouchers",
+   "max_annual_value": 200,
+   "value_period": "Current round (redeem by 19 June)",
+   "how_to_claim": "Apply online or phone.",
+   "phone": "1800 009 501",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": "Check whether the current round is open."
+  },
+  {
+   "id": "TAS-044",
+   "name": "Private Rental Assistance",
+   "provider": "Homes Tasmania (Housing Connect)",
+   "level": "State",
+   "state": "TAS",
+   "category": "Home and Rates",
+   "summary": "Help with bond, rent in advance, rent arrears or moving costs.",
+   "cards": [
+    "HCC",
+    "NONE"
+   ],
+   "requires": [
+    "renter",
+    "low_income"
+   ],
+   "eligibility_text": "Low-income renters, including HCC holders.",
+   "value_text": "Assistance with bond, rent or moving costs (amount not stated)",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Phone Housing Connect.",
+   "phone": "1800 800 588",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  },
+  {
+   "id": "TAS-045",
+   "name": "Social Housing",
+   "provider": "Homes Tasmania (Housing Connect)",
+   "level": "State",
+   "state": "TAS",
+   "category": "Home and Rates",
+   "summary": "Low-cost public or community housing for people on low incomes.",
+   "cards": [
+    "HCC",
+    "NONE"
+   ],
+   "requires": [
+    "low_income"
+   ],
+   "eligibility_text": "Low income; financial assets under $35,000.",
+   "value_text": "Rent based on income",
+   "max_annual_value": null,
+   "value_period": "Current",
+   "how_to_claim": "Phone Housing Connect.",
+   "phone": "1800 800 588",
+   "source_url": "https://www.concessions.tas.gov.au/concessions",
+   "notes": null
+  }
+ ]
+}
