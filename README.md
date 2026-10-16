@@ -15,10 +15,10 @@ The public website plus a secure members area, business offers portal and admin 
 ## Setting up (one time)
 
 1. **Supabase.** Create a project in the Sydney region. In the SQL editor, run `supabase/migrations/0001_init.sql`, then `supabase/seed.sql`.
-2. **Login codes.** In Supabase, Authentication > Email Templates > Magic Link: put `{{ .Token }}` in the email so people get a 6-digit code. Under Authentication > SMTP, connect Resend so emails come from your domain. For text messages, turn on the Phone provider and connect Twilio.
-3. **Make yourself admin.** Log in once on the site, then in the SQL editor run:
+2. **Login codes.** In Supabase, Authentication > Email Templates: in both Magic Link and Confirm signup, put `{{ .Token }}` in the email so people get a 6-digit code. Under Authentication > SMTP, connect Resend so emails come from your domain. For text messages, turn on the Phone provider and connect Twilio.
+3. **Vercel.** Add the values from `.env.example` under Project Settings > Environment Variables (tick Production and Preview), then redeploy. New values only apply to deployments built after they were added.
+4. **Make yourself admin.** Log in once on the site, then in the SQL editor run:
    `update profiles set role = 'admin' where email = 'you@example.com';`
-4. **Vercel.** Add the values from `.env.example` under Project Settings > Environment Variables, then redeploy.
 
 ## Working on it
 
